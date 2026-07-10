@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Training vs. Inference",
+    "definition": "Training is when a model learns patterns from data. Inference is when the trained model is used to generate outputs.",
+    "my_take": "This distinction matters because a lot of AI-risk arguments blur what happens during training with what happens during deployment.",
+    "why_it_matters": "If we are talking about alignment, capability, or governance, we need to know whether the risk emerges during training, inference, or the surrounding system.",
+    "sources": [
+      {"title": "Deep Learning — Goodfellow, Bengio, Courville", "type": "Book / Academic", "url": "https://www.deeplearningbook.org/"},
+      {"title": "Stanford CS229 Machine Learning Notes", "type": "Course / Academic", "url": "https://cs229.stanford.edu/"}
+    ]
+  },
+  {
+    "name": "Loss Function / Objective Function vs. Reward Signal",
+    "definition": "A loss or objective function is what the system is optimized against. A reward signal is feedback used to shape behavior, especially in reinforcement learning.",
+    "my_take": "This is central to the book: what we optimize for is not necessarily what we actually want.",
+    "why_it_matters": "A proxy objective can produce behavior that looks right while missing the underlying value.",
+    "sources": [
+      {"title": "Deep Reinforcement Learning from Human Preferences", "type": "Academic Paper", "url": "https://arxiv.org/abs/1706.03741"},
+      {"title": "Learning to Summarize from Human Feedback", "type": "Academic Paper", "url": "https://arxiv.org/abs/2009.01325"}
+    ]
+  },
+  {
+    "name": "Gradient Descent",
+    "definition": "Gradient descent is an optimization method that gradually adjusts model parameters to reduce error.",
+    "my_take": "For this project, the important point is not the math derivation. It is that intelligence can emerge from an optimization process rather than being explicitly programmed.",
+    "why_it_matters": "This is the foundation of the book's 'grown, not crafted' argument.",
+    "sources": [
+      {"title": "Neural Networks and Deep Learning — Michael Nielsen", "type": "Educational / Academic", "url": "http://neuralnetworksanddeeplearning.com/"},
+      {"title": "Deep Learning — Optimization for Training Deep Models", "type": "Book / Academic", "url": "https://www.deeplearningbook.org/"}
+    ]
+  },
+  {
+    "name": "RLHF",
+    "definition": "Reinforcement learning from human feedback uses human preferences to train models toward outputs people rate as better.",
+    "my_take": "RLHF is useful, but it is still a proxy. It trains behavior toward what humans reward, not necessarily toward truth, safety, or genuine alignment.",
+    "why_it_matters": "This connects directly to the book's claim that training for one thing may produce something else.",
+    "sources": [
+      {"title": "Training Language Models to Follow Instructions with Human Feedback", "type": "Academic Paper / OpenAI", "url": "https://arxiv.org/abs/2203.02155"},
+      {"title": "Constitutional AI: Harmlessness from AI Feedback", "type": "Academic Paper / Anthropic", "url": "https://arxiv.org/abs/2212.08073"}
+    ]
+  },
+  {
+    "name": "Overfitting vs. Generalization",
+    "definition": "Overfitting happens when a model memorizes patterns too narrowly. Generalization is when it performs well on new examples.",
+    "my_take": "Generalization is where the interesting—and sometimes scary—behavior appears. A model that generalizes can apply strategies outside the exact context it was trained on.",
+    "why_it_matters": "This matters for agency, transfer, jailbreaks, and unexpected capability jumps.",
+    "sources": [
+      {"title": "Deep Learning — Regularization and Generalization", "type": "Book / Academic", "url": "https://www.deeplearningbook.org/"},
+      {"title": "Understanding Deep Learning Requires Rethinking Generalization", "type": "Academic Paper", "url": "https://arxiv.org/abs/1611.03530"}
+    ]
+  },
+  {
+    "name": "Embeddings / Latent Space",
+    "definition": "Embeddings are numerical representations of concepts. Latent space is the learned internal space where relationships between concepts are represented.",
+    "my_take": "This is where the 'gray box' intuition starts. We can inspect the vectors, but their meaning is distributed and not always human-legible.",
+    "why_it_matters": "Latent representations are central to why models can generalize, reason by similarity, and develop internal abstractions.",
+    "sources": [
+      {"title": "Attention Is All You Need", "type": "Academic Paper", "url": "https://arxiv.org/abs/1706.03762"},
+      {"title": "The Illustrated Transformer", "type": "Essay / Educational", "url": "https://jalammar.github.io/illustrated-transformer/"}
+    ]
+  },
+  {
+    "name": "Black Box vs. Gray Box vs. White Box",
+    "definition": "A black box is only observable from inputs and outputs. A white box is fully interpretable. A gray box is inspectable but not fully understood.",
+    "my_take": "LLMs are gray boxes, not black boxes. We can inspect weights and activations, but we do not yet have a complete mechanistic theory.",
+    "why_it_matters": "This is one of my main pushbacks on the book's framing.",
+    "sources": [
+      {"title": "Toy Models of Superposition", "type": "Research / Anthropic", "url": "https://transformer-circuits.pub/2022/toy_model/index.html"},
+      {"title": "Towards Monosemanticity", "type": "Research / Anthropic", "url": "https://transformer-circuits.pub/2023/monosemantic-features/index.html"}
+    ]
+  },
+  {
+    "name": "Scaling Laws",
+    "definition": "Scaling laws describe predictable relationships between model performance, data, compute, and model size.",
+    "my_take": "Scaling laws help explain why capability can appear to jump discontinuously from a human perspective, even if the underlying curve is smoother.",
+    "why_it_matters": "They are important for understanding why governance and alignment can lag behind capability.",
+    "sources": [
+      {"title": "Scaling Laws for Neural Language Models", "type": "Academic Paper / OpenAI", "url": "https://arxiv.org/abs/2001.08361"},
+      {"title": "Training Compute-Optimal Large Language Models", "type": "Academic Paper / DeepMind", "url": "https://arxiv.org/abs/2203.15556"}
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "human_intelligence",
+
+    "title": "Human intelligence is probably not maximum possible intelligence",
+
+    "reaction": "🟢 Agreed",
+
+    "concepts": [
+      "Evolutionary Fitness",
+      "Comparative Cognition",
+      "Scaling Laws"
+    ],
+
+    "fiction": [
+      "Blindsight",
+      "Dune"
+    ],
+
+    "papers": [
+      "Scaling Laws for Neural Language Models"
+    ]
+  }
+]
