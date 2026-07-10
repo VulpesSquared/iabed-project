@@ -8,6 +8,13 @@ from chapters.chapter5 import render_chapter5
 from chapters.chapter6 import render_chapter6
 from chapters.chapter7 import render_chapter7
 from chapters.chapter8 import render_chapter8
+from chapters.chapter9 import render_chapter9
+from chapters.chapter10 import render_chapter10
+from chapters.chapter11 import render_chapter11
+from chapters.chapter12 import render_chapter12
+from chapters.chapter13 import render_chapter13
+from chapters.chapter14 import render_chapter14
+
 
 
 def show(you):
@@ -34,6 +41,11 @@ disagree, ask for a better definition, or wander down a side trail.
             "Chapter 7",
             "Chapter 8",
             "Chapter 9",
+            "Chapter 10",
+            "Chapter 11",
+            "Chapter 12",
+            "Chapter 13",
+            "Chapter 14",
         ],
     )
 
@@ -46,6 +58,12 @@ disagree, ask for a better definition, or wander down a side trail.
         "Chapter 6": render_chapter6,
         "Chapter 7": render_chapter7,
         "Chapter 8": render_chapter8,
+        "Chapter 9": render_chapter9,
+        "Chapter 10": render_chapter10,
+        "Chapter 11": render_chapter11,
+        "Chapter 12": render_chapter12,
+        "Chapter 13": render_chapter13,
+        "Chapter 14": render_chapter14,
     }
 
     renderer = chapter_renderers.get(chapter)

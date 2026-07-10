@@ -5,6 +5,7 @@ from components.home import render_home
 from components.reading_journal import show as show_reading_journal
 from components.concepts import show as show_concepts
 from components.ontology import show as show_ontology
+from components.about import show as show_about
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -197,7 +198,7 @@ if page == "Home":
     with col4:
         st.markdown("""
         <div class="card">
-            <h3>🧪 Rabbit Holes</h3>
+            <h3>🧪 Side Trails</h3>
             <p>
                 Research papers, white papers, essays, and reading paths.
             </p>
@@ -263,28 +264,4 @@ elif page == "Ask Me":
         """, unsafe_allow_html=True)
 
 elif page == "About":
-    st.title("About This Project")
-
-    st.markdown(f"""
-    <div class="card">
-        <h3>Why I built this</h3>
-        <p>
-            I knew we'd end up talking about this book for hours anyway.
-            This is a way to be a massive nerd and make it more engaging.
-        </p>
-        <p>
-            My goal was never to make {you()} agree with me.
-            It was to make my reasoning visible.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-    <div class="burgundy-box">
-        <h3>Design note</h3>
-        <p>
-            If the word <span class="you">you</span> appears in butterscotch,
-            that's intentional.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+    show_about()
