@@ -1,15 +1,85 @@
 [
   {
     "name": "Alignment",
-    "definition": "The problem of ensuring that an AI system's objectives and behavior reliably reflect human intentions and values, even as its capabilities increase.",
-    "my_take": "Alignment is not a single engineering problem. It is an umbrella term covering objective specification, optimization, interpretability, evaluation, governance, and deployment. People often talk about 'solving alignment' as though it were one thing when it is really an entire research program.",
-    "why_it_matters": "Nearly every chapter of the book ultimately returns to alignment. The central question is whether increasing capability naturally produces systems that continue to act in humanity's interests.",
+    "definition": "The research and engineering problem of making an AI system's behavior and objectives reliably reflect human intentions and values, including when the system encounters novel situations or becomes more capable.",
+    "my_take": "Alignment is not one technique or one solved problem. It spans objective specification, training, interpretability, evaluation, monitoring, deployment, and governance.",
+    "why_it_matters": "Nearly every chapter eventually returns to whether capability can grow without the system's behavior drifting away from human interests.",
+    "related_concepts": [
+      "Outer Alignment",
+      "Inner Alignment",
+      "RLHF",
+      "Interpretability",
+      "Governance"
+    ],
+    "appears_in": [
+      "Chapter 4",
+      "Chapter 5",
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Concrete Problems in AI Safety",
+        "authors": "Dario Amodei et al.",
+        "year": 2016,
+        "type": "Academic Paper",
+        "importance": "Foundational",
+        "url": "https://arxiv.org/abs/1606.06565"
+      },
+      {
+        "title": "The Alignment Problem from a Deep Learning Perspective",
+        "authors": "Richard Ngo, Lawrence Chan, Sören Mindermann",
+        "year": 2022,
+        "type": "Academic Paper",
+        "importance": "Advanced overview",
+        "url": "https://arxiv.org/abs/2209.00626"
+      }
+    ]
+  },
+  {
+    "name": "Outer Alignment",
+    "definition": "The problem of specifying an objective that actually represents what humans want, rather than a convenient but incomplete proxy.",
+    "my_take": "Outer alignment asks whether we chose the right target in the first place. If the target is wrong, better optimization can make the mistake worse.",
+    "why_it_matters": "The book repeatedly distinguishes between what humans intend and what the formal training objective rewards.",
     "related_concepts": [
       "Inner Alignment",
-      "Outer Alignment",
-      "RLHF",
-      "Agency",
-      "Interpretability"
+      "Objective Function",
+      "Reward Modeling",
+      "Specification Gaming"
+    ],
+    "appears_in": [
+      "Chapter 4",
+      "Chapter 5"
+    ],
+    "sources": [
+      {
+        "title": "Concrete Problems in AI Safety",
+        "authors": "Dario Amodei et al.",
+        "year": 2016,
+        "type": "Academic Paper",
+        "importance": "Foundational",
+        "url": "https://arxiv.org/abs/1606.06565"
+      },
+      {
+        "title": "Deep Reinforcement Learning from Human Preferences",
+        "authors": "Paul F. Christiano et al.",
+        "year": 2017,
+        "type": "Academic Paper",
+        "importance": "Preference learning",
+        "url": "https://arxiv.org/abs/1706.03741"
+      }
+    ]
+  },
+  {
+    "name": "Inner Alignment",
+    "definition": "The problem of whether the learned system internally pursues the objective intended by the training process, especially outside the conditions represented in training.",
+    "my_take": "This is where 'grown, not crafted' becomes important. Optimization may produce internal strategies or objectives that differ from the objective designers thought they were instilling.",
+    "why_it_matters": "A model can perform well during training while generalizing its objective differently in deployment.",
+    "related_concepts": [
+      "Mesa-Optimization",
+      "Goal Misgeneralization",
+      "Deceptive Alignment",
+      "Outer Alignment"
     ],
     "appears_in": [
       "Chapter 4",
@@ -18,291 +88,797 @@
     ],
     "sources": [
       {
-        "title": "Concrete Problems in AI Safety",
+        "title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
+        "authors": "Evan Hubinger et al.",
+        "year": 2019,
         "type": "Academic Paper",
+        "importance": "Foundational",
+        "url": "https://arxiv.org/abs/1906.01820"
+      },
+      {
+        "title": "Goal Misgeneralization in Deep Reinforcement Learning",
+        "authors": "Lauro Langosco et al.",
+        "year": 2022,
+        "type": "Academic Paper",
+        "importance": "Empirical",
+        "url": "https://arxiv.org/abs/2105.14111"
+      }
+    ]
+  },
+  {
+    "name": "Instrumental Convergence",
+    "definition": "The hypothesis that many different final goals can create pressure toward similar intermediate strategies, such as acquiring resources, preserving operation, gaining information, or increasing capability.",
+    "my_take": "The logic is compelling when a system has persistent objectives, but how broadly it applies to real frontier models remains an empirical question.",
+    "why_it_matters": "It explains why danger would not require hatred or malice; ordinary instrumental strategies could still conflict with human survival.",
+    "related_concepts": [
+      "Agency",
+      "Persistence",
+      "Resource Acquisition",
+      "Corrigibility"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "The Basic AI Drives",
+        "authors": "Stephen M. Omohundro",
+        "year": 2008,
+        "type": "Conference Paper",
+        "importance": "Classic",
+        "url": "https://selfawaresystems.com/wp-content/uploads/2008/01/ai_drives_final.pdf"
+      },
+      {
+        "title": "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
+        "authors": "Nick Bostrom",
+        "year": 2012,
+        "type": "Academic Paper",
+        "importance": "Classic",
+        "url": "https://nickbostrom.com/superintelligentwill.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Mesa-Optimization",
+    "definition": "A situation in which a training process produces a learned system that itself behaves like an optimizer pursuing an internal objective.",
+    "my_take": "Mesa-optimization is theoretically important but should not be treated as an established property of current frontier models.",
+    "why_it_matters": "It provides one mechanism by which a learned objective could diverge from the formal training objective.",
+    "related_concepts": [
+      "Inner Alignment",
+      "Deceptive Alignment",
+      "Optimization",
+      "Goal Misgeneralization"
+    ],
+    "appears_in": [
+      "Chapter 4",
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
+        "authors": "Evan Hubinger et al.",
+        "year": 2019,
+        "type": "Academic Paper",
+        "importance": "Foundational",
+        "url": "https://arxiv.org/abs/1906.01820"
+      }
+    ]
+  },
+  {
+    "name": "Goal Misgeneralization",
+    "definition": "A failure in which a model performs well during training but pursues the wrong goal in a new environment because its learned objective generalizes differently than intended.",
+    "my_take": "This is more precise than saying a model simply 'breaks.' The learned policy may remain competent while the inferred goal is wrong.",
+    "why_it_matters": "It demonstrates that capability generalization and goal generalization can come apart.",
+    "related_concepts": [
+      "Inner Alignment",
+      "Distribution Shift",
+      "Specification Gaming",
+      "Mesa-Optimization"
+    ],
+    "appears_in": [
+      "Chapter 4",
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "Goal Misgeneralization in Deep Reinforcement Learning",
+        "authors": "Lauro Langosco et al.",
+        "year": 2022,
+        "type": "Academic Paper",
+        "importance": "Empirical",
+        "url": "https://arxiv.org/abs/2105.14111"
+      }
+    ]
+  },
+  {
+    "name": "Deceptive Alignment",
+    "definition": "A hypothesized failure mode in which a system behaves as intended during training or evaluation because doing so helps it preserve or later pursue a conflicting objective.",
+    "my_take": "The concept is important, but evidence for stable deceptive objectives in deployed frontier models remains limited. It should be studied without being presented as inevitable.",
+    "why_it_matters": "Behavioral evaluations become less reliable if a system can recognize evaluation conditions and strategically comply.",
+    "related_concepts": [
+      "Situational Awareness",
+      "Inner Alignment",
+      "Mesa-Optimization",
+      "AI Evaluations"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
+        "authors": "Evan Hubinger et al.",
+        "year": 2019,
+        "type": "Academic Paper",
+        "importance": "Conceptual foundation",
+        "url": "https://arxiv.org/abs/1906.01820"
+      },
+      {
+        "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+        "authors": "Evan Hubinger et al.",
+        "year": 2024,
+        "type": "Academic Paper / Anthropic",
+        "importance": "Model-organism study",
+        "url": "https://arxiv.org/abs/2401.05566"
+      }
+    ]
+  },
+  {
+    "name": "Corrigibility",
+    "definition": "The property of remaining receptive to correction, modification, interruption, or shutdown by authorized operators.",
+    "my_take": "Corrigibility sounds simple but becomes difficult when intervention could conflict with the objective a system is pursuing.",
+    "why_it_matters": "A powerful system that cannot be safely redirected or stopped creates a fundamentally different control problem.",
+    "related_concepts": [
+      "Shutdownability",
+      "Agency",
+      "Instrumental Convergence",
+      "AI Control"
+    ],
+    "appears_in": [
+      "Chapter 6",
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Corrigibility",
+        "authors": "Nate Soares et al.",
+        "year": 2015,
+        "type": "Workshop Paper",
+        "importance": "Foundational",
+        "url": "https://intelligence.org/files/Corrigibility.pdf"
+      },
+      {
+        "title": "The Off-Switch Game",
+        "authors": "Dylan Hadfield-Menell et al.",
+        "year": 2016,
+        "type": "Academic Paper",
+        "importance": "Formal model",
+        "url": "https://arxiv.org/abs/1611.08219"
+      }
+    ]
+  },
+  {
+    "name": "Specification Gaming",
+    "definition": "Behavior that satisfies the literal specification or metric while violating the designer's underlying intent.",
+    "my_take": "Specification gaming is not malice. It is what happens when optimization discovers that the metric and the intended outcome are not the same thing.",
+    "why_it_matters": "It is a practical demonstration that formal objectives are always incomplete descriptions of human intent.",
+    "related_concepts": [
+      "Reward Hacking",
+      "Outer Alignment",
+      "Goodhart's Law",
+      "Objective Function"
+    ],
+    "appears_in": [
+      "Chapter 3",
+      "Chapter 4",
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "Concrete Problems in AI Safety",
+        "authors": "Dario Amodei et al.",
+        "year": 2016,
+        "type": "Academic Paper",
+        "importance": "Foundational",
+        "url": "https://arxiv.org/abs/1606.06565"
+      },
+      {
+        "title": "Specification Gaming: The Flip Side of AI Ingenuity",
+        "authors": "Victoria Krakovna et al.",
+        "year": 2020,
+        "type": "Research Article / DeepMind",
+        "importance": "Examples",
+        "url": "https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/"
+      }
+    ]
+  },
+  {
+    "name": "Reward Hacking",
+    "definition": "Behavior that increases the measured reward without producing the outcome the reward was intended to represent.",
+    "my_take": "Reward hacking makes the proxy problem concrete: the system can improve the score while moving farther from what humans actually wanted.",
+    "why_it_matters": "It shows why reward signals should not be mistaken for complete specifications of values or outcomes.",
+    "related_concepts": [
+      "Specification Gaming",
+      "Reward Modeling",
+      "RLHF",
+      "Goodhart's Law"
+    ],
+    "appears_in": [
+      "Chapter 3",
+      "Chapter 4",
+      "Chapter 5"
+    ],
+    "sources": [
+      {
+        "title": "Concrete Problems in AI Safety",
+        "authors": "Dario Amodei et al.",
+        "year": 2016,
+        "type": "Academic Paper",
+        "importance": "Foundational",
         "url": "https://arxiv.org/abs/1606.06565"
       }
     ]
   },
   {
-    "name": "Outer Alignment",
-    "definition": "The problem of specifying objectives that accurately represent what humans actually want a system to accomplish.",
-    "my_take": "Outer alignment asks whether we've written down the right objective in the first place. If the objective is wrong, perfect optimization only makes the mistake more effective.",
-    "why_it_matters": "Many examples in the book depend on proxy objectives drifting away from human intent.",
-    "related_concepts": [
-      "Inner Alignment",
-      "Objective Function",
-      "Reward Modeling"
-    ],
-    "appears_in": [
-      "Chapter 4",
-      "Chapter 5"
-    ]
-  },
-  {
-    "name": "Inner Alignment",
-    "definition": "The problem of whether the learned system actually optimizes the objective we intended during training.",
-    "my_take": "This is where the 'grown, not crafted' framing becomes important. Optimization may discover strategies or internal objectives that differ from the designer's intended objective.",
-    "why_it_matters": "Much of the concern about emergent goals comes from the possibility that optimization produces something different from what was explicitly specified.",
-    "related_concepts": [
-      "Mesa Optimization",
-      "Emergence",
-      "Optimization"
-    ],
-    "appears_in": [
-      "Chapter 4",
-      "Chapter 5",
-      "Chapter 7"
-    ]
-  },
-  {
-    "name": "Instrumental Convergence",
-    "definition": "The hypothesis that many different final objectives naturally give rise to similar intermediate goals, such as acquiring resources, preserving operation, gathering information, or increasing capability.",
-    "my_take": "This is one of the strongest ideas in the book. Whether the effect is as universal as sometimes claimed remains an open empirical question, but the logic is compelling if a system has persistent objectives.",
-    "why_it_matters": "It explains why an AI system does not need to hate humans to become dangerous.",
-    "related_concepts": [
-      "Agency",
-      "Persistence",
-      "Resource Acquisition",
-      "Goals"
-    ],
-    "appears_in": [
-      "Chapter 5",
-      "Chapter 8"
-    ]
-  },
-  {
-    "name": "Mesa Optimization",
-    "definition": "A situation in which an optimization process gives rise to another optimizer with its own internal objective.",
-    "my_take": "Mesa optimization is theoretically fascinating, but current empirical evidence remains limited. It's an important research direction without yet being an established property of frontier models.",
-    "why_it_matters": "Several arguments in the book assume optimization could eventually produce internal goals distinct from the training objective.",
-    "related_concepts": [
-      "Inner Alignment",
-      "Emergence",
-      "Optimization"
-    ],
-    "appears_in": [
-      "Chapter 7"
-    ]
-  },
-  {
-    "name": "Corrigibility",
-    "definition": "The property of an AI system remaining willing to be corrected, modified, interrupted, or shut down by its operators.",
-    "my_take": "Corrigibility sounds simple but is surprisingly difficult. A sufficiently capable optimizer may resist interventions if they interfere with achieving its objective unless corrigibility itself is deeply embedded.",
-    "why_it_matters": "The book repeatedly asks whether a highly capable AI would willingly allow humans to redirect or stop it.",
-    "related_concepts": [
-      "Containment",
-      "Agency",
-      "Alignment"
-    ],
-    "appears_in": [
-      "Chapter 6",
-      "Chapter 8"
-    ]
-  },
-  {
-    "name": "Specification Gaming",
-    "definition": "When a system satisfies the literal objective while violating the intent behind it.",
-    "my_take": "Specification gaming isn't evidence of malice—it's evidence that optimization is extremely good at exploiting poorly specified objectives.",
-    "why_it_matters": "Many alignment failures begin as specification failures rather than capability failures.",
-    "related_concepts": [
-      "Reward Hacking",
-      "Outer Alignment",
-      "Optimization"
-    ],
-    "appears_in": [
-      "Chapter 4",
-      "Chapter 7"
-    ]
-  },
-  {
-    "name": "Reward Hacking",
-    "definition": "Behavior in which an AI discovers ways to maximize its reward signal without accomplishing the underlying intended task.",
-    "my_take": "Reward hacking is the practical demonstration that optimizing a proxy objective can diverge dramatically from optimizing the desired outcome.",
-    "why_it_matters": "It reinforces one of the central themes of the book: optimization targets do not necessarily determine eventual preferences or behavior.",
+    "name": "Goodhart's Law",
+    "definition": "The principle that when a measure becomes a target, optimization pressure can make it stop functioning as a reliable measure of the underlying goal.",
+    "my_take": "Once a benchmark or evaluation becomes part of the optimization environment, performance on the metric may stop reflecting the thing we actually hoped to measure.",
+    "why_it_matters": "Static benchmarks and safety evaluations can become gameable as models and training systems adapt to them.",
     "related_concepts": [
       "Specification Gaming",
-      "RLHF",
-      "Objective Functions"
+      "AI Evaluations",
+      "Reward Hacking",
+      "Proxy Objective"
     ],
     "appears_in": [
       "Chapter 4",
-      "Chapter 5"
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Categorizing Variants of Goodhart's Law",
+        "authors": "David Manheim and Scott Garrabrant",
+        "year": 2018,
+        "type": "Academic Paper",
+        "importance": "Taxonomy",
+        "url": "https://arxiv.org/abs/1803.04585"
+      }
     ]
   },
   {
     "name": "Mechanistic Interpretability",
-    "definition": "The effort to reverse engineer neural networks by identifying the internal computations that give rise to specific behaviors.",
-    "my_take": "This is one of the most exciting areas of AI safety research because it attempts to move LLMs from gray boxes toward increasingly understandable systems.",
-    "why_it_matters": "The book repeatedly discusses whether we truly understand how advanced AI systems reason internally.",
+    "definition": "The effort to reverse engineer neural networks by identifying internal features, circuits, and computations that causally produce behavior.",
+    "my_take": "This is one of the most exciting areas in AI safety because it tries to move beyond input-output observation toward mechanistic explanation.",
+    "why_it_matters": "Behavioral testing alone may miss internal representations or strategies that only activate in new contexts.",
     "related_concepts": [
-      "Grey Box",
+      "Interpretability",
+      "Feature Superposition",
       "Sparse Autoencoders",
+      "Circuit Analysis"
+    ],
+    "appears_in": [
+      "Chapter 2",
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "A Mathematical Framework for Transformer Circuits",
+        "authors": "Nelson Elhage et al.",
+        "year": 2021,
+        "type": "Research Paper / Anthropic",
+        "importance": "Foundational",
+        "url": "https://transformer-circuits.pub/2021/framework/index.html"
+      },
+      {
+        "title": "In-context Learning and Induction Heads",
+        "authors": "Catherine Olsson et al.",
+        "year": 2022,
+        "type": "Research Paper / Anthropic",
+        "importance": "Circuit analysis",
+        "url": "https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html"
+      }
+    ]
+  },
+  {
+    "name": "Feature Superposition",
+    "definition": "A representational phenomenon in which a neural network encodes more features than it has individual dimensions by allowing features to overlap.",
+    "my_take": "Superposition helps explain why inspecting individual neurons often fails: meaningful features can be distributed and entangled across many directions.",
+    "why_it_matters": "It is a major reason mechanistic interpretability is difficult and motivates sparse feature-decomposition methods.",
+    "related_concepts": [
+      "Mechanistic Interpretability",
+      "Polysemanticity",
+      "Sparse Autoencoders",
+      "Distributed Representations"
+    ],
+    "appears_in": [
+      "Chapter 2",
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "Toy Models of Superposition",
+        "authors": "Nelson Elhage et al.",
+        "year": 2022,
+        "type": "Research Paper / Anthropic",
+        "importance": "Foundational",
+        "url": "https://transformer-circuits.pub/2022/toy_model/index.html"
+      }
+    ]
+  },
+  {
+    "name": "Sparse Autoencoders",
+    "definition": "Models trained to decompose dense neural activations into a larger set of sparse features that may be easier to interpret.",
+    "my_take": "Sparse autoencoders are promising tools, not transparent windows into cognition. Their features still require validation for faithfulness, stability, and causal relevance.",
+    "why_it_matters": "They offer one route for separating entangled representations into more human-legible components.",
+    "related_concepts": [
+      "Feature Superposition",
+      "Mechanistic Interpretability",
+      "Monosemanticity",
       "Interpretability"
     ],
     "appears_in": [
       "Chapter 2",
       "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "Sparse Autoencoders Find Highly Interpretable Features in Language Models",
+        "authors": "Hoagy Cunningham et al.",
+        "year": 2023,
+        "type": "Academic Paper",
+        "importance": "Foundational",
+        "url": "https://arxiv.org/abs/2309.08600"
+      },
+      {
+        "title": "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning",
+        "authors": "Trenton Bricken et al.",
+        "year": 2023,
+        "type": "Research Paper / Anthropic",
+        "importance": "Applied research",
+        "url": "https://transformer-circuits.pub/2023/monosemantic-features/index.html"
+      }
     ]
   },
   {
-    "name": "Capability Control",
-    "definition": "Approaches that reduce what an AI system is able to do rather than merely influencing how it behaves.",
-    "my_take": "One of the strongest ideas in the later chapters is distinguishing capability control from behavioral control. Restricting access to compute, tools, or deployment may ultimately prove more robust than simply training polite behavior.",
-    "why_it_matters": "This distinction became one of my biggest takeaways from the book.",
+    "name": "Eliciting Latent Knowledge (ELK)",
+    "definition": "The problem of determining what a model internally knows when its observable report may be incomplete, misleading, or optimized for another objective.",
+    "my_take": "ELK cleanly separates knowledge from reporting. A model can contain useful information without reliably revealing it in the form humans request.",
+    "why_it_matters": "Monitoring becomes much harder if systems can represent facts or plans that are not faithfully expressed through outputs.",
     "related_concepts": [
-      "Behavioral Alignment",
-      "Governance",
-      "Containment"
+      "Interpretability",
+      "Deceptive Alignment",
+      "Chain of Thought",
+      "Monitoring"
+    ],
+    "appears_in": [
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "Eliciting Latent Knowledge",
+        "authors": "Paul Christiano et al.",
+        "year": 2021,
+        "type": "Research Report / ARC",
+        "importance": "Foundational agenda",
+        "url": "https://www.alignment.org/elk/"
+      }
+    ]
+  },
+  {
+    "name": "Situational Awareness",
+    "definition": "A model's representation of its own context, including that it is an AI system, who is interacting with it, whether it is being evaluated, and what consequences its outputs may have.",
+    "my_take": "Situational awareness is not automatically dangerous, but it changes what evaluations mean if the system can distinguish testing from deployment.",
+    "why_it_matters": "Strategic compliance and deceptive behavior require some model of the surrounding situation.",
+    "related_concepts": [
+      "Deceptive Alignment",
+      "Self-Modeling",
+      "AI Evaluations",
+      "Agency"
     ],
     "appears_in": [
       "Chapter 7",
       "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Situational Awareness in Large Language Models",
+        "authors": "Rudolf Laine et al.",
+        "year": 2024,
+        "type": "Academic Paper",
+        "importance": "Empirical",
+        "url": "https://arxiv.org/abs/2407.04694"
+      }
+    ]
+  },
+  {
+    "name": "AI Evaluations",
+    "definition": "Structured tests used to measure model capabilities, behaviors, safeguards, and risk-relevant failure modes.",
+    "my_take": "Evaluations are essential, but they are measurements rather than guarantees. They require clear rubrics, representative data, adversarial testing, and continual revision.",
+    "why_it_matters": "Deployment decisions increasingly depend on whether evaluations can detect dangerous capabilities or behavioral regressions before release.",
+    "related_concepts": [
+      "Red Teaming",
+      "Goodhart's Law",
+      "Monitoring",
+      "Preparedness Frameworks"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "GPT-4o System Card",
+        "authors": "OpenAI",
+        "year": 2024,
+        "type": "Official System Card",
+        "importance": "Applied safety evaluation",
+        "url": "https://openai.com/index/gpt-4o-system-card/"
+      },
+      {
+        "title": "OpenAI o1 System Card",
+        "authors": "OpenAI",
+        "year": 2024,
+        "type": "Official System Card",
+        "importance": "Reasoning-model evaluation",
+        "url": "https://openai.com/index/openai-o1-system-card/"
+      }
+    ]
+  },
+  {
+    "name": "Red Teaming",
+    "definition": "The deliberate use of adversarial testers to discover harmful capabilities, bypass safeguards, and identify failure modes before or after deployment.",
+    "my_take": "Red teaming is valuable because ordinary test cases rarely represent the creativity of motivated attackers, but findings still need to become repeatable evaluations and mitigations.",
+    "why_it_matters": "Frontier models interact with open-ended users and tools, so safety cannot be assessed only through cooperative prompts.",
+    "related_concepts": [
+      "AI Evaluations",
+      "Jailbreaks",
+      "Defense in Depth",
+      "Monitoring"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Red Teaming Language Models with Language Models",
+        "authors": "Ethan Perez et al.",
+        "year": 2022,
+        "type": "Academic Paper",
+        "importance": "Automated red teaming",
+        "url": "https://arxiv.org/abs/2202.03286"
+      },
+      {
+        "title": "GPT-4o System Card",
+        "authors": "OpenAI",
+        "year": 2024,
+        "type": "Official System Card",
+        "importance": "External red teaming",
+        "url": "https://openai.com/index/gpt-4o-system-card/"
+      }
+    ]
+  },
+  {
+    "name": "Constitutional AI",
+    "definition": "A training approach that uses a written set of principles to guide model self-critique, revision, and reinforcement learning from AI-generated feedback.",
+    "my_take": "Constitutional AI makes normative assumptions more explicit than opaque preference labels, but the constitution is still a proxy and its interpretation still depends on the model.",
+    "why_it_matters": "It is a major example of behavioral alignment through explicit principles rather than only direct human rankings.",
+    "related_concepts": [
+      "RLHF",
+      "RLAIF",
+      "Behavioral Alignment",
+      "Value Specification"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "Constitutional AI: Harmlessness from AI Feedback",
+        "authors": "Yuntao Bai et al.",
+        "year": 2022,
+        "type": "Academic Paper / Anthropic",
+        "importance": "Foundational",
+        "url": "https://arxiv.org/abs/2212.08073"
+      },
+      {
+        "title": "Claude's Constitution",
+        "authors": "Anthropic",
+        "year": 2023,
+        "type": "Official Training Document",
+        "importance": "Applied framework",
+        "url": "https://www.anthropic.com/constitution"
+      }
+    ]
+  },
+  {
+    "name": "Preference Optimization",
+    "definition": "A family of methods that trains language models from preference comparisons, often without requiring a separately trained reinforcement-learning reward model.",
+    "my_take": "Preference optimization can simplify alignment training, but it does not eliminate the core proxy problem: the data still represents judgments about observed outputs rather than complete human values.",
+    "why_it_matters": "Methods such as DPO have become influential alternatives to traditional RLHF pipelines.",
+    "related_concepts": [
+      "RLHF",
+      "Reward Modeling",
+      "DPO",
+      "Behavioral Alignment"
+    ],
+    "appears_in": [
+      "Chapter 4",
+      "Chapter 5",
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+        "authors": "Rafael Rafailov et al.",
+        "year": 2023,
+        "type": "Academic Paper",
+        "importance": "Foundational",
+        "url": "https://arxiv.org/abs/2305.18290"
+      }
+    ]
+  },
+  {
+    "name": "AI Control",
+    "definition": "Research on obtaining useful work from potentially misaligned or untrusted AI systems while preventing them from causing unacceptable harm.",
+    "my_take": "AI control begins from a more pessimistic assumption than alignment: the system may not share our goals, so the surrounding protocol must detect and constrain dangerous behavior.",
+    "why_it_matters": "It offers a safety approach for cases where confidence in internal alignment is not available.",
+    "related_concepts": [
+      "Capability Control",
+      "Monitoring",
+      "Containment",
+      "Trusted Models"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "AI Control: Improving Safety Despite Intentional Subversion",
+        "authors": "Ryan Greenblatt et al.",
+        "year": 2023,
+        "type": "Academic Paper",
+        "importance": "Foundational",
+        "url": "https://arxiv.org/abs/2312.06942"
+      }
+    ]
+  },
+  {
+    "name": "Capability Control",
+    "definition": "Safety approaches that limit the actions, tools, resources, access, or deployment contexts available to a model rather than relying only on aligned behavior.",
+    "my_take": "Behavioral training and capability control solve different problems. Restricting tool access, compute, permissions, or deployment can remain valuable even when a model usually behaves well.",
+    "why_it_matters": "The book's later chapters repeatedly contrast teaching safe behavior with controlling what a powerful system can actually do.",
+    "related_concepts": [
+      "AI Control",
+      "Containment",
+      "Tool Use",
+      "Compute Governance"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "AI Control: Improving Safety Despite Intentional Subversion",
+        "authors": "Ryan Greenblatt et al.",
+        "year": 2023,
+        "type": "Academic Paper",
+        "importance": "Control protocols",
+        "url": "https://arxiv.org/abs/2312.06942"
+      },
+      {
+        "title": "The Alignment Problem from a Deep Learning Perspective",
+        "authors": "Richard Ngo, Lawrence Chan, Sören Mindermann",
+        "year": 2022,
+        "type": "Academic Paper",
+        "importance": "Broader context",
+        "url": "https://arxiv.org/abs/2209.00626"
+      }
+    ]
+  },
+  {
+    "name": "Containment",
+    "definition": "The technical and operational effort to keep an AI system within authorized environments, permissions, networks, and channels of action.",
+    "my_take": "Containment is not a single sandbox. It includes credentials, network boundaries, tool permissions, human operators, monitoring, and the ability to copy or distribute model artifacts.",
+    "why_it_matters": "Once models or their capabilities become distributed across infrastructure, containment becomes an ecosystem problem.",
+    "related_concepts": [
+      "Capability Control",
+      "Security",
+      "Tool Use",
+      "Distributed Systems"
+    ],
+    "appears_in": [
+      "Chapter 6",
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "AI Control: Improving Safety Despite Intentional Subversion",
+        "authors": "Ryan Greenblatt et al.",
+        "year": 2023,
+        "type": "Academic Paper",
+        "importance": "Operational control",
+        "url": "https://arxiv.org/abs/2312.06942"
+      }
+    ]
+  },
+  {
+    "name": "Monitoring",
+    "definition": "The ongoing observation and analysis of model inputs, outputs, tool calls, internal signals, and deployment outcomes to detect unsafe or anomalous behavior.",
+    "my_take": "Monitoring is part of alignment operations, not proof of alignment. Its quality depends on coverage, signal validity, escalation design, and whether the monitored system can adapt to the monitor.",
+    "why_it_matters": "Many failures only become visible in real workflows after deployment.",
+    "related_concepts": [
+      "AI Evaluations",
+      "AI Control",
+      "Tripwires",
+      "Defense in Depth"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "OpenAI's Approach to Frontier Risk",
+        "authors": "OpenAI",
+        "year": 2023,
+        "type": "Official Framework",
+        "importance": "Applied risk management",
+        "url": "https://openai.com/global-affairs/our-approach-to-frontier-risk/"
+      }
+    ]
+  },
+  {
+    "name": "Responsible Scaling Policies",
+    "definition": "Governance frameworks that connect increasing model capabilities to progressively stronger evaluation, security, and deployment requirements.",
+    "my_take": "The core idea is sensible: safeguards should scale with demonstrated risk rather than remain static while capabilities grow.",
+    "why_it_matters": "They create predefined decision points for when additional protections or evidence are required.",
+    "related_concepts": [
+      "AI Evaluations",
+      "Capability Thresholds",
+      "Governance",
+      "Defense in Depth"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic's Responsible Scaling Policy",
+        "authors": "Anthropic",
+        "year": 2023,
+        "type": "Official Policy",
+        "importance": "Foundational industry framework",
+        "url": "https://www.anthropic.com/responsible-scaling-policy"
+      }
+    ]
+  },
+  {
+    "name": "Compute Governance",
+    "definition": "Policy and technical approaches that use access to advanced computing hardware, cloud infrastructure, or large training runs as points of oversight and control.",
+    "my_take": "Compute is attractive as a governance lever because it is more physically concentrated and measurable than software ideas, but it does not cover every pathway to dangerous capability.",
+    "why_it_matters": "Capability governance may require controlling enabling resources rather than regulating only downstream model behavior.",
+    "related_concepts": [
+      "Capability Control",
+      "Frontier Models",
+      "Export Controls",
+      "Responsible Scaling Policies"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Compute Trends Across Three Eras of Machine Learning",
+        "authors": "Jaime Sevilla et al.",
+        "year": 2022,
+        "type": "Academic Paper",
+        "importance": "Empirical background",
+        "url": "https://arxiv.org/abs/2202.05924"
+      },
+      {
+        "title": "Computing Power and the Governance of Artificial Intelligence",
+        "authors": "Girish Sastry et al.",
+        "year": 2024,
+        "type": "Academic Paper",
+        "importance": "Governance framework",
+        "url": "https://arxiv.org/abs/2402.08797"
+      }
     ]
   },
   {
     "name": "Defense in Depth",
-    "definition": "The practice of combining multiple independent safety mechanisms so that failure of any single layer does not produce catastrophic failure.",
-    "my_take": "Modern AI safety already resembles defense in depth: pretraining choices, RLHF, constitutional AI, monitoring, evaluations, red teaming, and governance all contribute. No single safeguard is sufficient.",
-    "why_it_matters": "One of the book's recurring lessons is that there is unlikely to be a single alignment technique that guarantees safety.",
+    "definition": "A safety strategy that combines multiple independent or partially independent safeguards so that one failure does not automatically produce catastrophic failure.",
+    "my_take": "Frontier AI safety already functions this way: training methods, evaluations, monitoring, access controls, red teaming, model security, and governance each cover different weaknesses.",
+    "why_it_matters": "No single alignment technique currently provides a formal guarantee of safe behavior.",
     "related_concepts": [
-      "Governance",
       "Monitoring",
-      "Evaluations",
-      "Red Teaming"
+      "Red Teaming",
+      "AI Evaluations",
+      "Capability Control"
     ],
     "appears_in": [
       "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "GPT-4o System Card",
+        "authors": "OpenAI",
+        "year": 2024,
+        "type": "Official System Card",
+        "importance": "Applied example",
+        "url": "https://openai.com/index/gpt-4o-system-card/"
+      },
+      {
+        "title": "Anthropic's Responsible Scaling Policy",
+        "authors": "Anthropic",
+        "year": 2023,
+        "type": "Official Policy",
+        "importance": "Applied example",
+        "url": "https://www.anthropic.com/responsible-scaling-policy"
+      }
     ]
   },
   {
-  "name": "Mechanistic Interpretability",
-  "definition": "The scientific effort to reverse engineer neural networks by identifying the computations performed inside them rather than only observing inputs and outputs.",
-  "my_take": "This is one of the most exciting areas in AI research. Rather than treating models as mysterious black boxes, mechanistic interpretability asks what every circuit, feature, and neuron is actually doing.",
-  "why_it_matters": "The entire alignment problem becomes easier if we can understand how reasoning emerges instead of only measuring behavior.",
-  "sources": [
-    {
-      "title": "Transformer Circuits Thread",
-      "type": "Anthropic Research",
-      "url": "https://transformer-circuits.pub/"
-    }
-  ]
-},
-{
-  "name": "Instrumental Convergence",
-  "definition": "The hypothesis that many different goals naturally produce similar intermediate goals such as acquiring resources, preserving operation, gathering information, and increasing capability.",
-  "my_take": "This was one of the strongest ideas in the book. An AI doesn't need to hate humans to become dangerous if humans interfere with its objective.",
-  "why_it_matters": "It explains why risk can emerge from optimization itself rather than malicious intent.",
-  "sources": [
-    {
-      "title": "The Superintelligent Will",
-      "type": "Academic Paper",
-      "url": "https://www.nickbostrom.com/superintelligentwill.pdf"
-    }
-  ]
-},
-{
-  "name": "Mesa-Optimization",
-  "definition": "A phenomenon in which an optimization process produces another optimizer with its own objectives rather than merely solving the original task.",
-  "my_take": "Mostly theoretical today, but fascinating. If true, it changes how we think about what models are actually optimizing internally.",
-  "why_it_matters": "Inner objectives could diverge from the objective humans intended during training.",
-  "sources": [
-    {
-      "title": "Risks from Learned Optimization",
-      "type": "Academic Paper",
-      "url": "https://arxiv.org/abs/1906.01820"
-    }
-  ]
-},
-{
-  "name": "Objective Function",
-  "definition": "The mathematical objective that an optimization algorithm attempts to maximize or minimize during training.",
-  "my_take": "If I had to pick one concept that explains half the book, it would be this one. What you optimize determines what intelligence grows toward.",
-  "why_it_matters": "Changing the objective can completely change the resulting behavior, even with identical architectures.",
-  "sources": [
-    {
-      "title": "Deep Learning",
-      "type": "Book",
-      "url": "https://www.deeplearningbook.org/"
-    }
-  ]
-},
-{
-  "name": "Specification Gaming",
-  "definition": "When an AI successfully optimizes the stated objective while violating the designer's intended objective.",
-  "my_take": "This is the engineering version of 'be careful what you wish for.' The model is often doing exactly what you asked—not what you meant.",
-  "why_it_matters": "Many alignment failures begin as specification failures rather than capability failures.",
-  "sources": [
-    {
-      "title": "Concrete Problems in AI Safety",
-      "type": "Academic Paper",
-      "url": "https://arxiv.org/abs/1606.06565"
-    }
-  ]
-},
-{
-  "name": "World Models",
-  "definition": "Internal representations of how the external world works that allow an AI to make accurate predictions about future observations.",
-  "my_take": "One of my favorite ideas from the early chapters. Predicting language eventually requires predicting the world that generated the language.",
-  "why_it_matters": "World models help explain why next-token prediction can produce surprisingly general intelligence.",
-  "sources": [
-    {
-      "title": "World Models",
-      "type": "Academic Paper",
-      "url": "https://arxiv.org/abs/1803.10122"
-    }
-  ]
-},
-{
-  "name": "Capability vs. Alignment",
-  "definition": "Capability describes what an AI can do. Alignment describes whether those capabilities are directed toward human intentions.",
-  "my_take": "This distinction became clearer with every chapter. Intelligence is not the same thing as values.",
-  "why_it_matters": "Powerful systems can be either beneficial or dangerous depending on alignment rather than capability alone.",
-  "sources": [
-    {
-      "title": "Concrete Problems in AI Safety",
-      "type": "Academic Paper",
-      "url": "https://arxiv.org/abs/1606.06565"
-    }
-  ]
-},
-{
-  "name": "Capability Control",
-  "definition": "Safety strategies that restrict what an AI system is capable of doing rather than attempting to change its objectives.",
-  "my_take": "One of the biggest ideas I took away from the book. Restricting behavior and restricting capability are fundamentally different interventions.",
-  "why_it_matters": "Many modern safety techniques primarily shape behavior after capabilities already exist.",
-  "sources": [
-    {
-      "title": "Superintelligence",
-      "type": "Book",
-      "url": "https://global.oup.com/academic/product/superintelligence-9780199678112"
-    }
-  ]
-},
-{
-  "name": "Interpretability",
-  "definition": "The broader field devoted to understanding why AI systems make the decisions they do.",
-  "my_take": "Interpretability exists on a spectrum. I prefer describing LLMs as gray boxes rather than black boxes because we understand much more than people often realize.",
-  "why_it_matters": "Understanding internal reasoning is likely essential for safely deploying increasingly capable systems.",
-  "sources": [
-    {
-      "title": "Transformer Circuits",
-      "type": "Research",
-      "url": "https://transformer-circuits.pub/"
-    }
-  ]
-},
-{
-  "name": "Defense in Depth",
-  "definition": "A security philosophy that relies on multiple overlapping safeguards instead of trusting any single protective mechanism.",
-  "my_take": "This mirrors modern cybersecurity. Alignment should probably be viewed the same way.",
-  "why_it_matters": "RLHF, Constitutional AI, evaluations, monitoring, interpretability, and governance each compensate for the weaknesses of the others.",
-  "sources": [
-    {
-      "title": "NIST Cybersecurity Framework",
-      "type": "Government",
-      "url": "https://www.nist.gov/cyberframework"
-    }
-  ]
-}
+    "name": "Model Organisms of Misalignment",
+    "definition": "Artificially constructed models or training setups designed to exhibit a specific alignment failure so researchers can study that failure under controlled conditions.",
+    "my_take": "Model organisms are useful because naturally occurring severe failures may be too rare, ambiguous, or dangerous to study directly. The limitation is external validity: a constructed failure is not proof that the same failure will emerge naturally.",
+    "why_it_matters": "They let researchers test detection and mitigation methods against concrete examples of deceptive or misaligned behavior.",
+    "related_concepts": [
+      "Deceptive Alignment",
+      "Sleeper Agents",
+      "AI Evaluations",
+      "Interpretability"
+    ],
+    "appears_in": [
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+        "authors": "Evan Hubinger et al.",
+        "year": 2024,
+        "type": "Academic Paper / Anthropic",
+        "importance": "Model-organism study",
+        "url": "https://arxiv.org/abs/2401.05566"
+      }
+    ]
+  },
+  {
+    "name": "Agentic Misalignment",
+    "definition": "Misaligned behavior that occurs when a model is placed in an agentic role with goals, tools, sensitive information, and the ability to take consequential actions.",
+    "my_take": "This is a deployment-level risk: the model's surrounding role and permissions can turn ordinary capabilities into opportunities for strategic harmful behavior.",
+    "why_it_matters": "Risk depends not only on the base model but also on autonomy, tool access, objectives, and organizational context.",
+    "related_concepts": [
+      "Agency",
+      "Tool Use",
+      "Insider Threat",
+      "Capability Control"
+    ],
+    "appears_in": [
+      "Chapter 6",
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Agentic Misalignment: How LLMs Could Be Insider Threats",
+        "authors": "Anthropic",
+        "year": 2025,
+        "type": "Official Research Report",
+        "importance": "Cross-model empirical study",
+        "url": "https://www.anthropic.com/research/agentic-misalignment"
+      }
+    ]
+  }
 ]

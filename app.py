@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 from components.home import render_home
 from components.reading_journal import show as show_reading_journal
+from components.concepts import show as show_concepts
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -197,48 +198,8 @@ elif page == "Reading Journal":
     show_reading_journal(you)
 
 elif page == "Concepts":
-    st.title("🧠 Concepts")
-
-    concept = st.selectbox(
-        "Choose a concept",
-        ["Agency", "Grey Box", "Instrumental Convergence", "Governance", "Recursive Self-Improvement"]
-    )
-
-    if concept == "Agency":
-        st.header("Agency")
-        st.markdown("""
-        <div class="blue-box">
-            <h3>Definition</h3>
-            <p>The capacity to select and execute actions that influence future states according to an objective.</p>
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown("""
-        <div class="sage-box">
-            <h3>My Position</h3>
-            <p>Agency should be separated from intelligence, cognition, and sentience. A system can be highly capable without being strongly agentic.</p>
-        </div>
-        """, unsafe_allow_html=True)
-
-    elif concept == "Grey Box":
-        st.header("Grey Box")
-        st.markdown("""
-        <div class="blue-box">
-            <h3>Definition</h3>
-            <p>A system whose internal mechanisms are inspectable but not fully interpretable.</p>
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown("""
-        <div class="sage-box">
-            <h3>My Position</h3>
-            <p>LLMs are grey boxes, not black boxes. Understanding is incomplete, not absent.</p>
-        </div>
-        """, unsafe_allow_html=True)
-
-    else:
-        st.info("Concept page coming next.")
-
+    show_concepts()
+    
 elif page == "Side Trails":
     st.title("🧪 Side Trails")
     st.info("Next we’ll add research papers and white papers by concept.")

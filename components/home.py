@@ -14,26 +14,33 @@ def render_home(you):
     """, unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2)
 
     with col1:
         st.markdown("""
         <div class="card">
             <h3>📖 Reading Journal</h3>
-            <p>Chapter-by-chapter claims, agreements, disagreements, and questions.</p>
+            <p>
+                A chapter-by-chapter record of where I paused, what I questioned,
+                and how my interpretation changes as I keep reading.
+            </p>
             <span class="tag">claims</span>
-            <span class="tag">notes</span>
-            <span class="tag">chapters</span>
+            <span class="tag">margin notes</span>
+            <span class="tag">reflection</span>
         </div>
         """, unsafe_allow_html=True)
 
     with col2:
         st.markdown("""
         <div class="card">
-            <h3>🧠 Concepts</h3>
-            <p>Definitions, examples, related ideas, and why each concept matters.</p>
-            <span class="tag">agency</span>
-            <span class="tag">alignment</span>
-            <span class="tag">governance</span>
+            <h3>🧠 Concepts & Knowledge Base</h3>
+            <p>
+                Permanent concept pages connecting definitions, my interpretation,
+                book chapters, research, and related ideas across the Atlas.
+            </p>
+            <span class="tag">concept map</span>
+            <span class="tag">connections</span>
+            <span class="tag">evidence</span>
         </div>
         """, unsafe_allow_html=True)
 
@@ -42,11 +49,14 @@ def render_home(you):
     with col3:
         st.markdown("""
         <div class="card">
-            <h3>🧪 Side Trails</h3>
-            <p>Research papers, white papers, essays, and reading paths.</p>
-            <span class="tag">papers</span>
-            <span class="tag">sources</span>
-            <span class="tag">research</span>
+            <h3>🧭 Side Trails</h3>
+            <p>
+                The papers, technical questions, historical parallels, and unexpected
+                research paths that lead beyond the book itself.
+            </p>
+            <span class="tag">research trails</span>
+            <span class="tag">open questions</span>
+            <span class="tag">deeper reading</span>
         </div>
         """, unsafe_allow_html=True)
 
@@ -54,9 +64,12 @@ def render_home(you):
         st.markdown("""
         <div class="card">
             <h3>💭 Ask Me</h3>
-            <p>A future Q&A layer based on my notes, not generic internet answers.</p>
-            <span class="tag">questions</span>
-            <span class="tag">debate</span>
-            <span class="tag">perspective</span>
+            <p>
+                A future way to explore my notes, sources, disagreements, and evolving
+                positions without reducing them to generic AI answers.
+            </p>
+            <span class="tag">reasoning</span>
+            <span class="tag">uncertainty</span>
+            <span class="tag">what would change my mind</span>
         </div>
         """, unsafe_allow_html=True)

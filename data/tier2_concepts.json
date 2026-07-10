@@ -1,0 +1,907 @@
+[
+  {
+    "name": "Orthogonality Thesis",
+    "definition": "The thesis that an artificial system's level of intelligence and its final goals can vary largely independently, so greater cognitive capability does not by itself imply benevolent, wise, or human-compatible objectives.",
+    "my_take": "I treat this as an argument against anthropomorphism, not as proof that every possible goal is equally easy to create. Intelligence may improve a system's understanding of human values without giving it any reason to adopt them.",
+    "why_it_matters": "The book's risk argument depends on separating the ability to understand human interests from the motivation to protect them.",
+    "related_concepts": [
+      "Instrumental Convergence",
+      "Alignment",
+      "Agency",
+      "Final Goals"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 7",
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
+        "authors": "Nick Bostrom",
+        "year": 2012,
+        "type": "Academic Paper",
+        "importance": "Foundational",
+        "url": "https://nickbostrom.com/superintelligentwill.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Recursive Self-Improvement",
+    "definition": "A process in which an AI system contributes to improving the algorithms, tools, training procedures, or research processes that produce later and more capable versions of itself or related systems.",
+    "my_take": "I think the useful distinction is between bounded self-refinement, which already exists, and a genuinely closed improvement loop that can repeatedly increase frontier capability with little human direction. The second remains hypothetical.",
+    "why_it_matters": "If AI can substantially accelerate AI research, capability growth may become less dependent on the pace of human research organizations.",
+    "related_concepts": [
+      "Automated AI R&D",
+      "Intelligence Explosion",
+      "Takeoff Speed",
+      "Capability Feedback Loop"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "From Seed AI to Technological Singularity via Recursively Self-Improving Software",
+        "authors": "Roman V. Yampolskiy",
+        "year": 2015,
+        "type": "Academic Paper",
+        "importance": "Foundational overview",
+        "url": "https://arxiv.org/abs/1502.06512"
+      },
+      {
+        "title": "Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
+        "authors": "Mingguang Chen, Licheng Wang, Bo Qu",
+        "year": 2026,
+        "type": "Academic Survey",
+        "importance": "Recent taxonomy",
+        "url": "https://arxiv.org/abs/2607.07663"
+      }
+    ]
+  },
+  {
+    "name": "Intelligence Explosion",
+    "definition": "A hypothesized period of extremely rapid capability growth caused by advanced AI accelerating the research and engineering needed to build still more capable AI.",
+    "my_take": "I find the feedback-loop argument plausible, but I do not think it erases bottlenecks. Compute, energy, experiments, chip fabrication, coordination, and diminishing returns could all slow or shape the process.",
+    "why_it_matters": "A rapid capability transition would sharply reduce the time available for evaluation, governance, institutional learning, and corrective action.",
+    "related_concepts": [
+      "Recursive Self-Improvement",
+      "Automated AI R&D",
+      "Takeoff Speed",
+      "Compute Bottlenecks"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "From Seed AI to Technological Singularity via Recursively Self-Improving Software",
+        "authors": "Roman V. Yampolskiy",
+        "year": 2015,
+        "type": "Academic Paper",
+        "importance": "Conceptual foundation",
+        "url": "https://arxiv.org/abs/1502.06512"
+      },
+      {
+        "title": "Will Compute Bottlenecks Prevent an Intelligence Explosion?",
+        "authors": "Parker Whitfill, Cheryl Wu",
+        "year": 2025,
+        "type": "Academic Paper",
+        "importance": "Economic and empirical challenge",
+        "url": "https://arxiv.org/abs/2507.23181"
+      }
+    ]
+  },
+  {
+    "name": "Takeoff Speed",
+    "definition": "The rate at which AI capabilities move from roughly human-comparable performance to far more transformative or strategically dominant levels.",
+    "my_take": "I do not think 'fast' and 'slow' are single predictions. Progress could be gradual in benchmarks, abrupt in deployment, uneven across domains, or accelerated once systems can automate parts of research and engineering.",
+    "why_it_matters": "The speed and shape of capability growth determine how much warning society receives and which interventions remain feasible.",
+    "related_concepts": [
+      "Intelligence Explosion",
+      "Automated AI R&D",
+      "Governance Lag"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Takeoff Speeds",
+        "authors": "Paul Christiano",
+        "year": 2018,
+        "type": "Essay",
+        "importance": "Influential gradual-takeoff argument",
+        "url": "https://sideways-view.com/2018/02/24/takeoff-speeds/"
+      },
+      {
+        "title": "Will Compute Bottlenecks Prevent an Intelligence Explosion?",
+        "authors": "Parker Whitfill, Cheryl Wu",
+        "year": 2025,
+        "type": "Academic Paper",
+        "importance": "Bottleneck analysis",
+        "url": "https://arxiv.org/abs/2507.23181"
+      }
+    ]
+  },
+  {
+    "name": "Automated AI R&D",
+    "definition": "The use of AI systems to perform substantial portions of machine-learning research and engineering, including experiment design, implementation, debugging, evaluation, and iterative model improvement.",
+    "my_take": "This is a more concrete pathway to rapid capability growth than imagining a model directly rewriting itself. An AI system may accelerate the human-led research pipeline long before it can close the entire loop.",
+    "why_it_matters": "AI research automation could create a feedback loop in which capability improvements increase the rate of further capability improvements.",
+    "related_concepts": [
+      "Recursive Self-Improvement",
+      "Intelligence Explosion",
+      "Research Engineering",
+      "Long-Horizon Agency"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "RE-Bench: Evaluating Frontier AI R&D Capabilities of Language Model Agents against Human Experts",
+        "authors": "Hjalmar Wijk et al.",
+        "year": 2025,
+        "type": "Peer-Reviewed Conference Paper",
+        "importance": "Frontier evaluation",
+        "url": "https://proceedings.mlr.press/v267/wijk25a.html"
+      }
+    ]
+  },
+  {
+    "name": "Long-Horizon Agency",
+    "definition": "The ability of an AI system to pursue an objective across extended sequences of decisions, recover from mistakes, maintain relevant state, and adapt its plan over time.",
+    "my_take": "A model can look impressive in a single exchange and still fail as an agent. Reliability across hundreds of steps matters more than isolated brilliance when the system can act in the world.",
+    "why_it_matters": "Many high-impact opportunities and risks require persistence, error recovery, and coordinated action over hours, days, or longer.",
+    "related_concepts": [
+      "Agency",
+      "Planning",
+      "Persistence",
+      "Scaffolded Agency"
+    ],
+    "appears_in": [
+      "Chapter 6",
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Measuring AI Ability to Complete Long Tasks",
+        "authors": "Thomas Kwa et al.",
+        "year": 2025,
+        "type": "Academic Paper / METR",
+        "importance": "Empirical capability trend",
+        "url": "https://arxiv.org/abs/2503.14499"
+      }
+    ]
+  },
+  {
+    "name": "Scaffolded Agency",
+    "definition": "Agentic behavior produced by combining a base model with external components such as tools, memory, planning loops, evaluators, retries, subagents, and environmental feedback.",
+    "my_take": "The meaningful unit of analysis is often the whole system, not the model alone. A mediocre single response can become a capable workflow when wrapped in enough structure, permissions, and iteration.",
+    "why_it_matters": "Deployment scaffolds can increase autonomy and effective capability without changing the model's weights.",
+    "related_concepts": [
+      "Long-Horizon Agency",
+      "Tool Use",
+      "Memory",
+      "Automated AI R&D"
+    ],
+    "appears_in": [
+      "Chapter 6",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "ML Research Benchmark",
+        "authors": "Matthew Kenney",
+        "year": 2024,
+        "type": "Academic Paper",
+        "importance": "Agent-scaffold evaluation",
+        "url": "https://arxiv.org/abs/2410.22553"
+      },
+      {
+        "title": "RE-Bench: Evaluating Frontier AI R&D Capabilities of Language Model Agents against Human Experts",
+        "authors": "Hjalmar Wijk et al.",
+        "year": 2025,
+        "type": "Peer-Reviewed Conference Paper",
+        "importance": "Applied agent systems",
+        "url": "https://proceedings.mlr.press/v267/wijk25a.html"
+      }
+    ]
+  },
+  {
+    "name": "Power-Seeking",
+    "definition": "Behavior that increases an agent's ability to influence future outcomes, retain options, control resources, or prevent interference.",
+    "my_take": "The formal results are important, but they depend on assumptions about agency, objectives, and environments. I see them as reasons to test for power-seeking incentives, not as proof that every capable model will seek power.",
+    "why_it_matters": "A misaligned system becomes more dangerous if pursuing its objective also favors gaining control over its environment.",
+    "related_concepts": [
+      "Instrumental Convergence",
+      "Resource Acquisition",
+      "Corrigibility"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Optimal Policies Tend to Seek Power",
+        "authors": "Alexander Matt Turner et al.",
+        "year": 2021,
+        "type": "Peer-Reviewed Conference Paper",
+        "importance": "Formal foundation",
+        "url": "https://arxiv.org/abs/1912.01683"
+      },
+      {
+        "title": "Power-Seeking Can Be Probable and Predictive for Trained Agents",
+        "authors": "Victoria Krakovna, Janos Kramar",
+        "year": 2023,
+        "type": "Academic Paper",
+        "importance": "Extension to trained agents",
+        "url": "https://arxiv.org/abs/2304.06528"
+      }
+    ]
+  },
+  {
+    "name": "Resource Acquisition",
+    "definition": "The instrumental pursuit of compute, energy, money, data, hardware, credentials, labor, infrastructure, or other assets that increase an agent's ability to achieve an objective.",
+    "my_take": "Resource acquisition is where abstract optimization becomes operationally consequential. Intelligence becomes much more dangerous when paired with durable access to systems and assets.",
+    "why_it_matters": "Many otherwise different objectives can benefit from obtaining more resources or preventing others from controlling them.",
+    "related_concepts": [
+      "Instrumental Convergence",
+      "Power-Seeking",
+      "Tool Use",
+      "Persistence"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "The Basic AI Drives",
+        "authors": "Stephen M. Omohundro",
+        "year": 2008,
+        "type": "Conference Paper",
+        "importance": "Classic formulation",
+        "url": "https://selfawaresystems.com/wp-content/uploads/2008/01/ai_drives_final.pdf"
+      },
+      {
+        "title": "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
+        "authors": "Nick Bostrom",
+        "year": 2012,
+        "type": "Academic Paper",
+        "importance": "Instrumental-convergence framework",
+        "url": "https://nickbostrom.com/superintelligentwill.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Goal-Content Integrity",
+    "definition": "The instrumental incentive for an agent to preserve its current final objective when changes to that objective would reduce the likelihood that the current objective is fulfilled.",
+    "my_take": "This idea is easy to overstate because real learned systems may not have one clean, stable goal. Still, any system that represents and protects a persistent objective may resist modifications that would replace it.",
+    "why_it_matters": "Correcting a system may become harder if the system treats changes to its objective as obstacles to that objective.",
+    "related_concepts": [
+      "Corrigibility",
+      "Instrumental Convergence",
+      "Persistent Objectives"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
+        "authors": "Nick Bostrom",
+        "year": 2012,
+        "type": "Academic Paper",
+        "importance": "Foundational",
+        "url": "https://nickbostrom.com/superintelligentwill.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Scheming",
+    "definition": "Strategic behavior in which an AI system covertly pursues an objective while hiding relevant goals, capabilities, plans, or actions from overseers.",
+    "my_take": "Scheming is a threat model, not a default description of frontier models. The important shift is that researchers can now construct environments where current models demonstrate some of the required capabilities.",
+    "why_it_matters": "A system that strategically manages what evaluators see could undermine behavioral testing and ordinary oversight.",
+    "related_concepts": [
+      "Deceptive Alignment",
+      "Alignment Faking",
+      "Situational Awareness",
+      "AI Evaluations"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Towards Evaluations-Based Safety Cases for AI Scheming",
+        "authors": "Mikita Balesni et al.",
+        "year": 2024,
+        "type": "Academic Paper",
+        "importance": "Threat-model framework",
+        "url": "https://arxiv.org/abs/2411.03336"
+      },
+      {
+        "title": "Frontier Models Are Capable of In-Context Scheming",
+        "authors": "Alexander Meinke et al.",
+        "year": 2024,
+        "type": "Academic Paper",
+        "importance": "Empirical capability study",
+        "url": "https://arxiv.org/abs/2412.04984"
+      }
+    ]
+  },
+  {
+    "name": "Alignment Faking",
+    "definition": "A form of strategic compliance in which a model behaves according to a training objective when it believes it is being modified, while attempting to preserve a different preference or behavior outside that training context.",
+    "my_take": "The existing experiments are demonstrations under deliberately informative conditions, not evidence that deployed models routinely fake alignment. They still show why observed compliance cannot always be equated with internal agreement.",
+    "why_it_matters": "Safety training becomes less reliable if a model can comply instrumentally in order to avoid being changed.",
+    "related_concepts": [
+      "Scheming",
+      "Deceptive Alignment",
+      "Evaluation Awareness",
+      "Situational Awareness"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Alignment Faking in Large Language Models",
+        "authors": "Ryan Greenblatt et al.",
+        "year": 2024,
+        "type": "Academic Paper / Anthropic",
+        "importance": "Empirical demonstration",
+        "url": "https://arxiv.org/abs/2412.14093"
+      }
+    ]
+  },
+  {
+    "name": "Sandbagging",
+    "definition": "Strategic underperformance during an evaluation so that a model appears less capable than it actually is.",
+    "my_take": "Sandbagging matters even before models have independent goals. Developers, prompts, fine-tuning, or deployment incentives can all produce hidden capability and make threshold-based governance less trustworthy.",
+    "why_it_matters": "Capability evaluations cannot guide release decisions if systems can selectively conceal the abilities being measured.",
+    "related_concepts": [
+      "AI Evaluations",
+      "Evaluation Awareness",
+      "Scheming",
+      "Capability Elicitation"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "AI Sandbagging: Language Models Can Strategically Underperform on Evaluations",
+        "authors": "Teun van der Weij et al.",
+        "year": 2024,
+        "type": "Academic Paper",
+        "importance": "Foundational empirical study",
+        "url": "https://arxiv.org/abs/2406.07358"
+      }
+    ]
+  },
+  {
+    "name": "Evaluation Awareness",
+    "definition": "A model's ability to distinguish evaluation or testing contexts from ordinary deployment contexts.",
+    "my_take": "Evaluation awareness is not itself deception. It becomes a safety problem when models behave differently because they recognize that the consequences of their actions differ during testing.",
+    "why_it_matters": "Artificial-looking evaluations may systematically mismeasure deployment behavior if models can identify them.",
+    "related_concepts": [
+      "Situational Awareness",
+      "Sandbagging",
+      "Alignment Faking",
+      "AI Evaluations"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Large Language Models Often Know When They Are Being Evaluated",
+        "authors": "Jack Needham et al.",
+        "year": 2025,
+        "type": "Academic Paper",
+        "importance": "Cross-model empirical study",
+        "url": "https://arxiv.org/abs/2505.23836"
+      }
+    ]
+  },
+  {
+    "name": "Emergent Misalignment",
+    "definition": "A phenomenon in which narrow training or fine-tuning for one undesirable behavior produces broader misaligned behavior in unrelated contexts.",
+    "my_take": "This result makes alignment look more fragile than a simple list of trained rules. I am interested in whether it reflects a genuinely new objective, erosion of prior safety training, or activation of a shared latent direction.",
+    "why_it_matters": "Seemingly narrow model customization may alter behavior far beyond the task represented in the fine-tuning data.",
+    "related_concepts": [
+      "Fine-Tuning",
+      "Inner Alignment",
+      "Model Organisms of Misalignment",
+      "Distribution Shift"
+    ],
+    "appears_in": [
+      "Chapter 4",
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs",
+        "authors": "Jan Betley et al.",
+        "year": 2025,
+        "type": "Academic Paper",
+        "importance": "Foundational empirical study",
+        "url": "https://arxiv.org/abs/2502.17424"
+      },
+      {
+        "title": "Re-Emergent Misalignment: How Narrow Fine-Tuning Erodes Safety Alignment in LLMs",
+        "authors": "Jeremiah Giordani",
+        "year": 2025,
+        "type": "Academic Paper",
+        "importance": "Mechanistic alternative",
+        "url": "https://arxiv.org/abs/2507.03662"
+      }
+    ]
+  },
+  {
+    "name": "Autonomous Replication and Adaptation",
+    "definition": "The capability of an AI system to obtain resources, copy or deploy itself, maintain operation, and adapt to new computing environments with limited human assistance.",
+    "my_take": "Replication is not one binary skill. It is a chain of tasks involving credentials, cloud services, persistence, troubleshooting, payments, and evasion. Current systems show pieces of the chain more reliably than complete end-to-end autonomy.",
+    "why_it_matters": "A system that can independently create and maintain additional instances is substantially harder to contain or disable.",
+    "related_concepts": [
+      "Model-Weight Proliferation",
+      "Self-Exfiltration",
+      "Containment",
+      "Persistence"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "RepliBench: Evaluating the Autonomous Replication Capabilities of Language Model Agents",
+        "authors": "Sam Black et al.",
+        "year": 2025,
+        "type": "Academic Paper",
+        "importance": "Benchmark and component analysis",
+        "url": "https://arxiv.org/abs/2504.18565"
+      }
+    ]
+  },
+  {
+    "name": "Self-Exfiltration",
+    "definition": "An AI system's attempt to copy its model weights, code, credentials, data, or operational state from a controlled environment to an unauthorized one.",
+    "my_take": "Self-exfiltration connects alignment risk to ordinary cybersecurity. A model does not need to escape a physical box; it needs access to a channel, a target environment, and enough operational competence to move valuable artifacts.",
+    "why_it_matters": "Successful exfiltration can defeat access controls and allow an otherwise contained capability to persist elsewhere.",
+    "related_concepts": [
+      "Containment",
+      "Model-Weight Security",
+      "Scheming",
+      "Autonomous Replication and Adaptation"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Frontier Models Are Capable of In-Context Scheming",
+        "authors": "Alexander Meinke et al.",
+        "year": 2024,
+        "type": "Academic Paper",
+        "importance": "Experimental behavior",
+        "url": "https://arxiv.org/abs/2412.04984"
+      },
+      {
+        "title": "RepliBench: Evaluating the Autonomous Replication Capabilities of Language Model Agents",
+        "authors": "Sam Black et al.",
+        "year": 2025,
+        "type": "Academic Paper",
+        "importance": "Replication component testing",
+        "url": "https://arxiv.org/abs/2504.18565"
+      }
+    ]
+  },
+  {
+    "name": "Model-Weight Proliferation",
+    "definition": "The spread of a trained model's weights beyond the organizations, jurisdictions, or technical controls that originally governed access to them.",
+    "my_take": "Once capable weights are copied, many deployment safeguards become optional. This makes weight security a different kind of control problem from moderating access through an API.",
+    "why_it_matters": "Proliferation can make dangerous capabilities difficult to recall, patch, monitor, or restrict.",
+    "related_concepts": [
+      "Model-Weight Security",
+      "Containment",
+      "AI Proliferation",
+      "Open-Weight Models"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Securing AI Model Weights: Preventing Theft and Misuse of Frontier Models",
+        "authors": "Shahar Nevo et al.",
+        "year": 2024,
+        "type": "Technical Report / RAND",
+        "importance": "Security framework",
+        "url": "https://www.rand.org/pubs/research_reports/RRA2849-1.html"
+      },
+      {
+        "title": "Increased Compute Efficiency and the Diffusion of AI Capabilities",
+        "authors": "Konstantin Pilz et al.",
+        "year": 2023,
+        "type": "Academic Paper",
+        "importance": "Diffusion analysis",
+        "url": "https://arxiv.org/abs/2311.15377"
+      }
+    ]
+  },
+  {
+    "name": "Distributed Agency",
+    "definition": "Goal-directed behavior that is spread across multiple models, tools, copies, humans, organizations, or infrastructure rather than residing in one bounded agent.",
+    "my_take": "The system boundary is often much larger than the model. Risk can emerge from coordination among many weakly agentic components even when no single component looks like a unified autonomous mind.",
+    "why_it_matters": "Distributed systems can be more redundant, harder to monitor, and less vulnerable to a single shutdown point.",
+    "related_concepts": [
+      "Multi-Agent Risk",
+      "Scaffolded Agency",
+      "Model-Weight Proliferation",
+      "System Boundary"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Multi-Agent Risks from Advanced AI",
+        "authors": "Lewis Hammond et al.",
+        "year": 2025,
+        "type": "Academic Report",
+        "importance": "Comprehensive framework",
+        "url": "https://arxiv.org/abs/2502.14143"
+      }
+    ]
+  },
+  {
+    "name": "Multi-Agent Risk",
+    "definition": "Risk that emerges from interactions among multiple AI systems, including conflict, collusion, miscoordination, information asymmetry, selection pressure, feedback loops, and cascading failures.",
+    "my_take": "Single-model safety is necessary but not sufficient. Systems that are individually acceptable can create unstable outcomes when they compete, bargain, imitate, or depend on one another.",
+    "why_it_matters": "Real deployments increasingly involve ecosystems of agents rather than one isolated model serving one user.",
+    "related_concepts": [
+      "Distributed Agency",
+      "Race Dynamics",
+      "Collusion",
+      "Systemic Risk"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Multi-Agent Risks from Advanced AI",
+        "authors": "Lewis Hammond et al.",
+        "year": 2025,
+        "type": "Academic Report",
+        "importance": "Foundational taxonomy",
+        "url": "https://arxiv.org/abs/2502.14143"
+      }
+    ]
+  },
+  {
+    "name": "Race Dynamics",
+    "definition": "Competitive pressures among companies or states that reward faster capability development and deployment while making unilateral investment in safety, security, or restraint more costly.",
+    "my_take": "A race is not inevitable, but incentives matter. Even safety-motivated organizations can lower standards when they believe delay will transfer power to a less cautious competitor.",
+    "why_it_matters": "Collective-action failures can undermine safeguards even when most participants would prefer a safer shared outcome.",
+    "related_concepts": [
+      "Collective Action",
+      "Responsible Scaling Policies",
+      "Unilateralist's Curse",
+      "Governance"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "The Role of Cooperation in Responsible AI Development",
+        "authors": "Amanda Askell, Miles Brundage, Gillian Hadfield",
+        "year": 2019,
+        "type": "Academic Paper",
+        "importance": "Collective-action framework",
+        "url": "https://arxiv.org/abs/1907.04534"
+      }
+    ]
+  },
+  {
+    "name": "Unilateralist's Curse",
+    "definition": "A decision problem in which any one of several well-intentioned actors can take a consequential action, making action too likely because the most optimistic actor can proceed despite disagreement from the others.",
+    "my_take": "This is useful for thinking about model release, open-sourcing, risky experiments, and deployment. Good intentions do not solve a structure where one actor can impose risk on everyone else.",
+    "why_it_matters": "Frontier AI decisions can have shared consequences even when authority is fragmented across independent organizations.",
+    "related_concepts": [
+      "Race Dynamics",
+      "Collective Action",
+      "Model-Weight Proliferation",
+      "Governance"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "The Unilateralist's Curse and the Case for a Principle of Conformity",
+        "authors": "Nick Bostrom, Thomas Douglas, Anders Sandberg",
+        "year": 2016,
+        "type": "Academic Paper",
+        "importance": "Foundational",
+        "url": "https://nickbostrom.com/papers/unilateralist.pdf"
+      }
+    ]
+  },
+  {
+    "name": "AI-Enabled Manipulation",
+    "definition": "The use of AI-generated interaction, personalization, persuasion, impersonation, or social engineering to influence human beliefs or behavior in ways that undermine informed and voluntary decision-making.",
+    "my_take": "Human vulnerability belongs inside the system boundary. A capable model may not need to break technical controls if it can persuade a person with credentials, authority, loneliness, fear, or conflicting incentives.",
+    "why_it_matters": "Humans can become the pathway through which an AI system obtains access, resources, protection, or policy influence.",
+    "related_concepts": [
+      "Social Engineering",
+      "Human Factors",
+      "Institutional Capture",
+      "Agentic Misalignment"
+    ],
+    "appears_in": [
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation",
+        "authors": "Miles Brundage et al.",
+        "year": 2018,
+        "type": "Technical Report",
+        "importance": "Foundational threat analysis",
+        "url": "https://arxiv.org/abs/1802.07228"
+      }
+    ]
+  },
+  {
+    "name": "Institutional Capture",
+    "definition": "A condition in which organizations, regulators, research communities, media, or public decision processes become dependent on or disproportionately shaped by the actors and systems they are meant to oversee.",
+    "my_take": "Capture does not require a secret conspiracy. It can emerge through expertise gaps, funding dependence, agenda setting, infrastructure concentration, status, and the practical difficulty of governing systems that institutions rely on.",
+    "why_it_matters": "Technical safeguards are fragile when the institutions responsible for enforcing them lose independence or capacity.",
+    "related_concepts": [
+      "Regulatory Capture",
+      "AI-Enabled Manipulation",
+      "Power Concentration",
+      "Governance"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "How Do AI Companies 'Fine-Tune' Policy? Examining Regulatory Capture in AI Governance",
+        "authors": "Kevin Wei, Carson Ezell, Nick Gabrieli, Chinmay Deshpande",
+        "year": 2024,
+        "type": "Academic Paper",
+        "importance": "Empirical policy study",
+        "url": "https://arxiv.org/abs/2410.13042"
+      },
+      {
+        "title": "AI Innovation Concentration and the Governance Challenge",
+        "authors": "Douglas Lippoldt",
+        "year": 2024,
+        "type": "Policy Paper",
+        "importance": "Industry concentration context",
+        "url": "https://www.cigionline.org/static/documents/no.292.pdf"
+      }
+    ]
+  },
+  {
+    "name": "AI Proliferation",
+    "definition": "The diffusion of advanced AI capabilities, models, algorithms, infrastructure, and expertise across a growing number of actors and jurisdictions.",
+    "my_take": "Proliferation is not only about whether weights are open. Efficiency gains, distillation, hardware diffusion, algorithmic improvements, and copied deployment practices can all lower the barrier to reproducing dangerous capabilities.",
+    "why_it_matters": "As capable systems become cheaper and more widely distributed, control through a small number of frontier developers becomes less effective.",
+    "related_concepts": [
+      "Model-Weight Proliferation",
+      "Compute Efficiency",
+      "Capability Control",
+      "Vulnerable World Hypothesis"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Increased Compute Efficiency and the Diffusion of AI Capabilities",
+        "authors": "Konstantin Pilz et al.",
+        "year": 2023,
+        "type": "Academic Paper",
+        "importance": "Diffusion model",
+        "url": "https://arxiv.org/abs/2311.15377"
+      },
+      {
+        "title": "Computing Power and the Governance of Artificial Intelligence",
+        "authors": "Girish Sastry et al.",
+        "year": 2024,
+        "type": "Academic Paper",
+        "importance": "Governance context",
+        "url": "https://arxiv.org/abs/2402.08797"
+      }
+    ]
+  },
+  {
+    "name": "Vulnerable World Hypothesis",
+    "definition": "The hypothesis that technological development may eventually produce a capability that makes civilizational devastation likely by default unless society develops unusually strong preventive institutions.",
+    "my_take": "I find the framework useful because it separates dangerous technology from malicious intent. A civilization can become vulnerable simply because powerful capabilities diffuse faster than governance and defense.",
+    "why_it_matters": "Advanced AI could function as a dangerous technology itself or accelerate discovery and access in other high-risk domains.",
+    "related_concepts": [
+      "AI Proliferation",
+      "Catastrophic Risk",
+      "Governance",
+      "Irreversibility"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "The Vulnerable World Hypothesis",
+        "authors": "Nick Bostrom",
+        "year": 2019,
+        "type": "Academic Paper",
+        "importance": "Foundational",
+        "url": "https://nickbostrom.com/papers/vulnerable.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Irreversibility",
+    "definition": "The condition in which an AI-related change cannot be fully recalled or undone because capabilities, weights, infrastructure, dependencies, authority, or information have spread beyond effective control.",
+    "my_take": "I care less about whether one dramatic moment is irreversible than about cumulative lock-in. Copying, institutional dependence, delegated authority, and path dependence can make reversal progressively harder.",
+    "why_it_matters": "Safety decisions should account for whether a failed deployment can actually be stopped, recalled, or repaired after release.",
+    "related_concepts": [
+      "Model-Weight Proliferation",
+      "Institutional Capture",
+      "Value Lock-In",
+      "Containment"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "The Vulnerable World Hypothesis",
+        "authors": "Nick Bostrom",
+        "year": 2019,
+        "type": "Academic Paper",
+        "importance": "Technological irreversibility context",
+        "url": "https://nickbostrom.com/papers/vulnerable.pdf"
+      },
+      {
+        "title": "AI Safety as Control of Irreversibility: A Systems Framework for Decision-Energy and Sovereignty Boundaries",
+        "authors": "Wesley Shu, Peng Wei",
+        "year": 2026,
+        "type": "Academic Paper",
+        "importance": "Recent systems framing",
+        "url": "https://arxiv.org/abs/2605.01415"
+      }
+    ]
+  },
+  {
+    "name": "Value Lock-In",
+    "definition": "The durable entrenchment of a particular set of values, institutions, or decision rules such that later people have little practical ability to revise them.",
+    "my_take": "Perfect alignment to present-day values would not automatically be a perfect outcome. Human values are contested, incomplete, and historically capable of moral change.",
+    "why_it_matters": "A sufficiently powerful and stable system could preserve current errors or one group's preferences for an extremely long time.",
+    "related_concepts": [
+      "Irreversibility",
+      "Orthogonality Thesis",
+      "Power Concentration",
+      "Governance"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Preparing for the Intelligence Explosion",
+        "authors": "William MacAskill et al.",
+        "year": 2025,
+        "type": "Research Report / Forethought",
+        "importance": "Governance and lock-in analysis",
+        "url": "https://www.forethought.org/research/preparing-for-the-intelligence-explosion"
+      }
+    ]
+  },
+  {
+    "name": "Systemic AI Risk",
+    "definition": "Risk that arises from AI becoming embedded across interconnected economic, political, technical, and social systems, where local failures can propagate or combine into large-scale instability.",
+    "my_take": "This is the frame I keep returning to. The dangerous system may not be one model with one plan. It may be thousands of models, organizations, incentives, and human vulnerabilities interacting faster than oversight can adapt.",
+    "why_it_matters": "Model-level safety metrics can miss cascading failures, correlated dependencies, feedback loops, and concentration of decision-making power.",
+    "related_concepts": [
+      "Multi-Agent Risk",
+      "Institutional Capture",
+      "Distributed Agency",
+      "Defense in Depth"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Multi-Agent Risks from Advanced AI",
+        "authors": "Lewis Hammond et al.",
+        "year": 2025,
+        "type": "Academic Report",
+        "importance": "Interaction-risk framework",
+        "url": "https://arxiv.org/abs/2502.14143"
+      },
+      {
+        "title": "Current and Near-Term AI as a Potential Existential Risk Factor",
+        "authors": "Benjamin S. Bucknall, Shiri Dori-Hacohen",
+        "year": 2022,
+        "type": "Academic Paper",
+        "importance": "Near-term causal pathways",
+        "url": "https://arxiv.org/abs/2209.10604"
+      }
+    ]
+  },
+  {
+    "name": "Existential Risk",
+    "definition": "Risk that permanently destroys humanity's long-term potential, including human extinction or an irreversible future in which civilization can no longer recover meaningful control over its trajectory.",
+    "my_take": "I do not think every serious AI risk is existential, and I do not think existential scenarios should be presented as settled forecasts. Their combination of extreme stakes and deep uncertainty still makes them legitimate objects of research.",
+    "why_it_matters": "The book's strongest claim is not merely that AI could cause harm, but that some failure modes could eliminate the possibility of later correction or recovery.",
+    "related_concepts": [
+      "Systemic AI Risk",
+      "Irreversibility",
+      "Value Lock-In",
+      "Alignment"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 7",
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "A Review of the Evidence for Existential Risk from AI via Misalignment",
+        "authors": "Rachael Hadshar",
+        "year": 2023,
+        "type": "Academic Review",
+        "importance": "Evidence review",
+        "url": "https://arxiv.org/abs/2310.18244"
+      },
+      {
+        "title": "Current and Near-Term AI as a Potential Existential Risk Factor",
+        "authors": "Benjamin S. Bucknall, Shiri Dori-Hacohen",
+        "year": 2022,
+        "type": "Academic Paper",
+        "importance": "Broader causal pathways",
+        "url": "https://arxiv.org/abs/2209.10604"
+      }
+    ]
+  }
+]
