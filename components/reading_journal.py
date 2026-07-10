@@ -6,6 +6,8 @@ from chapters.chapter3 import render_chapter3
 from chapters.chapter4 import render_chapter4
 from chapters.chapter5 import render_chapter5
 from chapters.chapter6 import render_chapter6
+from chapters.chapter7 import render_chapter7
+from chapters.chapter8 import render_chapter8
 
 
 def show(you):
@@ -42,6 +44,8 @@ disagree, ask for a better definition, or wander down a side trail.
         "Chapter 4": render_chapter4,
         "Chapter 5": render_chapter5,
         "Chapter 6": render_chapter6,
+        "Chapter 7": render_chapter7,
+        "Chapter 8": render_chapter8,
     }
 
     renderer = chapter_renderers.get(chapter)
