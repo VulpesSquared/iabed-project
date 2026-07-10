@@ -1,0 +1,837 @@
+[
+  {
+    "name": "Epistemic Uncertainty",
+    "definition": "Uncertainty caused by incomplete knowledge about the world, the data-generating process, or the model itself. In many settings it can be reduced through better evidence, improved models, or additional observation.",
+    "my_take": "I use this as a reminder that confidence is partly a property of what we know, not only of what is true. When an AI-risk claim feels uncertain, I want to ask which missing evidence could actually narrow that uncertainty rather than treating uncertainty as one undifferentiated fog.",
+    "why_it_matters": "Arguments about advanced AI often depend on sparse evidence, novel systems, and extrapolation beyond observed conditions. Distinguishing reducible uncertainty helps identify where research, evaluation, or monitoring could change the decision.",
+    "related_concepts": [
+      "Aleatoric Uncertainty",
+      "Knightian Uncertainty",
+      "Calibration",
+      "Model Uncertainty"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 7",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Aleatoric and Epistemic Uncertainty in Machine Learning: An Introduction to Concepts and Methods",
+        "authors": "Eyke Hüllermeier, Willem Waegeman",
+        "year": 2021,
+        "type": "Peer-Reviewed Academic Paper",
+        "importance": "Foundational taxonomy",
+        "url": "https://arxiv.org/abs/1910.09457"
+      }
+    ]
+  },
+  {
+    "name": "Aleatoric Uncertainty",
+    "definition": "Uncertainty arising from randomness, noise, or variation inherent in the process being observed. More data may characterize it more precisely without eliminating it.",
+    "my_take": "This distinction keeps me from assuming every unknown can eventually be solved with enough research. Some systems are genuinely stochastic, and some outcomes remain variable even when the mechanism is well understood.",
+    "why_it_matters": "Safety decisions need to account for irreducible variation in model outputs, environments, users, and deployment conditions rather than treating one successful test as a guarantee of repeatable behavior.",
+    "related_concepts": [
+      "Epistemic Uncertainty",
+      "Calibration",
+      "Stochasticity",
+      "Reliability"
+    ],
+    "appears_in": [
+      "Chapter 2",
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?",
+        "authors": "Alex Kendall, Yarin Gal",
+        "year": 2017,
+        "type": "Peer-Reviewed Conference Paper",
+        "importance": "Influential machine-learning formulation",
+        "url": "https://arxiv.org/abs/1703.04977"
+      }
+    ]
+  },
+  {
+    "name": "Knightian Uncertainty",
+    "definition": "Uncertainty for which reliable probabilities are unavailable or poorly defined, often because the situation is novel, the possible outcomes are not fully known, or the underlying model is contested.",
+    "my_take": "I think this describes a large part of the advanced-AI debate better than ordinary risk does. Assigning a number can be useful, but a precise-looking probability does not create evidence that the situation itself does not support.",
+    "why_it_matters": "Some transformative-AI questions involve unprecedented systems and poorly specified outcome spaces, so decision methods that assume stable probabilities may create false confidence.",
+    "related_concepts": [
+      "Epistemic Uncertainty",
+      "Deep Uncertainty",
+      "Robust Decision-Making",
+      "Forecasting"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 7",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Risk, Uncertainty, and Profit",
+        "authors": "Frank H. Knight",
+        "year": 1921,
+        "type": "Book",
+        "importance": "Foundational distinction between measurable risk and uncertainty",
+        "url": "https://www.cambridge.org/core/books/economic-nature-of-the-firm/from-risk-uncertainty-and-profit/0905E48893D9370A2189A2C9B91ED569"
+      }
+    ]
+  },
+  {
+    "name": "Calibration",
+    "definition": "The degree to which stated confidence matches observed frequency. Among claims assigned 70 percent confidence, for example, a well-calibrated forecaster should be correct about 70 percent of the time.",
+    "my_take": "I care about calibration because fluency and certainty are easy to confuse. A model, expert, or author can sound decisive while having no demonstrated relationship between confidence and accuracy.",
+    "why_it_matters": "Risk assessment, model evaluation, and governance all depend on knowing whether confidence estimates can be trusted, especially when decisions are triggered by predicted probabilities.",
+    "related_concepts": [
+      "Forecasting",
+      "Bayesian Updating",
+      "Epistemic Uncertainty",
+      "AI Evaluations"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "On Calibration of Modern Neural Networks",
+        "authors": "Chuan Guo, Geoff Pleiss, Yu Sun, Kilian Q. Weinberger",
+        "year": 2017,
+        "type": "Peer-Reviewed Conference Paper",
+        "importance": "Canonical study of neural-network calibration",
+        "url": "https://proceedings.mlr.press/v70/guo17a.html"
+      }
+    ]
+  },
+  {
+    "name": "Bayesian Updating",
+    "definition": "The process of revising beliefs by combining prior expectations with new evidence, producing a posterior belief that reflects both.",
+    "my_take": "What I like about Bayesian reasoning is not that every belief needs a perfect numerical prior. It is the discipline of asking what I believed before, what the new evidence actually discriminates between, and how much movement that evidence deserves.",
+    "why_it_matters": "AI capabilities and risks are changing quickly. A useful position should update when evidence arrives rather than treating early confidence as an identity to defend.",
+    "related_concepts": [
+      "Base Rates",
+      "Calibration",
+      "Forecasting",
+      "Epistemic Humility"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 7",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Bayesian Data Analysis",
+        "authors": "Andrew Gelman et al.",
+        "year": 2013,
+        "type": "Academic Textbook",
+        "importance": "Foundational statistical treatment",
+        "url": "https://www.stat.columbia.edu/~gelman/book/"
+      }
+    ]
+  },
+  {
+    "name": "Base Rates",
+    "definition": "The background frequency of an event or outcome within an appropriate reference class before case-specific evidence is considered.",
+    "my_take": "Base rates are difficult in AI because the most important claims are often framed as historically unique. I still want the outside view: how often do ambitious technical forecasts fail, how often do safeguards erode, and what happens in comparable high-stakes technologies?",
+    "why_it_matters": "Ignoring background frequencies can make vivid scenarios, demonstrations, or anecdotes appear more predictive than they are.",
+    "related_concepts": [
+      "Bayesian Updating",
+      "Forecasting",
+      "Reference Class",
+      "Scope Sensitivity"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "On the Psychology of Prediction",
+        "authors": "Daniel Kahneman, Amos Tversky",
+        "year": 1973,
+        "type": "Peer-Reviewed Academic Paper",
+        "importance": "Foundational study of base-rate neglect and representativeness",
+        "url": "https://doi.org/10.1037/h0034747"
+      }
+    ]
+  },
+  {
+    "name": "Forecasting",
+    "definition": "The practice of making explicit, testable predictions about future events, ideally with time bounds, probability estimates, resolution criteria, and a record that permits accuracy to be evaluated.",
+    "my_take": "Forecasting forces vague confidence into a form that can eventually be wrong. I do not think every philosophical claim can be reduced to a forecast, but many capability and deployment claims become much clearer when someone has to specify what, when, and how likely.",
+    "why_it_matters": "Transparent forecasts make disagreement measurable and allow institutions to learn which experts, methods, and indicators have actually been informative.",
+    "related_concepts": [
+      "Calibration",
+      "Base Rates",
+      "Expert Elicitation",
+      "Falsifiability"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Identifying and Cultivating Superforecasters as a Method of Improving Probabilistic Predictions",
+        "authors": "Barbara Mellers et al.",
+        "year": 2015,
+        "type": "Peer-Reviewed Academic Paper",
+        "importance": "Empirical forecasting research",
+        "url": "https://web.stanford.edu/~knutson/jdm/mellers15.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Expert Elicitation",
+    "definition": "A structured process for obtaining and combining expert judgments when direct empirical evidence is incomplete, often by decomposing questions, eliciting probabilities, documenting assumptions, and testing sensitivity to disagreement.",
+    "my_take": "Expert opinion is evidence, but it is not a magic category. I trust it more when the question is structured, uncertainty is elicited explicitly, dissent is preserved, and the process is designed to reduce status effects and group convergence.",
+    "why_it_matters": "Many frontier-AI decisions must be made before large datasets exist, making the quality of expert judgment and aggregation methods unusually consequential.",
+    "related_concepts": [
+      "Forecasting",
+      "Calibration",
+      "Epistemic Humility",
+      "Knightian Uncertainty"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 7",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Uncertain Judgements: Eliciting Experts' Probabilities",
+        "authors": "Anthony O'Hagan et al.",
+        "year": 2006,
+        "type": "Academic Book",
+        "importance": "Structured expert-elicitation framework",
+        "url": "https://www.wiley.com/en-us/Uncertain+Judgements%3A+Eliciting+Experts%27+Probabilities-p-9780470033302"
+      }
+    ]
+  },
+  {
+    "name": "Epistemic Humility",
+    "definition": "The practice of recognizing the limits and fallibility of one's knowledge while remaining willing to hold justified beliefs and revise them in response to better evidence.",
+    "my_take": "For me, humility is not performative uncertainty or refusing to take a position. It means being specific about why I believe something, where the inference is weakest, and what evidence would make me move.",
+    "why_it_matters": "AI debates reward certainty, novelty, and strong narratives. Epistemic humility helps prevent confidence from outrunning evidence without turning uncertainty into paralysis.",
+    "related_concepts": [
+      "Bayesian Updating",
+      "Falsifiability",
+      "Moral Uncertainty",
+      "Calibration"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 7",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Predictors and Consequences of Intellectual Humility",
+        "authors": "Tenelle Porter et al.",
+        "year": 2022,
+        "type": "Peer-Reviewed Review Article",
+        "importance": "Empirical overview",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9244574/"
+      }
+    ]
+  },
+  {
+    "name": "Falsifiability",
+    "definition": "The property of a claim being exposed to possible evidence that could count against it, rather than being protected from every conceivable outcome.",
+    "my_take": "I keep coming back to this when an argument can reinterpret every success, failure, delay, or contradiction as support. Not every meaningful claim is cleanly falsifiable, but a theory should still tell me what observations would weaken it.",
+    "why_it_matters": "AI-risk claims can become difficult to evaluate when they concern hidden objectives or distant futures. Explicit disconfirming evidence keeps the discussion connected to inquiry rather than only narrative coherence.",
+    "related_concepts": [
+      "Forecasting",
+      "Scientific Method",
+      "Epistemic Humility",
+      "Evaluation Awareness"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "The Logic of Scientific Discovery",
+        "authors": "Karl Popper",
+        "year": 1959,
+        "type": "Book",
+        "importance": "Foundational philosophy of falsifiability",
+        "url": "https://www.routledge.com/The-Logic-of-Scientific-Discovery/Popper/p/book/9780415278447"
+      }
+    ]
+  },
+  {
+    "name": "Expected Value",
+    "definition": "A decision criterion that weights each possible outcome by its probability and sums the resulting values, allowing uncertain options to be compared on their probability-weighted consequences.",
+    "my_take": "Expected value is indispensable, but its outputs are only as good as the probabilities, outcome definitions, and value judgments that enter it. I become cautious when tiny, highly uncertain probabilities are multiplied by enormous consequences and presented as precise conclusions.",
+    "why_it_matters": "Much of catastrophic-risk prioritization depends on combining low probabilities with very large stakes, so assumptions about probability and value can dominate the recommendation.",
+    "related_concepts": [
+      "Pascal's Mugging",
+      "Tail Risk",
+      "Moral Uncertainty",
+      "Risk Asymmetry"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Decision Theory",
+        "authors": "Paul Weirich",
+        "year": 2020,
+        "type": "Academic Reference Entry",
+        "importance": "Overview of expected-utility decision theory",
+        "url": "https://plato.stanford.edu/entries/decision-theory/"
+      }
+    ]
+  },
+  {
+    "name": "Tail Risk",
+    "definition": "The possibility of outcomes in the extreme ends of a probability distribution, especially rare events with consequences far larger than ordinary variation.",
+    "my_take": "Tail risk is where average performance stops being reassuring. A system can be useful almost all of the time and still be unacceptable if a small class of failures is irreversible, correlated, or capable of spreading across institutions.",
+    "why_it_matters": "Catastrophic AI arguments focus less on typical outputs than on low-frequency pathways with unusually severe consequences.",
+    "related_concepts": [
+      "Fat-Tailed Distributions",
+      "Risk Asymmetry",
+      "Systemic AI Risk",
+      "Expected Value"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Statistical Consequences of Fat Tails",
+        "authors": "Nassim Nicholas Taleb",
+        "year": 2020,
+        "type": "Technical Monograph",
+        "importance": "Technical treatment of extreme-tail behavior",
+        "url": "https://www.statisticalconsequences.com/"
+      }
+    ]
+  },
+  {
+    "name": "Fat-Tailed Distributions",
+    "definition": "Probability distributions in which extreme outcomes occur more often, and contribute more to total risk, than they would under thin-tailed distributions such as the normal distribution.",
+    "my_take": "I am careful about using 'fat-tailed' as a dramatic synonym for uncertainty. It is a statistical claim about distributional structure, and we often do not yet have enough observations to know which distribution describes advanced-AI outcomes.",
+    "why_it_matters": "If relevant harms are fat-tailed, historical averages and ordinary stress tests may substantially underestimate the contribution of extreme events.",
+    "related_concepts": [
+      "Tail Risk",
+      "Extreme Value Theory",
+      "Systemic AI Risk",
+      "Base Rates"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "The Variation of Certain Speculative Prices",
+        "authors": "Benoit Mandelbrot",
+        "year": 1963,
+        "type": "Peer-Reviewed Academic Paper",
+        "importance": "Foundational empirical work on heavy-tailed behavior",
+        "url": "https://doi.org/10.1086/294632"
+      }
+    ]
+  },
+  {
+    "name": "Risk Asymmetry",
+    "definition": "A decision situation in which the costs of false reassurance and false alarm are substantially different, so equal error rates do not imply equal consequences.",
+    "my_take": "This is one reason I resist arguments that treat caution and inaction as mirror images. Overreacting can impose real costs, but underreacting may close off the ability to correct the mistake later. The asymmetry has to be argued, not merely asserted.",
+    "why_it_matters": "AI policy often weighs uncertain restrictions against uncertain catastrophic harms, and those errors may differ sharply in reversibility, scale, and who bears them.",
+    "related_concepts": [
+      "Precautionary Principle",
+      "Irreversibility",
+      "Tail Risk",
+      "Distributional Harm"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Moral Uncertainty and Our Relationships with Unknown Minds",
+        "authors": "John Danaher",
+        "year": 2023,
+        "type": "Peer-Reviewed Academic Paper",
+        "importance": "Applied analysis of ethical-epistemic risk asymmetries",
+        "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/AD705B3C29E1980DDEBDBD2BA604A480/S0963180123000191a.pdf/moral_uncertainty_and_our_relationships_with_unknown_minds.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Precautionary Principle",
+    "definition": "The principle that plausible threats of serious or irreversible harm can justify preventive action even when scientific certainty about probability or mechanism is incomplete.",
+    "my_take": "I see precaution as a burden-shifting framework, not a command to prohibit anything uncertain. It is strongest when the possible harm is severe, alternatives exist, safeguards are proportionate, and the intervention itself is also evaluated for harm.",
+    "why_it_matters": "Advanced-AI governance may need to act before catastrophic pathways can be demonstrated empirically, because waiting for direct evidence could mean waiting until prevention is no longer possible.",
+    "related_concepts": [
+      "Risk Asymmetry",
+      "Irreversibility",
+      "Knightian Uncertainty",
+      "Robust Decision-Making"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 7",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "The Precautionary Principle",
+        "authors": "UNESCO World Commission on the Ethics of Scientific Knowledge and Technology",
+        "year": 2005,
+        "type": "Official International Report",
+        "importance": "Authoritative policy formulation",
+        "url": "https://unesdoc.unesco.org/ark:/48223/pf0000139578"
+      }
+    ]
+  },
+  {
+    "name": "Robust Decision-Making",
+    "definition": "A family of methods that searches for strategies that perform acceptably across many plausible futures rather than optimizing for one best-estimate forecast.",
+    "my_take": "This is one of the most practical responses to deep uncertainty. I may not know which AI trajectory is correct, but I can still ask which policies preserve options, reveal information, and avoid failing catastrophically across several credible scenarios.",
+    "why_it_matters": "AI governance must often choose under disagreement about timelines, capabilities, actors, and failure modes. Robust strategies can remain useful without requiring consensus on one forecast.",
+    "related_concepts": [
+      "Knightian Uncertainty",
+      "Precautionary Principle",
+      "Reversibility",
+      "Scenario Analysis"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis",
+        "authors": "Robert J. Lempert, Steven W. Popper, Steven C. Bankes",
+        "year": 2003,
+        "type": "Technical Report / RAND",
+        "importance": "Foundational robust-decision framework",
+        "url": "https://www.rand.org/pubs/monograph_reports/MR1626.html"
+      }
+    ]
+  },
+  {
+    "name": "Pascal's Mugging",
+    "definition": "A decision-theory problem in which an extremely small or poorly grounded probability of an astronomically large payoff appears to dominate ordinary choices under straightforward expected-value reasoning.",
+    "my_take": "I do not think the lesson is to ignore low-probability catastrophe. It is to notice when the size of the imagined outcome is doing all the work while the probability estimate is unconstrained, manipulable, or detached from evidence.",
+    "why_it_matters": "Existential-risk arguments can become vulnerable to this structure when enormous stakes are paired with probabilities that cannot be meaningfully calibrated.",
+    "related_concepts": [
+      "Expected Value",
+      "Tail Risk",
+      "Longtermism",
+      "Scope Sensitivity"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Pascal's Mugging",
+        "authors": "Nick Bostrom",
+        "year": 2009,
+        "type": "Peer-Reviewed Philosophy Paper",
+        "importance": "Original formulation",
+        "url": "https://doi.org/10.1093/analys/anp062"
+      }
+    ]
+  },
+  {
+    "name": "Moral Uncertainty",
+    "definition": "Uncertainty about which moral principles, theories, or values are correct and therefore about what one ought to do even when the empirical facts are known.",
+    "my_take": "Alignment cannot escape moral uncertainty by asking for 'human values' as though they form one coherent target. I want the Atlas to preserve disagreement about values rather than hiding it inside a reward model or governance process.",
+    "why_it_matters": "Decisions about AI objectives, acceptable risk, moral status, and distribution require action despite unresolved ethical disagreement.",
+    "related_concepts": [
+      "Value Pluralism",
+      "Democratic Legitimacy",
+      "Moral Patienthood",
+      "Expected Value"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 7",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Moral Uncertainty",
+        "authors": "William MacAskill, Krister Bykvist, Toby Ord",
+        "year": 2020,
+        "type": "Academic Book",
+        "importance": "Comprehensive contemporary treatment",
+        "url": "https://global.oup.com/academic/product/moral-uncertainty-9780198722274"
+      }
+    ]
+  },
+  {
+    "name": "Value Pluralism",
+    "definition": "The view that multiple genuine values exist and may conflict without always being reducible to one common scale or a single overriding principle.",
+    "my_take": "I find this more realistic than imagining alignment as discovering one hidden utility function for humanity. Safety may require institutions that can negotiate and protect plural values, not merely models that optimize a compressed average of them.",
+    "why_it_matters": "AI systems deployed across societies will encounter conflicts among autonomy, welfare, equality, freedom, truth, privacy, and other values that cannot always be simultaneously maximized.",
+    "related_concepts": [
+      "Moral Uncertainty",
+      "Democratic Legitimacy",
+      "Value Learning",
+      "Incommensurable Values"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 7",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Value Theory",
+        "authors": "Mark Schroeder",
+        "year": 2021,
+        "type": "Academic Reference Entry",
+        "importance": "Overview of monism, pluralism, and value comparison",
+        "url": "https://plato.stanford.edu/entries/value-theory/"
+      }
+    ]
+  },
+  {
+    "name": "Population Ethics",
+    "definition": "The branch of ethics concerned with how to compare outcomes involving different numbers of people, different identities, and different distributions of well-being across possible populations.",
+    "my_take": "This is where apparently simple statements about 'benefiting humanity' become surprisingly unstable. The answer can change depending on whether we prioritize average welfare, total welfare, rights, equality, or the claims of possible future people.",
+    "why_it_matters": "Claims about existential risk and the value of the long-term future often depend on assumptions about future populations that are philosophically contested rather than technically given.",
+    "related_concepts": [
+      "Longtermism",
+      "Intergenerational Justice",
+      "Moral Uncertainty",
+      "Existential Risk"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "The Repugnant Conclusion",
+        "authors": "Gustaf Arrhenius, Jesper Ryberg, Torbjörn Tännsjö",
+        "year": 2022,
+        "type": "Academic Reference Entry",
+        "importance": "Central problem in population ethics",
+        "url": "https://plato.stanford.edu/entries/repugnant-conclusion/"
+      }
+    ]
+  },
+  {
+    "name": "Longtermism",
+    "definition": "The view that positively influencing the long-term future is an important moral priority, with stronger versions claiming it should be among the most important priorities of the present.",
+    "my_take": "I agree that future people matter and that irreversible choices deserve unusual attention. I am less convinced that this automatically tells us which present institutions, technologies, or interventions deserve priority, especially under deep empirical and moral uncertainty.",
+    "why_it_matters": "Many arguments for prioritizing advanced-AI risk derive much of their force from the scale and duration of possible effects on the future.",
+    "related_concepts": [
+      "Population Ethics",
+      "Intergenerational Justice",
+      "Pascal's Mugging",
+      "Value Lock-In"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "The Case for Strong Longtermism",
+        "authors": "Hilary Greaves, William MacAskill",
+        "year": 2021,
+        "type": "Academic Working Paper",
+        "importance": "Influential philosophical defense",
+        "url": "https://www.globalprioritiesinstitute.org/wp-content/uploads/The-Case-for-Strong-Longtermism-GPI-Working-Paper-June-2021-2-2.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Intergenerational Justice",
+    "definition": "The study of what present generations owe to future generations, including duties concerning resources, institutions, risk, opportunity, and the conditions under which future people can exercise agency.",
+    "my_take": "I prefer this framing when longtermism becomes too abstract. It keeps the future connected to justice: who creates the risk, who receives the benefit, whose choices become constrained, and what institutions we leave behind.",
+    "why_it_matters": "AI decisions made now may shape infrastructure, power, norms, and risks for people who cannot participate in present governance.",
+    "related_concepts": [
+      "Longtermism",
+      "Population Ethics",
+      "Democratic Legitimacy",
+      "Value Lock-In"
+    ],
+    "appears_in": [
+      "Chapter 1",
+      "Chapter 8",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Intergenerational Justice",
+        "authors": "Lukas H. Meyer",
+        "year": 2021,
+        "type": "Academic Reference Entry",
+        "importance": "Comprehensive philosophical overview",
+        "url": "https://plato.stanford.edu/entries/justice-intergenerational/"
+      }
+    ]
+  },
+  {
+    "name": "Democratic Legitimacy",
+    "definition": "The justified authority of a decision or institution grounded in fair participation, representation, accountability, transparency, lawful procedure, or public reasons acceptable to those subject to it.",
+    "my_take": "An aligned system is not automatically legitimate. Even technically excellent choices about values, access, or acceptable risk can remain politically illegitimate when they are made by a small group without meaningful authority from the people affected.",
+    "why_it_matters": "AI governance and value specification determine social rules at scale. Expertise is necessary, but expertise alone does not answer who has the right to decide.",
+    "related_concepts": [
+      "Value Pluralism",
+      "Governance",
+      "Institutional Capture",
+      "Procedural Legitimacy"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Legitimacy of Algorithmic Decision-Making: Six Threats and the Need for a Calibrated Institutional Response",
+        "authors": "Stephan Grimmelikhuijsen, Albert Meijer",
+        "year": 2022,
+        "type": "Peer-Reviewed Academic Paper",
+        "importance": "Applied legitimacy framework",
+        "url": "https://academic.oup.com/ppmg/article/5/3/232/6555119"
+      },
+      {
+        "title": "Toward Democracy Levels for AI",
+        "authors": "Aviv Ovadya et al.",
+        "year": 2024,
+        "type": "Academic Paper",
+        "importance": "Framework for evaluating democratic AI processes",
+        "url": "https://arxiv.org/abs/2411.09222"
+      }
+    ]
+  },
+  {
+    "name": "Distributional Harm",
+    "definition": "Harm that is unevenly allocated across people or groups, including cases where aggregate benefits conceal concentrated burdens, exclusion, reduced opportunity, or unequal exposure to risk.",
+    "my_take": "Average benefit is not enough. I want to know who absorbs model error, whose labor is displaced, whose data is used, who is surveilled, and who receives the power created by the system.",
+    "why_it_matters": "AI systems can improve overall performance while systematically worsening outcomes for smaller, less represented, or less powerful populations.",
+    "related_concepts": [
+      "Fairness",
+      "Sociotechnical Systems",
+      "Risk Asymmetry",
+      "Democratic Legitimacy"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Fairness and Abstraction in Sociotechnical Systems",
+        "authors": "Andrew D. Selbst et al.",
+        "year": 2019,
+        "type": "Peer-Reviewed Conference Paper",
+        "importance": "Foundational sociotechnical critique of fairness abstraction",
+        "url": "https://dl.acm.org/doi/10.1145/3287560.3287598"
+      }
+    ]
+  },
+  {
+    "name": "Sentience",
+    "definition": "The capacity to have subjective experiences with a felt quality, especially experiences that can be positively or negatively valenced, such as pleasure, pain, comfort, or distress.",
+    "my_take": "I separate sentience from intelligence, language, agency, and self-report. A system could be highly capable without experience, while a much less capable system could still matter morally if there is something it is like to be that system.",
+    "why_it_matters": "If artificial systems ever become sentient, their treatment could create a new class of moral harms that ordinary alignment frameworks are not designed to detect.",
+    "related_concepts": [
+      "Machine Consciousness",
+      "Moral Patienthood",
+      "Artificial Suffering",
+      "Anthropomorphism"
+    ],
+    "appears_in": [
+      "Chapter 3",
+      "Chapter 5",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "The Search for Invertebrate Consciousness",
+        "authors": "Jonathan Birch et al.",
+        "year": 2020,
+        "type": "Peer-Reviewed Academic Paper",
+        "importance": "Methodological framework for uncertain sentience",
+        "url": "https://doi.org/10.1007/s10071-020-01368-9"
+      }
+    ]
+  },
+  {
+    "name": "Machine Consciousness",
+    "definition": "The possibility that an artificial system could possess subjective experience or other properties associated with consciousness, rather than merely producing behavior that humans interpret as conscious.",
+    "my_take": "I do not think fluent self-report is evidence enough, and I do not think digital implementation rules consciousness out. The honest position is that the science of consciousness is unsettled, so claims in either direction need more than intuition.",
+    "why_it_matters": "Conscious AI would affect moral status, training practices, model deletion, replication, labor, consent, and the ethics of creating systems capable of suffering.",
+    "related_concepts": [
+      "Sentience",
+      "Moral Patienthood",
+      "Anthropomorphism",
+      "Artificial Suffering"
+    ],
+    "appears_in": [
+      "Chapter 3",
+      "Chapter 5",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness",
+        "authors": "Patrick Butlin et al.",
+        "year": 2023,
+        "type": "Academic Report",
+        "importance": "Indicator-based scientific assessment framework",
+        "url": "https://arxiv.org/abs/2308.08708"
+      },
+      {
+        "title": "Could a Large Language Model Be Conscious?",
+        "authors": "David J. Chalmers",
+        "year": 2023,
+        "type": "Academic Paper",
+        "importance": "Philosophical analysis",
+        "url": "https://arxiv.org/abs/2303.07103"
+      }
+    ]
+  },
+  {
+    "name": "Moral Patienthood",
+    "definition": "The status of being an entity whose welfare, interests, or experiences matter morally in their own right and can ground duties in other agents.",
+    "my_take": "Moral patienthood asks a different question from whether a system is responsible, intelligent, useful, or legally recognized. Something may deserve protection without being a moral agent or a person in the full political sense.",
+    "why_it_matters": "Future AI policy may need to decide whether artificial systems can be harmed and what evidence is sufficient to trigger protective obligations.",
+    "related_concepts": [
+      "Sentience",
+      "Machine Consciousness",
+      "Moral Uncertainty",
+      "Artificial Suffering"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 9"
+    ],
+    "sources": [
+      {
+        "title": "The Grounds of Moral Status",
+        "authors": "Agnieszka Jaworska, Julie Tannenbaum",
+        "year": 2021,
+        "type": "Academic Reference Entry",
+        "importance": "Overview of theories of moral standing",
+        "url": "https://plato.stanford.edu/entries/grounds-moral-status/"
+      }
+    ]
+  },
+  {
+    "name": "Anthropomorphism",
+    "definition": "The tendency to attribute humanlike minds, motives, emotions, intentions, or social roles to nonhuman entities based on appearance, behavior, language, or interaction.",
+    "my_take": "Anthropomorphism can make us overestimate consciousness and coherent agency, but refusing all human language can also hide real functional similarities. I want to treat it as a bias to examine, not a conversation-ending accusation.",
+    "why_it_matters": "Language models are designed to participate in human conversation, making users especially likely to infer stable beliefs, feelings, intentions, or relationships from generated behavior.",
+    "related_concepts": [
+      "Machine Consciousness",
+      "Agency",
+      "Theory of Mind",
+      "AI-Enabled Manipulation"
+    ],
+    "appears_in": [
+      "Chapter 2",
+      "Chapter 3",
+      "Chapter 5"
+    ],
+    "sources": [
+      {
+        "title": "On Seeing Human: A Three-Factor Theory of Anthropomorphism",
+        "authors": "Nicholas Epley, Adam Waytz, John T. Cacioppo",
+        "year": 2007,
+        "type": "Peer-Reviewed Academic Paper",
+        "importance": "Foundational psychological theory",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17907867/"
+      }
+    ]
+  },
+  {
+    "name": "Sociotechnical Systems",
+    "definition": "Systems whose outcomes emerge from interactions among technology, people, institutions, incentives, workflows, norms, infrastructure, and power rather than from the technical artifact alone.",
+    "my_take": "This may be the concept that most changes how I read AI-risk arguments. The model is never the whole system. Access rules, operators, organizations, markets, users, and governance can amplify, redirect, or contain what the model can do.",
+    "why_it_matters": "Evaluating only model behavior can miss harms and safeguards that arise from deployment context, institutional structure, and human adaptation.",
+    "related_concepts": [
+      "Distributional Harm",
+      "Institutional Capture",
+      "Human Factors",
+      "System Boundary"
+    ],
+    "appears_in": [
+      "Chapter 6",
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "Fairness and Abstraction in Sociotechnical Systems",
+        "authors": "Andrew D. Selbst et al.",
+        "year": 2019,
+        "type": "Peer-Reviewed Conference Paper",
+        "importance": "Applied sociotechnical framework for AI systems",
+        "url": "https://dl.acm.org/doi/10.1145/3287560.3287598"
+      },
+      {
+        "title": "Some Social and Psychological Consequences of the Longwall Method of Coal-Getting",
+        "authors": "Eric L. Trist, K. W. Bamforth",
+        "year": 1951,
+        "type": "Peer-Reviewed Academic Paper",
+        "importance": "Foundational sociotechnical-systems research",
+        "url": "https://doi.org/10.1177/001872675100400101"
+      }
+    ]
+  },
+  {
+    "name": "Normalization of Deviance",
+    "definition": "The gradual process by which repeated departures from safety rules or expected performance become accepted as normal because they have not yet produced visible disaster.",
+    "my_take": "This is one of the organizational risks I find most convincing. A safeguard can erode without anyone deciding to remove it; each successful exception becomes evidence that the margin was unnecessary until the system finally encounters the wrong conditions.",
+    "why_it_matters": "Competitive pressure and repeated near-misses can cause AI organizations to accept weaker evaluations, broader access, or riskier deployment as ordinary practice.",
+    "related_concepts": [
+      "Race Dynamics",
+      "Defense in Depth",
+      "Institutional Incentives",
+      "Systemic AI Risk"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ],
+    "sources": [
+      {
+        "title": "The Challenger Launch Decision: Risky Technology, Culture, and Deviance at NASA",
+        "authors": "Diane Vaughan",
+        "year": 1996,
+        "type": "Academic Book",
+        "importance": "Foundational organizational analysis",
+        "url": "https://press.uchicago.edu/ucp/books/book/chicago/C/bo22781921.html"
+      },
+      {
+        "title": "The Parable of the Boiled System Safety Professional",
+        "authors": "C. Herbert Shivers",
+        "year": 2011,
+        "type": "NASA Technical Paper",
+        "importance": "Applied system-safety interpretation",
+        "url": "https://ntrs.nasa.gov/search.jsp?R=20110015770"
+      }
+    ]
+  }
+]

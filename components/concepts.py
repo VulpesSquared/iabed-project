@@ -5,7 +5,6 @@ from pathlib import Path
 
 import streamlit as st
 
-
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_DIR / "data"
 
@@ -13,6 +12,7 @@ CONCEPT_FILES = [
     ("Tier 0", "tier0_concepts.json"),
     ("Tier 1", "tier1_concepts.json"),
     ("Tier 2", "tier2_concepts.json"),
+    ("Tier 3", "tier3_concepts.json"),
 ]
 
 
@@ -44,6 +44,14 @@ def load_concepts() -> list[dict]:
 
         for concept in tier_concepts:
             if not isinstance(concept, dict):
+                continue
+
+            name = concept.get("name")
+
+            if not isinstance(name, str) or not name.strip():
+                st.warning(
+                    f"Skipped a record in `{filename}` because it has no concept name."
+                )
                 continue
 
             concept["_tier"] = tier_name

@@ -4,6 +4,7 @@ from pathlib import Path
 from components.home import render_home
 from components.reading_journal import show as show_reading_journal
 from components.concepts import show as show_concepts
+from components.ontology import show as show_ontology
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -133,10 +134,11 @@ page = st.sidebar.radio(
         "Home",
         "Reading Journal",
         "Concepts",
+        "Knowledge Map",
         "Side Trails",
         "Ask Me",
-        "About"
-    ]
+        "About",
+    ],
 )
 
 st.sidebar.markdown("---")
@@ -152,7 +154,10 @@ if page == "Home":
         st.markdown("""
         <div class="card">
             <h3>📖 Reading Journal</h3>
-            <p>Chapter-by-chapter claims, agreements, disagreements, and questions.</p>
+            <p>
+                Chapter-by-chapter claims, agreements, disagreements,
+                and questions.
+            </p>
             <span class="tag">claims</span>
             <span class="tag">notes</span>
             <span class="tag">chapters</span>
@@ -162,11 +167,14 @@ if page == "Home":
     with col2:
         st.markdown("""
         <div class="card">
-            <h3>🧠 Concepts</h3>
-            <p>Definitions, examples, related ideas, and why each concept matters.</p>
-            <span class="tag">agency</span>
-            <span class="tag">alignment</span>
-            <span class="tag">governance</span>
+            <h3>🧠 Concepts & Knowledge Base</h3>
+            <p>
+                Permanent concept pages connecting definitions, my interpretation,
+                book chapters, research, and related ideas across the Atlas.
+            </p>
+            <span class="tag">concepts</span>
+            <span class="tag">definitions</span>
+            <span class="tag">evidence</span>
         </div>
         """, unsafe_allow_html=True)
 
@@ -175,22 +183,57 @@ if page == "Home":
     with col3:
         st.markdown("""
         <div class="card">
-            <h3>🧪 Rabbit Holes</h3>
-            <p>Research papers, white papers, essays, and reading paths.</p>
-            <span class="tag">papers</span>
-            <span class="tag">sources</span>
-            <span class="tag">research</span>
+            <h3>🕸️ Knowledge Map</h3>
+            <p>
+                A map of how ideas connect across the book, my notes,
+                the research, and the questions I keep returning to.
+            </p>
+            <span class="tag">connections</span>
+            <span class="tag">idea paths</span>
+            <span class="tag">related concepts</span>
         </div>
         """, unsafe_allow_html=True)
 
     with col4:
         st.markdown("""
         <div class="card">
+            <h3>🧪 Rabbit Holes</h3>
+            <p>
+                Research papers, white papers, essays, and reading paths.
+            </p>
+            <span class="tag">papers</span>
+            <span class="tag">sources</span>
+            <span class="tag">research</span>
+        </div>
+        """, unsafe_allow_html=True)
+
+    col5, col6 = st.columns(2)
+
+    with col5:
+        st.markdown("""
+        <div class="card">
             <h3>💭 Ask Me</h3>
-            <p>A future Q&A layer based on my notes, not generic internet answers.</p>
+            <p>
+                A future Q&A layer based on my notes,
+                not generic internet answers.
+            </p>
             <span class="tag">questions</span>
             <span class="tag">debate</span>
             <span class="tag">perspective</span>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col6:
+        st.markdown("""
+        <div class="card">
+            <h3>☕ About This Project</h3>
+            <p>
+                Why I built the Atlas, how it is organized,
+                and what I hope it makes visible.
+            </p>
+            <span class="tag">purpose</span>
+            <span class="tag">process</span>
+            <span class="tag">design</span>
         </div>
         """, unsafe_allow_html=True)
 
@@ -199,7 +242,10 @@ elif page == "Reading Journal":
 
 elif page == "Concepts":
     show_concepts()
-    
+
+elif page == "Knowledge Map":
+    show_ontology()
+
 elif page == "Side Trails":
     st.title("🧪 Side Trails")
     st.info("Next we’ll add research papers and white papers by concept.")
@@ -223,21 +269,22 @@ elif page == "About":
     <div class="card">
         <h3>Why I built this</h3>
         <p>
-        I knew we'd end up talking about this book for hours anyway.
-        This is a way to be a massive nerd and make it more engaging.
+            I knew we'd end up talking about this book for hours anyway.
+            This is a way to be a massive nerd and make it more engaging.
         </p>
         <p>
-        My goal was never to make {you()} agree with me.
-        It was to make my reasoning visible.
+            My goal was never to make {you()} agree with me.
+            It was to make my reasoning visible.
         </p>
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown(f"""
+    st.markdown("""
     <div class="burgundy-box">
         <h3>Design note</h3>
         <p>
-        If the word <span class="you">you</span> appears in butterscotch, that's intentional.
+            If the word <span class="you">you</span> appears in butterscotch,
+            that's intentional.
         </p>
     </div>
     """, unsafe_allow_html=True)
