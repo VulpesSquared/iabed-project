@@ -78,5 +78,149 @@
       {"title": "Scaling Laws for Neural Language Models", "type": "Academic Paper / OpenAI", "url": "https://arxiv.org/abs/2001.08361"},
       {"title": "Training Compute-Optimal Large Language Models", "type": "Academic Paper / DeepMind", "url": "https://arxiv.org/abs/2203.15556"}
     ]
-  }
+  },
+  {
+  "name": "Tokenization",
+  "definition": "Tokenization converts text into discrete units that a language model can process. Tokens may represent whole words, word fragments, punctuation, or other recurring character patterns.",
+  "my_take": "Tokens are not meanings. They are the representational units the model receives. A lot of confusion about LLMs begins when people imagine the model reading language in the same units humans consciously perceive.",
+  "why_it_matters": "Tokenization affects context length, multilingual performance, numerical reasoning, spelling behavior, and how efficiently different kinds of information are represented.",
+  "sources": [
+    {
+      "title": "Neural Machine Translation of Rare Words with Subword Units",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/1508.07909"
+    },
+    {
+      "title": "SentencePiece: A Simple and Language Independent Subword Tokenizer",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/1808.06226"
+    }
+  ]
+},
+{
+  "name": "Attention and Self-Attention",
+  "definition": "Attention allows a model to weight which pieces of information are most relevant when producing a representation or output. Self-attention relates positions within the same sequence to one another.",
+  "my_take": "Attention is not human attention. It is a learned routing mechanism that determines which token representations should influence one another at a given layer.",
+  "why_it_matters": "Self-attention is central to how transformers represent long-range relationships, resolve context, and build increasingly abstract internal representations.",
+  "sources": [
+    {
+      "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/1409.0473"
+    },
+    {
+      "title": "Attention Is All You Need",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/1706.03762"
+    }
+  ]
+},
+{
+  "name": "Transformers",
+  "definition": "Transformers are neural-network architectures built primarily around attention mechanisms rather than recurrent processing. They process relationships among tokens in parallel and form the foundation of modern large language models.",
+  "my_take": "The transformer matters because architecture changes the kinds of patterns optimization can efficiently discover. It does not prescribe reasoning, but it creates a structure in which surprisingly general representations can emerge.",
+  "why_it_matters": "Nearly every technical claim in the book about frontier language models rests on capabilities enabled by transformer-based architectures.",
+  "sources": [
+    {
+      "title": "Attention Is All You Need",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "title": "The Annotated Transformer",
+      "type": "Educational / Academic",
+      "url": "https://nlp.seas.harvard.edu/annotated-transformer/"
+    }
+  ]
+},
+{
+  "name": "Representation Learning",
+  "definition": "Representation learning is the process by which a model discovers internal features and structures that make prediction or decision-making easier.",
+  "my_take": "This is one of the most important ideas in modern machine learning. The model is not merely memorizing answers. It is learning internal representations that can support abstraction, transfer, planning, and novel combinations.",
+  "why_it_matters": "Representation learning connects next-token prediction to world models, generalization, emergent capability, and the difficulty of mechanistic interpretability.",
+  "sources": [
+    {
+      "title": "Representation Learning: A Review and New Perspectives",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/1206.5538"
+    },
+    {
+      "title": "Deep Learning — Representation Learning",
+      "type": "Book / Academic",
+      "url": "https://www.deeplearningbook.org/"
+    }
+  ]
+},
+{
+  "name": "In-Context Learning",
+  "definition": "In-context learning is a model's ability to infer a task or pattern from examples supplied in the prompt without updating its stored parameters.",
+  "my_take": "This is not the same as training. The weights remain fixed during ordinary inference, but the model can still adapt its behavior by using patterns represented within the current context.",
+  "why_it_matters": "It helps explain why a pretrained model can perform new tasks from demonstrations, instructions, or temporary information without being retrained.",
+  "sources": [
+    {
+      "title": "Language Models are Few-Shot Learners",
+      "type": "Academic Paper / OpenAI",
+      "url": "https://arxiv.org/abs/2005.14165"
+    },
+    {
+      "title": "What Learning Algorithm Is In-Context Learning?",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/2211.15661"
+    }
+  ]
+},
+{
+  "name": "Emergent Capabilities",
+  "definition": "Emergent capabilities are behaviors that become observable as models scale or training conditions change, despite not being explicitly programmed as separate functions.",
+  "my_take": "I use 'emergent' descriptively, not mystically. The behavior arises from optimization across many interacting components, even when engineers did not encode that behavior directly.",
+  "why_it_matters": "Emergence is the bridge between the book's 'grown, not crafted' argument and its concern that capabilities or strategies may appear before governance and evaluation are prepared for them.",
+  "sources": [
+    {
+      "title": "Emergent Abilities of Large Language Models",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/2206.07682"
+    },
+    {
+      "title": "Are Emergent Abilities of Large Language Models a Mirage?",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/2304.15004"
+    }
+  ]
+},
+{
+  "name": "World Models",
+  "definition": "A world model is an internal representation of patterns, entities, relationships, and causal or predictive structure in an environment.",
+  "my_take": "A language model does not need to reproduce reality perfectly to carry useful structure about it. If internal representations support prediction across medicine, physics, social behavior, and planning, calling them merely linguistic becomes increasingly inadequate.",
+  "why_it_matters": "World models connect language prediction to reasoning, transfer, simulation, and the possibility of increasingly agent-like behavior.",
+  "sources": [
+    {
+      "title": "World Models",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/1803.10122"
+    },
+    {
+      "title": "Language Models Represent Space and Time",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/2310.02207"
+    }
+  ]
+},
+{
+  "name": "Chain of Thought vs. Internal Computation",
+  "definition": "Chain-of-thought text is a generated sequence that presents intermediate reasoning in language. It is not a complete transcript of the model's underlying neural computation.",
+  "my_take": "This distinction matters enormously. A readable explanation can be useful without being a faithful window into every internal process that produced the answer.",
+  "why_it_matters": "Treating chain of thought as literal cognition can create false confidence in interpretability, monitoring, and alignment evaluations.",
+  "sources": [
+    {
+      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/2201.11903"
+    },
+    {
+      "title": "Language Models Don't Always Say What They Think",
+      "type": "Academic Paper / Anthropic",
+      "url": "https://arxiv.org/abs/2305.04388"
+    }
+  ]
+ }
 ]

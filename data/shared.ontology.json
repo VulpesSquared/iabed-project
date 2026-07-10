@@ -1,0 +1,80 @@
+[
+  {
+    "term": "Sentience",
+    "initial_definition": "The capacity to experience input.",
+    "refined_definition": "The capacity to have experiences rather than merely process information. Sentience implies that inputs are experienced by the system in some phenomenological sense, though it does not require higher-order reasoning, self-awareness, or agency.",
+    "notes": "Separates experience from cognition. A system may process information without being sentient.",
+    "related_terms": [
+      "Consciousness",
+      "Subjectivity",
+      "Cognition"
+    ]
+  },
+  {
+    "term": "Cognition",
+    "initial_definition": "Processing of input into model of reality.",
+    "refined_definition": "The process of transforming sensory or informational input into internal representations that model reality and support prediction, reasoning, planning, or decision-making.",
+    "notes": "Cognition is fundamentally computational and does not imply consciousness or intelligence by itself.",
+    "related_terms": [
+      "Intelligence",
+      "Mind",
+      "World Models"
+    ]
+  },
+  {
+    "term": "Intelligence",
+    "initial_definition": "Cognition tending to result in accurate or useful models of reality.",
+    "refined_definition": "The effectiveness with which cognition produces models of reality that support accurate prediction, useful reasoning, successful planning, or adaptive behavior. Intelligence concerns the quality of a model rather than the values guiding its use.",
+    "notes": "Throughout the journal, intelligence is deliberately separated from morality, consciousness, and agency.",
+    "related_terms": [
+      "Cognition",
+      "Agency",
+      "Optimization"
+    ]
+  },
+  {
+    "term": "Subjectivity",
+    "initial_definition": "Incorporation of own experience into a model of reality.",
+    "refined_definition": "The incorporation of one's own experiences, perspective, or internal state into a model of reality. Subjectivity represents a point of view rather than objective representation alone.",
+    "notes": "Subjectivity introduces perspective but does not necessarily imply self-awareness.",
+    "related_terms": [
+      "Sentience",
+      "Consciousness",
+      "Mind"
+    ]
+  },
+  {
+    "term": "Consciousness",
+    "initial_definition": "Subjective awareness self distinct within reality.",
+    "refined_definition": "Subjective awareness of oneself as an entity distinct from the surrounding world, capable of integrating experience into an ongoing model of both self and reality.",
+    "notes": "The ontology intentionally treats consciousness as building upon subjectivity rather than replacing it.",
+    "related_terms": [
+      "Sentience",
+      "Subjectivity",
+      "Mind"
+    ]
+  },
+  {
+    "term": "Mind",
+    "initial_definition": "Networked arrangement of cognitive faculties.",
+    "refined_definition": "An organized system of interacting cognitive processes—including perception, memory, reasoning, planning, learning, and self-modeling—that together produce coherent cognition.",
+    "notes": "This definition emphasizes organization rather than any single faculty.",
+    "related_terms": [
+      "Cognition",
+      "Agency",
+      "Consciousness"
+    ]
+  },
+  {
+    "term": "Agency",
+    "initial_definition": "Cognitive capacity to discriminate and select outputs that affect reality, including oneself.",
+    "refined_definition": "The capacity of a cognitive system to evaluate alternative actions, select among them, and intentionally influence reality—including itself—in pursuit of objectives. Agency may exist independently of consciousness and should not be conflated with intelligence.",
+    "notes": "One of the central concepts of the journal. Many later chapters depend on separating agency from intelligence.",
+    "related_terms": [
+      "Goals",
+      "Instrumental Goals",
+      "Intelligence",
+      "Optimization"
+    ]
+  }
+]

@@ -7,8 +7,8 @@ def render_home(you):
         <h1>📖 If Anyone Builds It, Everyone Dies</h1>
         <div class="subtitle">Interactive Reading Companion</div>
         <div class="quote">
-            I didn't build this because I wanted {you()} to agree with me.<br><br>
-            I built it because I wanted to be able to think through the book with {you()} in a way that was more interactive than just reading.<br><br>
+            Built this because I wanted to be able to think through the book with {you()} in a way that was more interactive than just reading.<br><br>
+            And also because I am a massive nerd.
         </div>
     </div>
     """, unsafe_allow_html=True)

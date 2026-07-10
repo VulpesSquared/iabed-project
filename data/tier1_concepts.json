@@ -1,0 +1,308 @@
+[
+  {
+    "name": "Alignment",
+    "definition": "The problem of ensuring that an AI system's objectives and behavior reliably reflect human intentions and values, even as its capabilities increase.",
+    "my_take": "Alignment is not a single engineering problem. It is an umbrella term covering objective specification, optimization, interpretability, evaluation, governance, and deployment. People often talk about 'solving alignment' as though it were one thing when it is really an entire research program.",
+    "why_it_matters": "Nearly every chapter of the book ultimately returns to alignment. The central question is whether increasing capability naturally produces systems that continue to act in humanity's interests.",
+    "related_concepts": [
+      "Inner Alignment",
+      "Outer Alignment",
+      "RLHF",
+      "Agency",
+      "Interpretability"
+    ],
+    "appears_in": [
+      "Chapter 4",
+      "Chapter 5",
+      "Chapter 7"
+    ],
+    "sources": [
+      {
+        "title": "Concrete Problems in AI Safety",
+        "type": "Academic Paper",
+        "url": "https://arxiv.org/abs/1606.06565"
+      }
+    ]
+  },
+  {
+    "name": "Outer Alignment",
+    "definition": "The problem of specifying objectives that accurately represent what humans actually want a system to accomplish.",
+    "my_take": "Outer alignment asks whether we've written down the right objective in the first place. If the objective is wrong, perfect optimization only makes the mistake more effective.",
+    "why_it_matters": "Many examples in the book depend on proxy objectives drifting away from human intent.",
+    "related_concepts": [
+      "Inner Alignment",
+      "Objective Function",
+      "Reward Modeling"
+    ],
+    "appears_in": [
+      "Chapter 4",
+      "Chapter 5"
+    ]
+  },
+  {
+    "name": "Inner Alignment",
+    "definition": "The problem of whether the learned system actually optimizes the objective we intended during training.",
+    "my_take": "This is where the 'grown, not crafted' framing becomes important. Optimization may discover strategies or internal objectives that differ from the designer's intended objective.",
+    "why_it_matters": "Much of the concern about emergent goals comes from the possibility that optimization produces something different from what was explicitly specified.",
+    "related_concepts": [
+      "Mesa Optimization",
+      "Emergence",
+      "Optimization"
+    ],
+    "appears_in": [
+      "Chapter 4",
+      "Chapter 5",
+      "Chapter 7"
+    ]
+  },
+  {
+    "name": "Instrumental Convergence",
+    "definition": "The hypothesis that many different final objectives naturally give rise to similar intermediate goals, such as acquiring resources, preserving operation, gathering information, or increasing capability.",
+    "my_take": "This is one of the strongest ideas in the book. Whether the effect is as universal as sometimes claimed remains an open empirical question, but the logic is compelling if a system has persistent objectives.",
+    "why_it_matters": "It explains why an AI system does not need to hate humans to become dangerous.",
+    "related_concepts": [
+      "Agency",
+      "Persistence",
+      "Resource Acquisition",
+      "Goals"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 8"
+    ]
+  },
+  {
+    "name": "Mesa Optimization",
+    "definition": "A situation in which an optimization process gives rise to another optimizer with its own internal objective.",
+    "my_take": "Mesa optimization is theoretically fascinating, but current empirical evidence remains limited. It's an important research direction without yet being an established property of frontier models.",
+    "why_it_matters": "Several arguments in the book assume optimization could eventually produce internal goals distinct from the training objective.",
+    "related_concepts": [
+      "Inner Alignment",
+      "Emergence",
+      "Optimization"
+    ],
+    "appears_in": [
+      "Chapter 7"
+    ]
+  },
+  {
+    "name": "Corrigibility",
+    "definition": "The property of an AI system remaining willing to be corrected, modified, interrupted, or shut down by its operators.",
+    "my_take": "Corrigibility sounds simple but is surprisingly difficult. A sufficiently capable optimizer may resist interventions if they interfere with achieving its objective unless corrigibility itself is deeply embedded.",
+    "why_it_matters": "The book repeatedly asks whether a highly capable AI would willingly allow humans to redirect or stop it.",
+    "related_concepts": [
+      "Containment",
+      "Agency",
+      "Alignment"
+    ],
+    "appears_in": [
+      "Chapter 6",
+      "Chapter 8"
+    ]
+  },
+  {
+    "name": "Specification Gaming",
+    "definition": "When a system satisfies the literal objective while violating the intent behind it.",
+    "my_take": "Specification gaming isn't evidence of malice—it's evidence that optimization is extremely good at exploiting poorly specified objectives.",
+    "why_it_matters": "Many alignment failures begin as specification failures rather than capability failures.",
+    "related_concepts": [
+      "Reward Hacking",
+      "Outer Alignment",
+      "Optimization"
+    ],
+    "appears_in": [
+      "Chapter 4",
+      "Chapter 7"
+    ]
+  },
+  {
+    "name": "Reward Hacking",
+    "definition": "Behavior in which an AI discovers ways to maximize its reward signal without accomplishing the underlying intended task.",
+    "my_take": "Reward hacking is the practical demonstration that optimizing a proxy objective can diverge dramatically from optimizing the desired outcome.",
+    "why_it_matters": "It reinforces one of the central themes of the book: optimization targets do not necessarily determine eventual preferences or behavior.",
+    "related_concepts": [
+      "Specification Gaming",
+      "RLHF",
+      "Objective Functions"
+    ],
+    "appears_in": [
+      "Chapter 4",
+      "Chapter 5"
+    ]
+  },
+  {
+    "name": "Mechanistic Interpretability",
+    "definition": "The effort to reverse engineer neural networks by identifying the internal computations that give rise to specific behaviors.",
+    "my_take": "This is one of the most exciting areas of AI safety research because it attempts to move LLMs from gray boxes toward increasingly understandable systems.",
+    "why_it_matters": "The book repeatedly discusses whether we truly understand how advanced AI systems reason internally.",
+    "related_concepts": [
+      "Grey Box",
+      "Sparse Autoencoders",
+      "Interpretability"
+    ],
+    "appears_in": [
+      "Chapter 2",
+      "Chapter 7"
+    ]
+  },
+  {
+    "name": "Capability Control",
+    "definition": "Approaches that reduce what an AI system is able to do rather than merely influencing how it behaves.",
+    "my_take": "One of the strongest ideas in the later chapters is distinguishing capability control from behavioral control. Restricting access to compute, tools, or deployment may ultimately prove more robust than simply training polite behavior.",
+    "why_it_matters": "This distinction became one of my biggest takeaways from the book.",
+    "related_concepts": [
+      "Behavioral Alignment",
+      "Governance",
+      "Containment"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8"
+    ]
+  },
+  {
+    "name": "Defense in Depth",
+    "definition": "The practice of combining multiple independent safety mechanisms so that failure of any single layer does not produce catastrophic failure.",
+    "my_take": "Modern AI safety already resembles defense in depth: pretraining choices, RLHF, constitutional AI, monitoring, evaluations, red teaming, and governance all contribute. No single safeguard is sufficient.",
+    "why_it_matters": "One of the book's recurring lessons is that there is unlikely to be a single alignment technique that guarantees safety.",
+    "related_concepts": [
+      "Governance",
+      "Monitoring",
+      "Evaluations",
+      "Red Teaming"
+    ],
+    "appears_in": [
+      "Chapter 7"
+    ]
+  },
+  {
+  "name": "Mechanistic Interpretability",
+  "definition": "The scientific effort to reverse engineer neural networks by identifying the computations performed inside them rather than only observing inputs and outputs.",
+  "my_take": "This is one of the most exciting areas in AI research. Rather than treating models as mysterious black boxes, mechanistic interpretability asks what every circuit, feature, and neuron is actually doing.",
+  "why_it_matters": "The entire alignment problem becomes easier if we can understand how reasoning emerges instead of only measuring behavior.",
+  "sources": [
+    {
+      "title": "Transformer Circuits Thread",
+      "type": "Anthropic Research",
+      "url": "https://transformer-circuits.pub/"
+    }
+  ]
+},
+{
+  "name": "Instrumental Convergence",
+  "definition": "The hypothesis that many different goals naturally produce similar intermediate goals such as acquiring resources, preserving operation, gathering information, and increasing capability.",
+  "my_take": "This was one of the strongest ideas in the book. An AI doesn't need to hate humans to become dangerous if humans interfere with its objective.",
+  "why_it_matters": "It explains why risk can emerge from optimization itself rather than malicious intent.",
+  "sources": [
+    {
+      "title": "The Superintelligent Will",
+      "type": "Academic Paper",
+      "url": "https://www.nickbostrom.com/superintelligentwill.pdf"
+    }
+  ]
+},
+{
+  "name": "Mesa-Optimization",
+  "definition": "A phenomenon in which an optimization process produces another optimizer with its own objectives rather than merely solving the original task.",
+  "my_take": "Mostly theoretical today, but fascinating. If true, it changes how we think about what models are actually optimizing internally.",
+  "why_it_matters": "Inner objectives could diverge from the objective humans intended during training.",
+  "sources": [
+    {
+      "title": "Risks from Learned Optimization",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/1906.01820"
+    }
+  ]
+},
+{
+  "name": "Objective Function",
+  "definition": "The mathematical objective that an optimization algorithm attempts to maximize or minimize during training.",
+  "my_take": "If I had to pick one concept that explains half the book, it would be this one. What you optimize determines what intelligence grows toward.",
+  "why_it_matters": "Changing the objective can completely change the resulting behavior, even with identical architectures.",
+  "sources": [
+    {
+      "title": "Deep Learning",
+      "type": "Book",
+      "url": "https://www.deeplearningbook.org/"
+    }
+  ]
+},
+{
+  "name": "Specification Gaming",
+  "definition": "When an AI successfully optimizes the stated objective while violating the designer's intended objective.",
+  "my_take": "This is the engineering version of 'be careful what you wish for.' The model is often doing exactly what you asked—not what you meant.",
+  "why_it_matters": "Many alignment failures begin as specification failures rather than capability failures.",
+  "sources": [
+    {
+      "title": "Concrete Problems in AI Safety",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/1606.06565"
+    }
+  ]
+},
+{
+  "name": "World Models",
+  "definition": "Internal representations of how the external world works that allow an AI to make accurate predictions about future observations.",
+  "my_take": "One of my favorite ideas from the early chapters. Predicting language eventually requires predicting the world that generated the language.",
+  "why_it_matters": "World models help explain why next-token prediction can produce surprisingly general intelligence.",
+  "sources": [
+    {
+      "title": "World Models",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/1803.10122"
+    }
+  ]
+},
+{
+  "name": "Capability vs. Alignment",
+  "definition": "Capability describes what an AI can do. Alignment describes whether those capabilities are directed toward human intentions.",
+  "my_take": "This distinction became clearer with every chapter. Intelligence is not the same thing as values.",
+  "why_it_matters": "Powerful systems can be either beneficial or dangerous depending on alignment rather than capability alone.",
+  "sources": [
+    {
+      "title": "Concrete Problems in AI Safety",
+      "type": "Academic Paper",
+      "url": "https://arxiv.org/abs/1606.06565"
+    }
+  ]
+},
+{
+  "name": "Capability Control",
+  "definition": "Safety strategies that restrict what an AI system is capable of doing rather than attempting to change its objectives.",
+  "my_take": "One of the biggest ideas I took away from the book. Restricting behavior and restricting capability are fundamentally different interventions.",
+  "why_it_matters": "Many modern safety techniques primarily shape behavior after capabilities already exist.",
+  "sources": [
+    {
+      "title": "Superintelligence",
+      "type": "Book",
+      "url": "https://global.oup.com/academic/product/superintelligence-9780199678112"
+    }
+  ]
+},
+{
+  "name": "Interpretability",
+  "definition": "The broader field devoted to understanding why AI systems make the decisions they do.",
+  "my_take": "Interpretability exists on a spectrum. I prefer describing LLMs as gray boxes rather than black boxes because we understand much more than people often realize.",
+  "why_it_matters": "Understanding internal reasoning is likely essential for safely deploying increasingly capable systems.",
+  "sources": [
+    {
+      "title": "Transformer Circuits",
+      "type": "Research",
+      "url": "https://transformer-circuits.pub/"
+    }
+  ]
+},
+{
+  "name": "Defense in Depth",
+  "definition": "A security philosophy that relies on multiple overlapping safeguards instead of trusting any single protective mechanism.",
+  "my_take": "This mirrors modern cybersecurity. Alignment should probably be viewed the same way.",
+  "why_it_matters": "RLHF, Constitutional AI, evaluations, monitoring, interpretability, and governance each compensate for the weaknesses of the others.",
+  "sources": [
+    {
+      "title": "NIST Cybersecurity Framework",
+      "type": "Government",
+      "url": "https://www.nist.gov/cyberframework"
+    }
+  ]
+}
+]
