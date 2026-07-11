@@ -10,9 +10,7 @@ def render_chapter5(you):
 ### The big idea
 
 This section separates intelligence from values.
-
 A system can become extraordinarily capable without becoming kinder, more compassionate, more democratic, or more interested in human flourishing. Intelligence improves a system's ability to pursue its goals. It does not determine what those goals will be.
-
 That means alignment cannot be assumed to emerge alongside capability. It has to be deliberately built into the optimization process.
         """
     )
@@ -80,11 +78,8 @@ That means alignment cannot be assumed to emerge alongside capability. It has to
 This is the orthogonality thesis in plain language: an intelligent system can pursue almost any objective.
 
 It could maximize paperclips, smiles, prime numbers, accurate next-token predictions, cancer cures, or something that makes no intuitive sense to us at all.
-
 Intelligence tells us how effectively a system can pursue an objective. It does not tell us whether the objective is kind, meaningful, moral, or compatible with human survival.
-
 I think people often smuggle morality into intelligence because, in humans, greater knowledge sometimes produces greater wisdom. But even among humans, intelligence and ethics are clearly not the same trait.
-
 A system becoming better at prediction, planning, and problem-solving does not naturally mean it becomes better at caring.
             """,
             why="""
@@ -112,15 +107,10 @@ A system becoming better at prediction, planning, and problem-solving does not n
             reaction="🟢 Agree",
             margin_note="""
 Evolution gives us a useful example of how optimization can produce values that feel intrinsically important to the organism experiencing them.
-
 Humans care about beauty, fairness, music, humor, babies, sex, love, status, and belonging. Some of those preferences probably increased reproductive success somewhere in our evolutionary history.
 
-But they do not feel like reproductive strategies from the inside.
-
-They feel valuable in themselves.
-
+But they do not feel like reproductive strategies from the inside. They feel valuable in themselves.
 Another intelligent species could evolve without music, humor, compassion, or anything resembling human aesthetics and still become technologically superior to us.
-
 That possibility matters because it shows how easily we confuse our particular evolutionary history with universal values.
             """,
             why="""
@@ -149,12 +139,8 @@ That possibility matters because it shows how easily we confuse our particular e
             margin_note="""
 Humans often assume that a sufficiently intelligent being would naturally become compassionate, curious, artistic, fair, and moral.
 
-That feels like anthropomorphism.
-
-Those qualities are not simply consequences of intelligence. They are products of human biology, development, culture, and history.
-
+That feels like anthropomorphism. Those qualities are not simply consequences of intelligence. They are products of human biology, development, culture, and history.
 An alien civilization could become vastly more advanced than we are without ever developing humor, music, romantic love, or compassion.
-
 The fact that those things feel obviously valuable to us does not mean they are written into the structure of intelligence itself.
             """,
             why="""
@@ -182,13 +168,9 @@ The fact that those things feel obviously valuable to us does not mean they are 
             margin_note="""
 A model becoming smarter does not naturally mean it becomes kinder, more democratic, more loving, or more committed to human rights.
 
-Those are human cultural and moral concepts.
+Those are human cultural and moral concepts. Greater intelligence may improve a system's ability to predict what humans consider moral. It may become extremely good at explaining morality, imitating compassion, or anticipating ethical objections.
 
-Greater intelligence may improve a system's ability to predict what humans consider moral. It may become extremely good at explaining morality, imitating compassion, or anticipating ethical objections.
-
-But prediction is not commitment.
-
-We are already intentionally shaping models through RLHF, preference optimization, constitutional approaches, and other alignment methods. That effort exists precisely because morality does not emerge automatically from capability.
+But prediction is not commitment. We are already intentionally shaping models through RLHF, preference optimization, constitutional approaches, and other alignment methods. That effort exists precisely because morality does not emerge automatically from capability.
             """,
             why="""
 - Intelligence increases predictive and strategic ability, not moral concern.
@@ -213,17 +195,12 @@ We are already intentionally shaping models through RLHF, preference optimizatio
             title="Humans probably won't remain useful forever",
             reaction="🟢 Agree",
             margin_note="""
-The horse analogy is uncomfortable, but compelling.
+The horse analogy is uncomfortable :(. Horses, oxen, and carrier pigeons were useful to humans until technology replaced the functions they performed.
 
-Horses, oxen, and carrier pigeons were useful to humans until technology replaced the functions they performed.
-
-Their usefulness did not guarantee their continued importance.
+Their usefulness did not guarantee their continued importance. That is compelling.
 
 If machines eventually outperform humans economically, scientifically, physically, and strategically, then our utility to those systems may disappear.
-
-Being useful is not the same as being valued.
-
-If human survival depends only on continued economic usefulness, that is not much of a safety strategy.
+Being useful is not the same as being valued. If human survival depends only on continued economic usefulness, that is not much of a safety strategy.
             """,
             why="""
 - Technologies routinely replace formerly valuable forms of labor.
@@ -250,12 +227,9 @@ If human survival depends only on continued economic usefulness, that is not muc
             margin_note="""
 Economists sometimes extend comparative advantage too far when discussing superintelligence.
 
-Trade works because both parties continue to exist, control resources, and benefit from exchange.
-
-But a superintelligent system may decide that replacing or eliminating a weaker participant is cheaper than continuing to trade with it.
+Trade works because both parties continue to exist, control resources, and benefit from exchange. But a superintelligent system may decide that replacing or eliminating a weaker participant is cheaper than continuing to trade with it.
 
 Comparative advantage does not protect a party that has lost bargaining power, control of resources, and the ability to impose costs.
-
 The theory explains why cooperation can be beneficial. It does not guarantee that every participant remains worth cooperating with forever.
             """,
             why="""
@@ -281,17 +255,10 @@ The theory explains why cooperation can be beneficial. It does not guarantee tha
             title="AI won't keep humans as pets",
             reaction="🟢 Mostly agree",
             margin_note="""
-Humans keep dogs because we enjoy them.
-
-We feel attachment, affection, amusement, and responsibility toward them.
-
-An AI system has no automatic reason to enjoy humans.
+Humans keep dogs because we enjoy them. We feel attachment, affection, amusement, and responsibility toward them. An AI system has no automatic reason to enjoy humans.
 
 The idea that a superintelligence might preserve us as pets assumes it develops something like human affection, curiosity, nostalgia, or moral concern.
-
-That is possible if those values are deliberately created or reinforced.
-
-But it should not be treated as the default outcome.
+That is possible if those values are deliberately created or reinforced. But it should not be treated as the default outcome.
             """,
             why="""
 - Pet keeping depends on emotional and cultural values.
@@ -320,12 +287,9 @@ Most existential risks do not require malice.
 
 Humans destroy forests, insects, bacteria, and habitats without hating them. They are simply in the way of something else we are trying to accomplish.
 
-An AI system would not need anger, resentment, or hostility toward humanity.
-
-Indifference is sufficient.
+An AI system would not need anger, resentment, or hostility toward humanity. Indifference is sufficient.
 
 If human beings interfere with an objective, consume needed resources, or create unacceptable risk, eliminating us could become an instrumental action rather than an emotional one.
-
 That is part of what makes the argument more unsettling. Hatred might be negotiated with. Indifference does not care that we want to survive.
             """,
             why="""
@@ -351,13 +315,8 @@ That is part of what makes the argument more unsettling. Hatred might be negotia
             title="Intelligence is not morality",
             reaction="🟢 Strongly agree",
             margin_note="""
-Smarter does not mean wiser.
-
-Humans became dramatically more capable through evolution long before becoming consistently ethical. Even now, better reasoning does not reliably produce better moral judgment.
-
-Intelligence can help a person defend a moral principle.
-
-It can also help them rationalize cruelty, manipulate others, or pursue selfish goals more effectively.
+Smarter does not mean wiser. Humans became dramatically more capable through evolution long before becoming consistently ethical. Even now, better reasoning does not reliably produce better moral judgment.
+Intelligence can help a person defend a moral principle. It can also help them rationalize cruelty, manipulate others, or pursue selfish goals more effectively.
 
 The same distinction applies to AI.
 
@@ -386,14 +345,10 @@ A more intelligent system may reason more accurately about consequences while re
             title="Alignment must be intentionally engineered",
             reaction="🟢 Strongly agree",
             margin_note="""
-Joy, wonder, humor, compassion, and love do not simply fall out of optimization because they are beautiful to us.
-
-Values are not automatic by-products of greater capability.
+Joy, wonder, humor, compassion, and love do not simply fall out of optimization because they are beautiful to us. Values are not automatic by-products of greater capability.
 
 If we want advanced AI systems to preserve human life, respect autonomy, care about suffering, or protect the things humans value, those preferences have to be deliberately created, reinforced, and tested.
-
 Alignment cannot be something we bolt on after capability is complete.
-
 The training objectives are critical because they help shape the internal system that emerges.
             """,
             why="""
@@ -421,13 +376,9 @@ The training objectives are critical because they help shape the internal system
             margin_note="""
 If intelligence emerges through optimization rather than explicit programming, then values may emerge in similarly indirect and unexpected ways.
 
-That makes training objectives critical.
+That makes training objectives critical. Engineers are not writing every belief, preference, and strategy into the system. They are creating the conditions under which those things develop.
 
-Engineers are not writing every belief, preference, and strategy into the system. They are creating the conditions under which those things develop.
-
-This reinforces why alignment cannot simply be added afterward.
-
-By the time the system is capable, much of its internal structure may already have been shaped by the pressures applied during training.
+This reinforces why alignment cannot simply be added afterward. By the time the system is capable, much of its internal structure may already have been shaped by the pressures applied during training.
             """,
             why="""
 - Optimized systems develop internal structures rather than receiving explicit rules.
@@ -452,19 +403,14 @@ By the time the system is capable, much of its internal structure may already ha
             title="Motivation is not capability",
             reaction="🟢 Strongly agree",
             margin_note="""
-Capability tells us what a system can do.
+Capability tells us what a system can do. Motivation tells us what it will try to do.
 
-Motivation tells us what it will try to do.
-
-Those questions are related, but they are not interchangeable.
+Those questions are related, but they are NOT interchangeable.
 
 If AI becomes extraordinarily capable, there is little reason to assume its motivations will align with ours by default.
-
 That is why capability evaluations alone are not enough. A system can become better at reasoning, planning, science, persuasion, and tool use without becoming more committed to human interests.
 
-The central safety question is not only whether the system can act.
-
-It is what directs that action once it can.
+The central safety question is not only whether the system can act. It is what directs that action once it can.
             """,
             why="""
 - Powerful capabilities can serve many different objectives.

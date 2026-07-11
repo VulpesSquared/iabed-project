@@ -1,7 +1,16 @@
+from pathlib import Path
+
 import streamlit as st
 
 
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+HOME_HERO = PROJECT_DIR / "assets" / "home-hero-scifi.png"
+
+
 def render_home(you) -> None:
+    if HOME_HERO.exists():
+        st.image(str(HOME_HERO), use_container_width=True)
+
     st.markdown(
         f"""
         <div class="hero">

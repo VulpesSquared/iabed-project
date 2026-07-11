@@ -7,6 +7,7 @@ import streamlit as st
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 DATA_FILE = PROJECT_DIR / "data" / "side_trails.json"
+HEADER_IMAGE = PROJECT_DIR / "assets" / "side-trails-header-scifi.png"
 
 
 CONCENTRATION_DETAILS = {
@@ -504,6 +505,9 @@ def render_trail(trail: dict, all_trails: list[dict]) -> None:
 
 def show() -> None:
     st.title("🧭 Side Trails")
+
+    if HEADER_IMAGE.exists():
+        st.image(str(HEADER_IMAGE), use_container_width=True)
 
     trails = load_side_trails()
 

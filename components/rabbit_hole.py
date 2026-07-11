@@ -1,10 +1,15 @@
 import html
+from pathlib import Path
 from typing import Optional
 
 import streamlit as st
 
 from services.atlas_corpus import build_corpus
 from services.atlas_retrieval import retrieve
+
+
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+HEADER_IMAGE = PROJECT_DIR / "assets" / "rabbit-hole-header-scifi.png"
 
 
 ROUTES = {
@@ -284,6 +289,10 @@ def render_route(route_id: str, corpus: list[dict]) -> None:
 
 def show() -> None:
     st.title("🐇 Choose a Rabbit Hole")
+
+    if HEADER_IMAGE.exists():
+        st.image(str(HEADER_IMAGE), use_container_width=True)
+
     st.markdown(
         """
         You can absolutely explore this like a serious research atlas.
@@ -319,7 +328,7 @@ def show() -> None:
                     unsafe_allow_html=True,
                 )
                 st.button(
-                    "Choose this door (and look down)",
+                    "Choose this door",
                     key=f"rabbit_hole_{route_id}",
                     use_container_width=True,
                     on_click=choose_route,

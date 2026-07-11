@@ -12,12 +12,10 @@ def render_chapter1(you):
 The introduction is really trying to establish two big ideas.
 
 First, that human intelligence probably isn't the upper limit of what's possible.
-
 Second, that modern AI is better understood as something that emerges through optimization than something engineers explicitly design.
 
 Those ideas show up throughout the rest of the book.
-
-These are the places where I found myself stopping to think.
+These are the places where I found myself stopping to think and take notes.
         """
     )
 
@@ -38,13 +36,11 @@ These are the places where I found myself stopping to think.
             title="Human intelligence is probably not maximum possible intelligence",
             reaction="🟢 Agreed",
             margin_note="""
-This was probably the easiest point in the introduction for me to agree with.
+This was probably the easiest point in the introduction for me to agree with actually...
 
-Evolution doesn't optimize for intelligence. It optimizes for reproductive success.
-
-Intelligence is one strategy among many, and from a biochemical perspective, it's an incredibly expensive one.
-
-The more interesting question to me isn't whether humans are exceptionally intelligent. It's why we would assume evolution accidentally stopped at the maximum possible intelligence.
+- Evolution doesn't optimize for intelligence. It optimizes for reproductive success.
+- Intelligence is one strategy among many, and from a biochemical perspective, it's an incredibly expensive one.
+- The more interesting question to me isn't whether humans are exceptionally intelligent. It's why we would assume evolution accidentally stopped at the maximum possible intelligence.
             """,
             why="""
 - Evolution optimizes reproductive fitness rather than intelligence.
@@ -72,17 +68,13 @@ The more interesting question to me isn't whether humans are exceptionally intel
 This was one of the first places I wanted to slow down.
 
 I don't love the word "shallow" here because it feels like it collapses too many different things into one vague judgment.
-
 Shallow along what dimension?
-
 Memory? Agency? Self-modeling? Embodiment? Long-horizon planning?
-
 Current frontier models already show abstraction, transfer learning, few-shot abstraction, tool use, planning, emergent reasoning, and representation learning.
-
 So I don't think "AI is shallow" is necessarily wrong. I think it needs to be defined before I can decide whether I agree.
             """,
             why="""
-- "Shallow" is doing too much work.
+- "Shallow" is doing too much work (pretty sure we agree on this)
 - A model can be shallow in one dimension and surprisingly deep in another.
 - Current systems already demonstrate behaviors that make the claim less obvious than it sounds.
             """,

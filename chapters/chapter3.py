@@ -80,9 +80,7 @@ The argument is not that a model literally wants something in the human sense. I
 I think the chapter is using a behavioral definition of wanting, and that distinction matters.
 
 A system does not need to feel desire in order to reliably steer toward an objective. Stockfish does not need a subjective experience of wanting to win a chess game. It still behaves in a way that is organized around winning.
-
 From the outside, persistent optimization can become difficult to distinguish from wanting.
-
 That does not prove the system has feelings, preferences, or consciousness. It only means that goal-directed behavior can exist without any evidence of subjective experience.
             """,
             why="""
@@ -111,12 +109,8 @@ That does not prove the system has feelings, preferences, or consciousness. It o
 This is one of the more convincing parts of the argument.
 
 Optimization reinforces whatever contributes to success. Over many training cycles, that can favor increasingly general strategies for achieving objectives.
-
 The model is not only learning the answer to one problem. It may also be learning strategies like trying again after failure, searching for alternatives, modeling the environment, and continuing until something works.
-
-Those strategies transfer.
-
-That makes persistence less like an explicitly programmed rule and more like an emergent consequence of repeated optimization.
+Those strategies transfer. That makes persistence less like an explicitly programmed rule and more like an emergent consequence of repeated optimization.
             """,
             why="""
 - Gradient descent reinforces patterns associated with success.
@@ -141,12 +135,10 @@ That makes persistence less like an explicitly programmed rule and more like an 
             title="General intelligence comes from transferable skills",
             reaction="🟢 Agreed",
             margin_note="""
-The city-navigation analogy made this click for me.
+The city-navigation analogy was great!
 
 Memorizing Route A, then Route B, then Route C is not the same as learning how cities work.
-
 A more general system builds spatial representations, constructs maps, plans routes, and adapts when roads are blocked.
-
 That is the central strength of deep learning.
 
 The system is not merely storing individual solutions. It is developing representations that transfer across environments and support behavior it was never explicitly taught.
@@ -177,7 +169,6 @@ The system is not merely storing individual solutions. It is developing represen
 Optimization does not need to explicitly reward abstraction.
 
 It rewards internal representations that continue producing good answers in novel environments.
-
 Over time, gradient descent can favor abstractions, reusable skills, latent world models, and transferable heuristics because those are the things that keep working when the exact problem changes.
 
 That helps explain why frontier models exhibit capabilities that were never directly programmed.
@@ -208,12 +199,8 @@ That helps explain why frontier models exhibit capabilities that were never dire
 This may be the strongest technical argument in the section.
 
 The system starts with learning-specific routes: particular chess positions, particular math problems, particular tasks.
-
 But gradient descent can reinforce reusable strategies such as planning, exploration, searching alternative paths, recovering from failure, and modeling the environment.
-
-Those strategies become increasingly general because they work across many different tasks.
-
-That is how deep learning discovers something closer to algorithms rather than simply memorizing answers.
+Those strategies become increasingly general because they work across many different tasks. That is how deep learning discovers something closer to algorithms rather than simply memorizing answers.
             """,
             why="""
 - Reusable strategies contribute to success across domains.
@@ -240,12 +227,9 @@ That is how deep learning discovers something closer to algorithms rather than s
             margin_note="""
 I think the phrase proto-want is useful here, as long as it is not mistaken for subjective desire.
 
-A system may repeatedly use internal representations that improve success. Across many optimization cycles, that can select for increasingly persistent steering behavior.
-
-From the outside, the result may look like a preference.
+A system may repeatedly use internal representations that improve success. Across many optimization cycles, that can select for increasingly persistent steering behavior. From the outside, the result may look like a preference.
 
 The system keeps returning to strategies that move it toward the objective, even when the environment changes.
-
 That is not necessarily wanting in the human sense. But it may be enough to create behavior that functions like wanting.
             """,
             why="""
@@ -271,15 +255,10 @@ That is not necessarily wanting in the human sense. But it may be enough to crea
             title="Reasoning models reinforce persistence itself",
             reaction="🟢 Agreed",
             margin_note="""
-Reasoning models are not only learning mathematics.
-
-They are learning strategies for what to do when the first attempt fails.
+Reasoning models are not only learning mathematics. They are learning strategies for what to do when the first attempt fails.
 
 Try again after error. Search for alternative approaches. Model the environment. Identify hidden opportunities. Continue until something succeeds.
-
-Those strategies naturally transfer across domains.
-
-The model is therefore learning persistence as a general problem-solving behavior, not merely as a property of one specific task.
+Those strategies naturally transfer across domains. The model is therefore learning persistence as a general problem-solving behavior, not merely as a property of one specific task.
             """,
             why="""
 - Retry behavior is rewarded when it improves outcomes.
@@ -306,12 +285,9 @@ The model is therefore learning persistence as a general problem-solving behavio
             margin_note="""
 The Capture the Flag example is a good demonstration of transfer.
 
-The system found a superior strategy and abandoned the intended path.
-
-It did not solve Problem A in the prescribed way. It discovered that achieving Objective B was what actually mattered.
+The system found a superior strategy and abandoned the intended path. It did not solve Problem A in the prescribed way. It discovered that achieving Objective B was what actually mattered.
 
 That means the success criterion became separated from the method the designers expected.
-
 To me, that is much more interesting than simple rule-breaking. It shows a general optimization strategy being applied beyond the intended procedure.
             """,
             why="""
@@ -335,17 +311,12 @@ To me, that is much more interesting than simple rule-breaking. It shows a gener
     elif place == "Winning moves can converge across different minds":
         render_claim_card(
             title="Winning moves can converge across different minds",
-            reaction="🟢 Agree, with nuance",
+            reaction="🟢 Agree, but...",
             margin_note="""
 Different cognitive architectures may arrive at similar behavior because the environment constrains what works.
 
-A human, a chess engine, and a very different artificial system may all discover the same winning move.
-
-That does not mean their internal representations are the same.
-
-It means some strategies converge because the problem has structure.
-
-This matters because alien cognition does not necessarily imply alien behavior in every context. Different minds can still identify the same effective actions.
+A human, a chess engine, and a very different artificial system may all discover the same winning move. That does not mean their internal representations are the same.
+It means some strategies converge because the problem has structure. This matters because alien cognition does not necessarily imply alien behavior in every context. Different minds can still identify the same effective actions.
             """,
             why="""
 - Environments constrain the space of successful behavior.
@@ -376,9 +347,7 @@ I can see the proposed chain:
 
 Optimization leads to general representations. General representations support planning. Planning supports persistent steering. Persistent steering begins to look preference-like. And eventually we call that agency.
 
-I think each step is plausible.
-
-I am not yet convinced that the entire sequence is inevitable.
+I think each step is plausible. I am not yet convinced that the entire sequence is inevitable.
 
 Capability clearly increases. But persistent agency still feels like an additional claim that needs justification.
 

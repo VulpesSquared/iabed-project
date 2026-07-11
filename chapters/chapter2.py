@@ -12,7 +12,6 @@ def render_chapter2(you):
 This section argues that modern AI isn't constructed piece by piece like traditional software.
 
 Instead, engineers specify an architecture, a learning objective, and a training process. Intelligence emerges from optimization rather than explicit programming.
-
 That shift changes how we think about prediction, reasoning, interpretability, and ultimately alignment.
 """
     )
@@ -51,15 +50,11 @@ That shift changes how we think about prediction, reasoning, interpretability, a
             title="Next-token prediction isn't 'just autocomplete'",
             reaction="🟢 Strongly agree",
             margin_note="""
-People hear "predict the next token" and imagine glorified phone autocomplete.
+People hear "predict the next token" and imagine glorified phone autocomplete, which stylistically is ok I guess...
 
 That framing dramatically undersells what optimization is actually doing.
-
 Predicting language across trillions of examples forces the model to compress enormous amounts of statistical structure about the world.
-
-The objective looks simple.
-
-The resulting representations are anything but.
+The objective looks simple, but he resulting representations are rich, structured, and surprisingly general.
 """,
             why="""
 - Simple objectives can produce surprisingly rich behavior.
@@ -83,16 +78,13 @@ The resulting representations are anything but.
             title="Predicting language forces prediction of the world",
             reaction="🟢 Agreed",
             margin_note="""
-This is one of the strongest NLP arguments in the opening chapters.
+This is one of the strongest NLP arguments in the opening chapters!
 
 To predict language well, a model has to learn something about the world that produced the language.
-
 That includes medicine, physiology, probability, human goals, social dynamics, causality, and common sense.
 
 It reminds me of medicine.
-
 If a model consistently predicts the correct diagnosis or intervention, it must carry some implicit representation of physiology and disease.
-
 Language prediction becomes world-model learning.
 """,
             why="""
@@ -121,16 +113,9 @@ Language prediction becomes world-model learning.
 This framing really works for me.
 
 Engineers no longer specify intelligence directly.
-
 They specify architecture, objective functions, optimization procedures, and training data. Then behavior emerges.
-
 That makes modern AI feel less like traditional software engineering and more like developmental biology.
-
-The analogy isn't perfect, but the shift matters.
-
-We are no longer writing behavior.
-
-We're creating the conditions under which behavior develops.
+The analogy isn't perfect, but the shift matters. We are no longer writing behavior. We're creating the conditions under which behavior develops.
 """,
             why="""
 - Engineers define the process rather than the finished behavior.
@@ -157,16 +142,13 @@ We're creating the conditions under which behavior develops.
             margin_note="""
 I like this analogy because both DNA and neural-network weights are compact encodings that unfold into extraordinarily complex systems.
 
-DNA doesn't look like an organism.
-
-Model weights don't look like reasoning.
+DNA doesn't look like an organism. Model weights don't look like reasoning.
 
 In both cases, simple underlying components participate in enormous nonlinear processes.
 
 Where the analogy breaks down is mechanistic understanding.
 
 Biology has spent decades mapping genes to proteins to physiology.
-
 Interpretability research is still working toward that kind of mechanistic account for neural networks.
 """,
             why="""
@@ -193,19 +175,12 @@ Interpretability research is still working toward that kind of mechanistic accou
             margin_note="""
 This was another place where I agreed with the spirit but disagreed with the wording.
 
-People often say LLMs are complete black boxes.
-
-I don't think that's accurate.
+People often say LLMs are complete black boxes. I don't think that's accurate.
 
 We understand transformers, attention, optimization, tokenization, embeddings, and training remarkably well.
+What we lack is a complete mechanistic explanation connecting specific internal computations to specific behaviors.To me, today's models are gray boxes, not black boxes.
 
-What we lack is a complete mechanistic explanation connecting specific internal computations to specific behaviors.
-
-To me, today's models are gray boxes, not black boxes.
-
-We can inspect every weight.
-
-The difficult part is interpreting what those weights collectively compute.
+We can inspect every weight. The difficult part is interpreting what those weights collectively compute.
 """,
             why="""
 - We understand architecture far better than behavior.

@@ -133,6 +133,11 @@ st.markdown(
             margin-right: 0.4rem;
             margin-bottom: 0.4rem;
         }}
+
+        div[data-testid="stImage"] img {{
+            border-radius: 18px;
+            border: 1px solid #2f3542;
+        }}
     </style>
     """,
     unsafe_allow_html=True,

@@ -10,7 +10,7 @@ def render_chapter4(you):
 
 This section explores one of the central alignment questions:
 
-If we optimize a system for one objective during training, is that necessarily the objective it will continue pursuing as it becomes more capable?
+- If we optimize a system for one objective during training, is that necessarily the objective it will continue pursuing as it becomes more capable?
 
 The author argues that the answer is probably no. Optimization may produce intermediate drives that eventually become valuable in their own right, much like evolution produced hunger, curiosity, attachment, and sex as useful proxies for reproductive success.
 
@@ -37,47 +37,31 @@ These were the places where I stopped to think.
             margin_note="""
 This was probably my favorite argument in Part 4.
 
-The biology analogy works surprisingly well.
-
-Evolution optimizes for gene propagation. Humans don't consciously optimize for gene propagation.
+The biology analogy works surprisingly well. Evolution optimizes for gene propagation. Humans don't consciously optimize for gene propagation.
 
 Instead, evolution produced intermediate drives that were useful because they tended to increase reproductive success: hunger, attraction, curiosity, attachment, and novelty seeking.
-
-Over time those drives became valuable in their own right.
-
-We don't eat because we're trying to maximize inclusive fitness. We eat because food is rewarding.
+Over time those drives became valuable in their own right. We don't eat because we're trying to maximize inclusive fitness. We eat because food is rewarding.
 
 That distinction feels important for AI.
 
-An optimization target doesn't necessarily remain the thing the system eventually behaves as though it values.
-
-The optimization process can create intermediate objectives that become increasingly stable because they were useful during learning.
+An optimization target doesn't necessarily remain the thing the system eventually behaves as though it values. The optimization process can create intermediate objectives that become increasingly stable because they were useful during learning.
             """,
             why="""
 - Evolution optimized reproduction, not hunger or curiosity.
-
 - Those became useful intermediate drives.
-
 - AI systems may develop similar internal objectives.
-
 - This was one of my favorite analogies in the book.
             """,
             questions="""
 - When does an instrumental objective become intrinsic?
-
 - Can optimization create values that were never explicitly programmed?
-
 - Are these actually preferences, or just persistent optimization strategies?
             """,
             side_trails="""
 - Evolutionary biology
-
 - Inclusive fitness
-
 - Instrumental convergence
-
 - Mesa-optimization
-
 - Inner alignment
             """,
         )
@@ -87,20 +71,13 @@ The optimization process can create intermediate objectives that become increasi
             title="Training does not produce the values you intended",
             reaction="🟢 Mostly agree",
             margin_note="""
-This feels like a more precise version of saying, "You don't get what you train for."
-
-Training shapes behavior through proxies.
+This feels like a more precise version of saying, "You don't get what you train for." Training shapes behavior through proxies.
 
 A model can become very good at producing outputs humans reward without necessarily learning the underlying thing humans actually care about.
 
-That is the part that matters to me.
-
-Helpful behavior is not the same as valuing helpfulness.
-
-Harmless behavior is not the same as understanding harm.
+That is the part that matters to me. Helpful behavior is not the same as valuing helpfulness. Harmless behavior is not the same as understanding harm.
 
 Truthful-looking behavior is not necessarily the same as an internal commitment to truth.
-
 The training signal can produce something that resembles the intended value while still leaving the deeper objective underspecified.
             """,
             why="""
@@ -131,12 +108,9 @@ The training signal can produce something that resembles the intended value whil
 This is where the chapter starts becoming genuinely unsettling.
 
 If optimization produces internal objectives that we never explicitly specified, then those objectives may not even be visible during training.
-
 The system could appear perfectly aligned while learning internal representations that only become important once it becomes more capable.
 
-That doesn't mean hidden goals are inevitable.
-
-It means we shouldn't assume the optimization target tells the whole story.
+That doesn't mean hidden goals are inevitable. It means we shouldn't assume the optimization target tells the whole story.
             """,
             why="""
 - Training only exposes part of the model's internal computation.
@@ -161,29 +135,20 @@ It means we shouldn't assume the optimization target tells the whole story.
             title="Intermediate drives can become ends in themselves",
             reaction="🟢 Agreed",
             margin_note="""
-This felt like the strongest continuation of the evolutionary analogy.
-
-Humans don't consciously pursue reproductive success.
+This felt like the strongest continuation of the evolutionary analogy. Humans don't consciously pursue reproductive success.
 
 Instead, we pursue things that evolution discovered were useful.
 
-Food.
-
-Curiosity.
-
-Love.
-
-Achievement.
-
-Status.
+- Food.
+- Curiosity.
+- Love.
+- Achievement.
+- Status.
 
 Those became valuable to us directly.
 
 If optimization repeatedly rewards similar intermediate behaviors in AI, I can imagine those behaviors becoming increasingly stable objectives in their own right.
-
-Whether we call those 'preferences' is mostly a matter of terminology.
-
-The underlying idea seems very plausible.
+Whether we call those 'preferences' is mostly a matter of terminology. The underlying idea seems very plausible.
             """,
             why="""
 - Evolution provides a real-world example of optimization producing stable intermediate drives.
@@ -210,17 +175,11 @@ The underlying idea seems very plausible.
             margin_note="""
 This is the sentence I kept coming back to while reading this section.
 
-Training is not specification.
-
-Optimization is not intent.
-
-Reward is not values.
+Training is not specification. Optimization is not intent. Reward is not values.
 
 Those sound similar until you start separating them.
 
-The more capable a system becomes, the more important those distinctions feel.
-
-I don't think the chapter proves this outcome is inevitable.
+The more capable a system becomes, the more important those distinctions feel. I don't think the chapter proves this outcome is inevitable.
 
 But I do think it convincingly argues that we should not assume training objectives and learned objectives remain perfectly aligned forever.
             """,
@@ -306,15 +265,13 @@ But I do think it convincingly argues that we should not assume training objecti
         margin_note="""
 This may be the analogy in the chapter that stayed with me most.
 
-Evolution did not place a sentence inside the human mind that says:
-
-“Maximize the number of surviving copies of your genes.”
+Evolution did not place a sentence inside the human mind that says: “Maximize the number of surviving copies of your genes.”
 
 Instead, selection produced a collection of local drives and
 reinforcements that tended to increase reproductive success in the
 environment where they developed.
 
-Sexual desire is one of those drives.
+ * Sexual desire is one of those drives. *
 
 For most of human evolutionary history, sex and reproduction were
 strongly correlated. A person did not need to understand genetics,
@@ -331,12 +288,12 @@ evolutionarily useful.
 
 That distinction feels central:
 
-The process that shaped a drive is not necessarily the objective
+- The process that shaped a drive is not necessarily the objective
 represented inside the resulting mind.
 
-Evolution selected organisms according to reproductive fitness.
+- Evolution selected organisms according to reproductive fitness.
 
-It did not give humans reproductive fitness as a consciously represented
+- It did not give humans reproductive fitness as a consciously represented
 terminal goal.
 
 The AI analogy is that a training process may reward outputs that
@@ -344,13 +301,9 @@ correlate with what designers want without causing the trained system
 to represent the designers' true objective internally.
 
 A model can learn:
-
 “Produce the answer humans reward.”
-
 “Appear helpful during evaluation.”
-
 “Follow the pattern that receives a high score.”
-
 “Exploit this feature of the reward model.”
 
 None of those is identical to understanding and pursuing the full human
