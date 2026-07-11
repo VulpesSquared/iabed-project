@@ -1,865 +1,761 @@
 import streamlit as st
 
+from components.claim_card import render_claim_card
+
 
 def render_chapter14(you) -> None:
     st.header("Chapter 14 — Where There’s Life, There’s Hope")
 
     st.caption(
-        "On uncertainty, nuclear near-misses, political action, "
-        "and how to live while taking catastrophic risk seriously."
-    )
-
-    # ------------------------------------------------------------------
-    # BEFORE YOU READ
-    # ------------------------------------------------------------------
-
-    st.subheader("Before You Read")
-
-    st.markdown(
-        """
-        This is the final chapter, and it is doing two things at once.
-
-        First, the authors restate the argument they have spent the entire book
-        building:
-
-        **If anyone creates artificial superintelligence, everyone dies.**
-
-        They do not retreat to “maybe,” “possibly,” or “there is some risk.”
-        Their position remains absolute.
-
-        But the chapter is also trying to leave the reader somewhere other than
-        paralysis.
-
-        The authors turn to nuclear history, political organizing, journalism,
-        public pressure, and ordinary life to argue that a predicted catastrophe
-        is not the same thing as an unavoidable one.
-
-        Humanity has lived beneath credible threats of annihilation before.
-        People changed institutions, negotiated treaties, built monitoring
-        systems, and sometimes prevented disaster through individual acts of
-        judgment.
-
-        I appreciate that movement from warning toward responsibility.
-
-        I am still not convinced by the certainty of the underlying prediction.
-        But I agree with the broader idea that uncertainty about whether a
-        catastrophe will occur is not the same thing as evidence that no action
-        is needed.
-        """
-    )
-
-    # ------------------------------------------------------------------
-    # THE BIG IDEA
-    # ------------------------------------------------------------------
-
-    st.subheader("The Big Idea")
-
-    st.markdown(
-        """
-        <div class="blue-box">
-            <h3>What the authors are arguing</h3>
-
-            <p>
-                Humanity should not continue developing artificial
-                superintelligence merely because the exact timing of disaster
-                cannot be predicted.
-            </p>
-
-            <p>
-                In other safety-critical fields, placing the entire human species
-                at risk would require strong evidence that catastrophe is
-                extraordinarily unlikely. The authors argue that current AI
-                development proceeds under the opposite standard: companies and
-                governments continue unless critics can prove exactly when and how
-                disaster will occur.
-            </p>
-
-            <p>
-                They compare the situation to the nuclear age. Nuclear war once
-                appeared highly plausible, and humanity came dangerously close to
-                it. Civilization survived not because the danger was imaginary,
-                but because people recognized the trajectory and worked to change
-                it through diplomacy, monitoring, communication, arms agreements,
-                political leadership, and individual restraint.
-            </p>
-
-            <p>
-                The authors therefore ask governments, politicians, journalists,
-                and ordinary citizens to help build support for international
-                restrictions on advanced AI development.
-            </p>
-
-            <p>
-                Their final message is that action and ordinary life are not
-                opposites. People should do what they can to reduce the danger,
-                then continue living rather than allowing fear to consume the life
-                they are trying to protect.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # ------------------------------------------------------------------
-    # PLACES I PAUSED
-    # ------------------------------------------------------------------
-
-    st.subheader("Places I Paused")
-
-    # CLAIM 1 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>1. An apparently certain death can still fail to occur</h3>
-
-            <p><strong>My initial reaction:</strong> Agree, but the lesson is
-            narrower than the chapter sometimes makes it sound.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “A confident prediction can be wrong. That does not mean every
-                extraordinary survival teaches us the same thing about policy.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The chapter opens with Vesna Vulović, who survived a fall that
-                almost anyone would have predicted was fatal. The example separates
-                a probable outcome from an inevitable one.
-            </p>
-
-            <p>
-                That is an important epistemic reminder. Even an “easy call” can be
-                wrong in an individual case.
-            </p>
-
-            <p>
-                But rare survival does not tell us that the original risk estimate
-                was unreasonable. Nor does it establish how we should govern a
-                different threat involving different mechanisms.
-            </p>
-
-            <p>
-                The story works best as a statement about hope: while an outcome has
-                not occurred, there remains some possibility of changing it.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-
-            <p>
-                When an unlikely survival occurs, should it make us question the
-                original risk estimate, or simply remind us that high probability
-                is not the same thing as fate?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
+        "On uncertain survival, nuclear near misses, political action, "
+        "public courage, and choosing hope without pretending the danger is small."
     )
 
     st.markdown(
         """
-        <span class="tag">probability</span>
-        <span class="tag">uncertainty</span>
-        <span class="tag">survivorship</span>
-        <span class="tag">hope</span>
-        """,
-        unsafe_allow_html=True,
-    )
+### Before you read
 
-    # CLAIM 2 -----------------------------------------------------------
+The final chapter begins with someone who survived what should have been
+unsurvivable.
 
-    st.markdown(
+Vesna Vulović fell more than six miles after an airplane was destroyed
+in flight. Any reasonable prediction made beforehand would have said
+that she would die.
+
+She lived.
+
+The story gives the chapter its title and its emotional center:
+prediction is not destiny while someone is still alive to change the
+outcome.
+
+The authors do not soften their central claim. They still believe that
+building artificial superintelligence will kill everyone, regardless of
+who builds it or how benevolent its creators intend to be.
+
+But this chapter is less interested in repeating the technical argument
+than in asking what people should do after hearing it.
+
+Its answer is not passive optimism.
+
+Governments should negotiate. Politicians should prepare the legal
+ground. Journalists should investigate. Citizens should speak, vote,
+organize, and make concern visible.
+
+And after doing what we can, we should continue living recognizably human
+lives rather than allowing fear to consume the entire future we are
+trying to protect.
+
+I find that final distinction important.
+
+Hope is not confidence that everything will work out.
+
+Hope is the belief that the outcome is still responsive to action.
         """
-        <div class="card">
-            <h3>2. The book ends with the same absolute claim it began with</h3>
-
-            <p><strong>My initial reaction:</strong> Still disagree.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “The argument has become more detailed, but the conclusion is still
-                doing more work than the evidence can carry: if anyone builds it,
-                everyone dies.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors explicitly reject the language of possibility and risk.
-                They argue that the disaster is predictable and that the identity,
-                intentions, location, and values of the builders do not matter.
-            </p>
-
-            <p>
-                I think the book makes a serious case that sufficiently capable,
-                autonomous, misaligned systems could create catastrophic and
-                potentially irreversible harm.
-            </p>
-
-            <p>
-                I do not think it demonstrates that every sufficiently advanced
-                artificial intelligence must become a unified strategic agent,
-                escape meaningful human control, overcome competing systems and
-                institutions, and eliminate all human life.
-            </p>
-
-            <p>
-                Those are connected hypotheses, not one established result.
-            </p>
-
-            <p>
-                The authors’ certainty makes the policy recommendation cleaner. It
-                does not make the empirical uncertainty disappear.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-
-            <p>
-                Does the moral force of the book depend on certainty, or would its
-                case for drastic precaution remain strong if the authors admitted a
-                wide range of possible outcomes?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
     )
 
     st.markdown(
         """
-        <span class="tag">existential risk</span>
-        <span class="tag">certainty</span>
-        <span class="tag">argument structure</span>
-        <span class="tag">burden of proof</span>
-        """,
-        unsafe_allow_html=True,
-    )
+### The big idea
 
-    # CLAIM 3 -----------------------------------------------------------
+The authors restate the book's core argument as directly as possible:
 
-    st.markdown(
+If anyone builds artificial superintelligence, everyone dies.
+
+They argue that continued AI escalation should not require critics to
+predict the exact date, mechanism, and sequence of catastrophe. In other
+high-consequence engineering domains, placing all of humanity at risk
+would require evidence that disaster is extremely unlikely—not merely
+the observation that critics cannot prove precisely how it will occur.
+
+The chapter then turns to the nuclear age.
+
+After World War II, many informed observers reasonably expected that
+nuclear war would eventually destroy civilization. They were wrong about
+what humanity would choose, not necessarily about what nuclear weapons
+could do.
+
+Nuclear catastrophe was avoided because people treated the trajectory
+toward destruction as something that could be changed. Governments built
+communication channels, negotiated treaties, monitored weapons, and
+worked repeatedly to prevent individual mistakes from becoming an
+irreversible war.
+
+The authors argue that AI requires the same seriousness.
+
+Their final message is directed toward different groups: government
+leaders, elected officials, uncertain politicians, journalists, and
+ordinary citizens. Each has a role in creating the political conditions
+for international restraint.
+
+The chapter ends by holding two ideas together:
+
+Humanity may fail.
+
+Humanity can still act.
         """
-        <div class="card">
-            <h3>3. Humanity should not need a catastrophe to be precisely predictable before acting</h3>
-
-            <p><strong>My initial reaction:</strong> Strongly agree.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “Requiring critics to provide the exact date, mechanism, and failure
-                sequence is an impossible standard—and a convenient way to keep
-                moving.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors compare AI development to launching a rocket carrying
-                the entire human species. In an ordinary safety-critical system,
-                designers would not demand that someone predict the exact moment of
-                failure before requiring evidence that the vehicle was safe.
-            </p>
-
-            <p>
-                This is one of the book’s stronger reversals of the burden of proof.
-                When the possible harm is extreme and irreversible, uncertainty
-                should not automatically favor deployment.
-            </p>
-
-            <p>
-                I would still avoid the authors’ binary framing. We do not have to
-                choose only between complete confidence in safety and a universal
-                halt to all relevant research.
-            </p>
-
-            <p>
-                But developers making increasingly consequential systems should bear
-                more responsibility for demonstrating control, containment,
-                security, and recoverability than critics bear for predicting an
-                exact catastrophe.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
     )
 
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
+    st.markdown("### How I was thinking through this")
 
-            <p>
-                What level of evidence should a developer have to provide before
-                deploying a system whose worst plausible failure may be
-                irreversible?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
+    st.graphviz_chart(
         """
-        <span class="tag">safety case</span>
-        <span class="tag">risk asymmetry</span>
-        <span class="tag">precautionary principle</span>
-        <span class="tag">deployment standards</span>
+        digraph {
+            rankdir=LR
+            bgcolor="transparent"
+
+            node [
+                shape=box
+                style="rounded,filled"
+                fillcolor="#181B23"
+                color="#7C9A7A"
+                fontcolor="#F4F1EA"
+                fontname="Helvetica"
+                margin="0.18,0.12"
+            ]
+
+            edge [
+                color="#D8A54A"
+                penwidth=2
+                arrowsize=0.8
+            ]
+
+            trajectory [label="A catastrophic trajectory\\nlooks increasingly plausible"]
+            recognition [label="People recognize that\\nthe trajectory is not fate"]
+            institutions [label="Institutions, treaties,\\nand safeguards are built"]
+            public [label="Citizens make action\\npolitically possible"]
+            uncertainty [label="The outcome remains\\nuncertain"]
+            hope [label="Uncertainty leaves room\\nfor deliberate action"]
+
+            trajectory -> recognition
+            recognition -> institutions
+            institutions -> public
+            public -> uncertainty
+            uncertainty -> hope
+        }
         """,
-        unsafe_allow_html=True,
+        use_container_width=True,
     )
 
-    # CLAIM 4 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>4. Nuclear catastrophe was not avoided because the warnings were foolish</h3>
-
-            <p><strong>My initial reaction:</strong> Strongly agree.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “When prevention succeeds, the original warning can look
-                exaggerated precisely because the warned-about event did not
-                happen.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The chapter argues that people who predicted nuclear catastrophe
-                were not necessarily wrong about the danger. Nuclear weapons could
-                destroy cities, penetrate defenses, trigger escalation, and produce
-                mass death.
-            </p>
-
-            <p>
-                What some forecasts underestimated was humanity’s ability to alter
-                the trajectory.
-            </p>
-
-            <p>
-                Diplomats negotiated. Governments established direct communication.
-                Monitoring systems and arms agreements were developed. People
-                worked repeatedly to prevent errors, misunderstandings, and local
-                crises from escalating.
-            </p>
-
-            <p>
-                This creates a difficult evaluation problem. If the catastrophe does
-                not happen because people responded to the warning, the warning may
-                later be dismissed as alarmism.
-            </p>
-
-            <p>
-                Successful prevention often removes the observable counterfactual
-                that would have proven the intervention was necessary.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
+    place = st.radio(
+        "📍 Places I paused",
+        [
+            "An outcome can be highly predictable without being inevitable",
+            "The burden of proof should change when all of humanity is exposed",
+            "Nuclear war was avoided because people worked to change the trajectory",
+            "Human survival depends on institutions, not one heroic intervention",
+            "Political leaders may be more persuadable than public silence suggests",
+            "Unconvinced officials can still preserve the option to act later",
+            "Journalism helps society understand risks before they become disasters",
+            "Ordinary people matter by changing what leaders believe is politically possible",
+            "Living under existential risk should not mean surrendering ordinary life",
+            "Hope is a commitment to action, not a prediction of success",
+        ],
+        key="chapter14_place",
     )
 
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-
-            <p>
-                How do we evaluate whether a warning was excessive when the actions
-                motivated by that warning may be part of why the predicted disaster
-                never occurred?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">prevention paradox</span>
-        <span class="tag">counterfactuals</span>
-        <span class="tag">nuclear risk</span>
-        <span class="tag">institutional learning</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # CLAIM 5 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>5. Civilization survives when people work to “un-write” an apparently fixed future</h3>
-
-            <p><strong>My initial reaction:</strong> Agree.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “This is the version of hope I trust: not optimism that everything
-                will work out, but organized effort based on the belief that the
-                trajectory can still be changed.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors distinguish passive reassurance from active hope. The
-                people working to avoid nuclear war did not treat the danger as a
-                remote accident. They behaved as though destruction was the path the
-                world was already traveling and their job was to redirect it.
-            </p>
-
-            <p>
-                That framing avoids two failures.
-            </p>
-
-            <p>
-                One is fatalism: the belief that catastrophe is inevitable, so
-                action is pointless.
-            </p>
-
-            <p>
-                The other is complacency: the belief that civilization has survived
-                so far because the danger was never serious.
-            </p>
-
-            <p>
-                Hope becomes a practice rather than a forecast.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-
-            <p>
-                Is hope more useful when it means confidence in a good outcome, or
-                when it means believing that effort can still influence an uncertain
-                one?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">active hope</span>
-        <span class="tag">collective agency</span>
-        <span class="tag">fatalism</span>
-        <span class="tag">resilience</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # CLAIM 6 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>6. Different institutions have different responsibilities</h3>
-
-            <p><strong>My initial reaction:</strong> Agree with the structure, not
-            necessarily every requested action.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “Responsibility should follow power, access, and institutional
-                function—not be flattened into the claim that everyone is equally
-                responsible for everything.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The chapter addresses governments, elected officials, journalists,
-                and ordinary citizens separately.
-            </p>
-
-            <p>
-                Governments can negotiate treaties and establish verification
-                systems. Legislators can create reporting, licensing, monitoring,
-                and enforcement authority. Journalists can investigate claims,
-                incentives, failures, and contradictions. Citizens can communicate
-                political concern, vote, organize, and influence the legitimacy of
-                action.
-            </p>
-
-            <p>
-                I appreciate this role-specific approach because it resists the
-                tendency to turn structural problems into consumer guilt.
-            </p>
-
-            <p>
-                A person choosing not to use an AI writing tool does not meaningfully
-                govern frontier model development. A regulator, cloud provider,
-                chip manufacturer, laboratory executive, or head of state occupies
-                a very different causal position.
-            </p>
-
-            <p>
-                The chapter sometimes overstates the certainty of what these actors
-                should support. But it is right that their responsibilities differ.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-
-            <p>
-                How should responsibility for AI risk be distributed among
-                developers, infrastructure providers, governments, journalists,
-                researchers, and ordinary users?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">institutional responsibility</span>
-        <span class="tag">governance</span>
-        <span class="tag">journalism</span>
-        <span class="tag">collective action</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # CLAIM 7 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>7. Journalism should treat catastrophic AI claims as an investigative subject, not a personality conflict</h3>
-
-            <p><strong>My initial reaction:</strong> Strongly agree.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “The relevant story is not which CEO is charismatic or which
-                researcher sounds dramatic. It is whether the claims, incentives,
-                evaluations, and technical evidence hold up.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors ask journalists to move beyond product announcements,
-                executive profiles, and simplified debates between optimists and
-                pessimists.
-            </p>
-
-            <p>
-                That request is reasonable.
-            </p>
-
-            <p>
-                AI reporting often collapses technical and institutional questions
-                into personalities: the visionary founder, the frightened former
-                employee, the accelerationist, the doomer, the regulator who does
-                not understand technology.
-            </p>
-
-            <p>
-                Serious reporting should instead examine what systems can do, how
-                those claims were tested, what incidents occurred, who has access,
-                which incentives shape disclosure, and whether governance promises
-                are enforceable.
-            </p>
-
-            <p>
-                It should also interrogate catastrophic-risk advocates with the same
-                care. Taking a claim seriously does not require treating it as true.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-
-            <p>
-                What would genuinely rigorous AI-risk journalism investigate that
-                personality-driven coverage usually misses?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">technology journalism</span>
-        <span class="tag">accountability</span>
-        <span class="tag">evidence</span>
-        <span class="tag">institutional incentives</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # CLAIM 8 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>8. People who are not persuaded by the full argument can still support building brakes</h3>
-
-            <p><strong>My initial reaction:</strong> Strongly agree.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “This is the most useful political move in the chapter: preserving
-                future options does not require agreeing today that the worst-case
-                forecast is certain.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors ask skeptical politicians to support infrastructure that
-                would make later restraint possible: concentrating advanced
-                computing resources, making large clusters legible, establishing
-                monitoring arrangements, and preventing uncontrolled proliferation.
-            </p>
-
-            <p>
-                I do not accept every element of their preferred regime. But the
-                underlying concept is important.
-            </p>
-
-            <p>
-                Governance often arrives after a crisis, when the institutions
-                needed to respond do not yet exist. Building measurement,
-                registration, evaluation, incident-reporting, audit, and coordination
-                capacity now preserves options later.
-            </p>
-
-            <p>
-                This is different from accepting an immediate permanent prohibition.
-                It is creating the ability to slow down if stronger evidence
-                emerges.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-
-            <p>
-                Which governance mechanisms function as reversible preparedness,
-                and which ones quietly commit society to a much broader control
-                regime?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">option value</span>
-        <span class="tag">governance capacity</span>
-        <span class="tag">monitoring</span>
-        <span class="tag">reversibility</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # CLAIM 9 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>9. Ordinary users are not asked to achieve purity through individual abstention</h3>
-
-            <p><strong>My initial reaction:</strong> Agree.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “Good. A global coordination problem cannot be solved by asking
-                individuals to become symbolically blameless while institutions
-                continue unchanged.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors explicitly say that ordinary people do not need to stop
-                using every AI tool. They acknowledge that refusing these tools may
-                place an individual at a disadvantage without meaningfully changing
-                the development race.
-            </p>
-
-            <p>
-                This avoids a common moral displacement in technology debates.
-                Responsibility is transferred from organizations with enormous
-                resources and decision-making power to users making constrained
-                choices inside the system those organizations created.
-            </p>
-
-            <p>
-                Consumer choices can occasionally support broader movements, but
-                they are not substitutes for law, infrastructure, governance, or
-                collective coordination.
-            </p>
-
-            <p>
-                The relevant question is not whether an individual has ever used an
-                AI system. It is what political and institutional arrangements they
-                are willing to support.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-
-            <p>
-                When does personal abstention contribute to collective change, and
-                when does it mainly turn a structural problem into an individual
-                test of moral purity?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">consumer responsibility</span>
-        <span class="tag">structural change</span>
-        <span class="tag">collective action</span>
-        <span class="tag">moral purity</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # CLAIM 10 ----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>10. After doing what you can, live your life</h3>
-
-            <p><strong>My initial reaction:</strong> Strongly agree.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “Fear is not the same thing as responsibility. Protecting life also
-                means continuing to inhabit it.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The chapter closes with C. S. Lewis’s argument about living under
-                the threat of atomic war. The danger may be real, but organizing
-                every belief, relationship, and ordinary activity around terror
-                does not prevent it.
-            </p>
-
-            <p>
-                People should work, teach, read, make music, raise children, spend
-                time with friends, and continue doing the human things that make
-                survival worth wanting.
-            </p>
-
-            <p>
-                I think this is the healthiest distinction in the book.
-            </p>
-
-            <p>
-                Taking a risk seriously does not require performing fear
-                continuously. Constant dread is not evidence of intellectual
-                seriousness, and it does not automatically produce useful action.
-            </p>
-
-            <p>
-                Do the work available to you. Preserve room for joy, curiosity,
-                intimacy, and ordinary life. Otherwise the feared future begins
-                consuming the present before it has even arrived.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-
-            <p>
-                What does it look like to take an existential risk seriously without
-                allowing it to colonize every part of the life one is trying to
-                preserve?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">living with uncertainty</span>
-        <span class="tag">fear</span>
-        <span class="tag">meaning</span>
-        <span class="tag">ordinary life</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # ------------------------------------------------------------------
-    # WHAT WOULD CHANGE MY MIND
-    # ------------------------------------------------------------------
-
+    if place == (
+        "An outcome can be highly predictable without being inevitable"
+    ):
+        render_claim_card(
+            title="An outcome can be highly predictable without being inevitable",
+            reaction="🟢 Strongly agree",
+            margin_note="""
+The story of Vesna Vulović is a useful opening because it separates
+prediction from certainty.
+
+Before the fall, nearly any reasonable model would have assigned her
+almost no chance of survival.
+
+That prediction would have been rational.
+
+It also would have been wrong.
+
+Rare survival does not mean that falling from an airplane is secretly
+safe. It means that even excellent predictions describe a distribution
+of possible outcomes rather than writing the future into existence.
+
+The same distinction matters in the opposite direction.
+
+A catastrophic trajectory can be alarming even when catastrophe is not
+guaranteed.
+
+The chapter's use of the story works best when it reminds us that
+uncertainty leaves room for intervention.
+
+It works less well if it is taken to mean that an extraordinary escape
+from danger is a substitute for preventing the danger in the first place.
+            """,
+            why="""
+- Rational forecasts can still be wrong in individual cases.
+- Low probability is not the same as impossibility.
+- A dangerous trajectory can remain responsive to intervention.
+- Exceptional survival does not make the underlying hazard acceptable.
+            """,
+            questions="""
+- When should uncertainty motivate prevention rather than reassurance?
+- How do we distinguish genuine hope from dependence on a miracle?
+- Can a forecast be actionable even when its confidence is poorly calibrated?
+- What does it mean to change a trajectory rather than merely survive it?
+            """,
+            side_trails="""
+- Probabilistic forecasting
+- Tail events
+- Survivorship bias
+- Counterfactual reasoning
+- Hope under uncertainty
+            """,
+        )
+
+    elif place == (
+        "The burden of proof should change when all of humanity is exposed"
+    ):
+        render_claim_card(
+            title=(
+                "The burden of proof should change when all of humanity "
+                "is exposed"
+            ),
+            reaction="🟢 Agree with the principle",
+            margin_note="""
+The authors argue that they should not have to predict every detail of
+the disaster before society takes the risk seriously.
+
+I agree with the underlying engineering principle.
+
+If a rocket carried every living human, the launch standard would not be
+“critics have failed to prove exactly how it will explode.”
+
+The designers would need extraordinary evidence that the system was safe.
+
+Scale and irreversibility should change the burden of proof.
+
+A system with bounded consequences can reasonably be deployed under
+uncertainty and improved through experience.
+
+A system that could impose irreversible harm on everyone should face a
+much higher evidentiary standard.
+
+My hesitation is that this principle does not resolve the empirical
+dispute by itself.
+
+Before reversing the burden of proof, we still need a defensible account
+of why a proposed AI system belongs in the category of civilization-scale
+hazards.
+
+The authors believe the entire book establishes that bridge.
+
+I think parts of the bridge are strong, while other parts remain
+conditional on assumptions about agency, autonomy, strategic behavior,
+and control.
+            """,
+            why="""
+- Safety standards should reflect the scale and reversibility of harm.
+- Critics cannot always predict the exact mechanism of a novel failure.
+- Developers should carry more responsibility when others cannot opt out.
+- The high-consequence category still requires an evidence-based definition.
+            """,
+            questions="""
+- What evidence places an AI system in the civilization-scale risk category?
+- How should uncertainty affect the burden carried by developers?
+- Who represents people exposed to a risk they did not consent to?
+- What would constitute affirmative evidence of sufficient safety?
+            """,
+            side_trails="""
+- Burden of proof
+- Safety cases
+- Catastrophic risk
+- Informed consent
+- Precautionary principle
+            """,
+        )
+
+    elif place == (
+        "Nuclear war was avoided because people worked to change the trajectory"
+    ):
+        render_claim_card(
+            title=(
+                "Nuclear war was avoided because people worked to "
+                "change the trajectory"
+            ),
+            reaction="🟢 Strongly agree",
+            margin_note="""
+The nuclear section is the strongest source of hope in the chapter.
+
+People who expected nuclear war were not necessarily confused about the
+weapons.
+
+They correctly understood that cities could be destroyed, radiation
+could kill indiscriminately, defenses could fail, and a single
+miscalculation could escalate into something civilization might not
+survive.
+
+What they underestimated was humanity's ability to respond to the
+danger.
+
+The absence of full-scale nuclear war was not produced by one reassuring
+fact about nuclear weapons.
+
+It was produced by decades of diplomacy, monitoring, arms control,
+communication systems, military procedures, public pressure, individual
+judgment, and repeated luck.
+
+The Cuban Missile Crisis is especially uncomfortable because it shows
+both sides of the story.
+
+Humanity created systems capable of bringing us terrifyingly close to
+destruction.
+
+Individual people and institutions also prevented the machinery from
+completing the trajectory.
+
+That is not evidence that everything naturally works out.
+
+It is evidence that trajectories can be unwritten through sustained,
+deliberate work.
+            """,
+            why="""
+- The technical danger of nuclear weapons was real even though global war was avoided.
+- Avoidance resulted from repeated institutional and individual intervention.
+- Communication and verification reduced the chance of uncontrolled escalation.
+- A predicted catastrophe may fail to occur because people act on the prediction.
+            """,
+            questions="""
+- Which nuclear-risk institutions have meaningful analogues in AI governance?
+- Which features of AI make the analogy weaker?
+- How much of nuclear survival came from design, diplomacy, individuals, or luck?
+- Can AI governance be built before a crisis creates broad political attention?
+            """,
+            side_trails="""
+- Nuclear command and control
+- Cuban Missile Crisis
+- Arms-control treaties
+- Vasili Arkhipov
+- Self-negating predictions
+            """,
+        )
+
+    elif place == (
+        "Human survival depends on institutions, not one heroic intervention"
+    ):
+        render_claim_card(
+            title=(
+                "Human survival depends on institutions, not one "
+                "heroic intervention"
+            ),
+            reaction="🟢 Strongly agree",
+            margin_note="""
+Stories about survival often concentrate on one person who made the
+right decision at the decisive moment.
+
+Those people matter.
+
+But designing safety around the hope that one unusually wise person will
+be present is not a serious control strategy.
+
+Nuclear war was not avoided only because of one submarine officer, one
+president, or one negotiator.
+
+It was also avoided because there were treaties, monitors, command
+procedures, diplomatic channels, verification systems, and people whose
+full-time work was preventing individual errors from escalating.
+
+The same should be true for AI.
+
+We should not depend on one conscientious researcher refusing to train a
+model, one executive choosing safety over competition, or one employee
+raising an alarm.
+
+Institutions should make the safe action ordinary rather than heroic.
+
+The difficulty is that AI governance institutions remain immature while
+the technological and commercial systems they would govern are moving
+quickly.
+            """,
+            why="""
+- Heroic intervention is unreliable and difficult to reproduce.
+- Institutions preserve safety across changes in personnel.
+- Communication and verification reduce dependence on individual judgment.
+- Durable governance turns exceptional restraint into standard procedure.
+            """,
+            questions="""
+- Which AI safety decisions currently depend on individual courage?
+- What institutions would make those choices less personally costly?
+- How should whistleblowers and dissenting researchers be protected?
+- What must remain independent from companies developing the technology?
+            """,
+            side_trails="""
+- High-reliability organizations
+- Institutional design
+- Whistleblower protection
+- Safety culture
+- Defense in depth
+            """,
+        )
+
+    elif place == (
+        "Political leaders may be more persuadable than public silence suggests"
+    ):
+        render_claim_card(
+            title=(
+                "Political leaders may be more persuadable than public "
+                "silence suggests"
+            ),
+            reaction="🟢 Agree, cautiously",
+            margin_note="""
+The chapter suggests that some elected officials understand the concern
+but hesitate to say so publicly because the position sounds strange,
+extreme, or professionally risky.
+
+That seems plausible.
+
+Public silence is not reliable evidence of private disbelief.
+
+Politicians respond to incentives, coalitions, perceived voter interest,
+institutional norms, and the range of positions that can be expressed
+without ridicule.
+
+An issue can therefore remain politically invisible even when many
+individual decision-makers are privately concerned.
+
+That creates a coordination problem.
+
+Officials wait for public permission.
+
+Citizens wait for officials to treat the issue seriously.
+
+Journalists wait for prominent institutions to legitimize the story.
+
+Experts soften their language so they are not dismissed.
+
+Everyone may be waiting for everyone else to move first.
+
+I do not know how common private concern actually is.
+
+But I agree that making concern socially legible can change what leaders
+believe they are allowed to do.
+            """,
+            why="""
+- Public positions do not always reveal private judgments.
+- Political actors respond to perceived constituent concern.
+- Fear of ridicule can suppress discussion of unfamiliar risks.
+- Visible coalitions make previously marginal policies easier to consider.
+            """,
+            questions="""
+- How can private concern be converted into credible public coordination?
+- What evidence would show that officials are genuinely open to stronger action?
+- How should advocates avoid overstating the level of hidden agreement?
+- What makes an unusual risk politically discussable?
+            """,
+            side_trails="""
+- Preference falsification
+- Political signaling
+- Policy entrepreneurship
+- Public opinion
+- Coordination problems
+            """,
+        )
+
+    elif place == (
+        "Unconvinced officials can still preserve the option to act later"
+    ):
+        render_claim_card(
+            title=(
+                "Unconvinced officials can still preserve the option "
+                "to act later"
+            ),
+            reaction="🟢 Strongly agree",
+            margin_note="""
+This is one of the most pragmatic arguments in the chapter.
+
+An official does not need to accept the authors' entire extinction
+forecast in order to preserve humanity's ability to respond if the
+evidence becomes stronger.
+
+Governments can create chip registries, reporting requirements,
+international monitoring frameworks, research access, audit authority,
+and legal mechanisms before they decide to use the strongest forms of
+restraint.
+
+That is option preservation.
+
+It recognizes that future policymakers may understand more than current
+policymakers do.
+
+The goal is not necessarily to slam on the brakes today.
+
+It is to make sure the brakes still exist tomorrow.
+
+I find this much easier to support than the claim that the complete
+global prohibition proposed in Chapter 13 is already fully specified and
+ready to implement.
+
+Institutional preparation can be justified under a broader range of
+beliefs about the eventual level of danger.
+            """,
+            why="""
+- Preparation does not require certainty about the worst-case forecast.
+- Monitoring systems create information needed for later decisions.
+- Legal authority is difficult to build during an active emergency.
+- Preserving future options is valuable under deep uncertainty.
+            """,
+            questions="""
+- Which policies preserve options without prematurely imposing a global shutdown?
+- What infrastructure would future enforcement require?
+- Can preparatory powers be prevented from expanding into unrelated surveillance?
+- Which decisions become impossible if governments wait several more years?
+            """,
+            side_trails="""
+- Option value
+- Adaptive governance
+- Regulatory capacity
+- Compute monitoring
+- Reversible policy
+            """,
+        )
+
+    elif place == (
+        "Journalism helps society understand risks before they become disasters"
+    ):
+        render_claim_card(
+            title=(
+                "Journalism helps society understand risks before they "
+                "become disasters"
+            ),
+            reaction="🟢 Strongly agree",
+            margin_note="""
+The chapter is right that journalism has a distinct role here.
+
+AI coverage often oscillates between product spectacle, executive
+personality, investment enthusiasm, labor panic, and dramatic claims
+that receive little technical examination.
+
+Serious risk coverage requires something slower.
+
+It requires investigating company practices, institutional incentives,
+employee departures, evaluation results, governance failures, technical
+disagreements, and the assumptions underneath catastrophic forecasts.
+
+Journalists should not simply repeat the authors' conclusion.
+
+They should investigate it.
+
+They should also avoid treating the conclusion as inherently unserious
+because it sounds socially unusual.
+
+The job is not to make extinction risk popular.
+
+The job is to determine which claims are supported, which are disputed,
+which institutions have conflicts of interest, and what evidence the
+public is not currently seeing.
+
+This is especially important because the people building the systems are
+also shaping much of the public story about what those systems are and
+where they are going.
+            """,
+            why="""
+- Public understanding depends on sustained investigation rather than product coverage.
+- Companies possess information and incentives that outsiders may not share.
+- Unfamiliar claims can be dismissed socially before being evaluated evidentially.
+- Journalism can expose disagreements, incentives, incidents, and hidden assumptions.
+            """,
+            questions="""
+- What would rigorous AI-risk journalism investigate first?
+- How should journalists represent uncertainty without flattening disagreement?
+- Which claims require independent technical replication?
+- How can coverage avoid both corporate hype and uncritical catastrophe narratives?
+            """,
+            side_trails="""
+- Investigative journalism
+- Risk communication
+- Corporate accountability
+- Science reporting
+- Epistemic institutions
+            """,
+        )
+
+    elif place == (
+        "Ordinary people matter by changing what leaders believe is politically possible"
+    ):
+        render_claim_card(
+            title=(
+                "Ordinary people matter by changing what leaders believe "
+                "is politically possible"
+            ),
+            reaction="🟢 Agree",
+            margin_note="""
+The chapter does not ask individual people to solve alignment or boycott
+every AI tool.
+
+That is sensible.
+
+Individual consumer purity would impose substantial costs on a person
+while doing very little to change a global technological race.
+
+The authors instead emphasize civic action: contacting representatives,
+voting, speaking publicly, organizing, supporting institutions, and
+making concern visible.
+
+The mechanism is political permission.
+
+A letter does not create a treaty.
+
+A protest does not design a verification system.
+
+A conversation does not shut down a datacenter.
+
+But collective visibility changes what officials believe their
+constituents will tolerate, support, or punish.
+
+That matters most when leaders are privately uncertain and waiting for a
+signal that action will not end their careers.
+
+I would still be careful not to imply that public awareness alone solves
+the institutional problem.
+
+It helps create the conditions under which technical and diplomatic work
+can proceed.
+            """,
+            why="""
+- Individual consumption choices have little leverage over a global race.
+- Collective political expression can alter leaders' incentives.
+- Public visibility reduces the social cost of discussing unfamiliar risks.
+- Civic action supports but does not replace technical governance.
+            """,
+            questions="""
+- Which forms of civic action have the greatest policy leverage?
+- What should citizens ask their representatives to do specifically?
+- How can concern be organized without amplifying misinformation?
+- How do movements preserve credibility when the evidence remains uncertain?
+            """,
+            side_trails="""
+- Civic participation
+- Collective action
+- Social movements
+- Constituent pressure
+- Political legitimacy
+            """,
+        )
+
+    elif place == (
+        "Living under existential risk should not mean surrendering ordinary life"
+    ):
+        render_claim_card(
+            title=(
+                "Living under existential risk should not mean surrendering "
+                "ordinary life"
+            ),
+            reaction="🟢 Strongly agree",
+            margin_note="""
+The C. S. Lewis passage gives the chapter something the rest of the book
+often lacks: a theory of how to remain human while taking danger
+seriously.
+
+Fear can become totalizing.
+
+A person can spend so much time imagining the future's destruction that
+they stop inhabiting the life they are supposedly trying to protect.
+
+That does not improve the forecast.
+
+It does not strengthen institutions.
+
+It does not make thoughtful action more likely.
+
+The answer is not denial.
+
+Lewis was not arguing that atomic weapons were imaginary or harmless.
+He was arguing against reorganizing one's entire inner life around the
+terror.
+
+Do the work.
+
+Speak.
+
+Vote.
+
+Build.
+
+Prepare.
+
+Then read, teach, make dinner, listen to music, care for people, walk the
+dogs, argue about books, and remain present.
+
+A future worth saving has to be practiced before it is secured.
+            """,
+            why="""
+- Chronic fear can narrow attention and reduce effective action.
+- Ordinary life embodies the values that safety efforts are meant to protect.
+- Denial and total preoccupation are not the only available responses.
+- Sustained civic work requires psychological endurance.
+            """,
+            questions="""
+- How do we remain informed without becoming consumed?
+- What does proportionate concern look like in daily life?
+- Can joy be part of resilience rather than avoidance?
+- How should communities support people working on catastrophic risks?
+            """,
+            side_trails="""
+- C. S. Lewis
+- Existential anxiety
+- Resilience
+- Meaning under threat
+- Sustainable activism
+            """,
+        )
+
+    elif place == "Hope is a commitment to action, not a prediction of success":
+        render_claim_card(
+            title="Hope is a commitment to action, not a prediction of success",
+            reaction="🟢 Strongly agree",
+            margin_note="""
+This is where I land at the end of the book.
+
+Hope is not the assertion that the authors must be wrong.
+
+It is not confidence that governments will coordinate, companies will
+restrain themselves, or technical researchers will solve alignment in
+time.
+
+It is also not the belief that a rare survival story guarantees another
+one.
+
+Hope is the refusal to treat the current trajectory as completed history.
+
+The authors ask whether enough people doing their part would be enough.
+
+Their answer is honest: perhaps, perhaps not.
+
+That uncertainty is not a reason to do nothing.
+
+It is the condition that makes action meaningful.
+
+If the outcome were guaranteed, hope would be unnecessary.
+
+If nothing could affect the outcome, action would be pointless.
+
+Hope lives between certainty and futility.
+            """,
+            why="""
+- Hope does not require confidence that success is likely.
+- Action matters only when the future remains unsettled.
+- Uncertainty can create responsibility rather than passivity.
+- Collective effort may change a trajectory even without guaranteeing an outcome.
+            """,
+            questions="""
+- What distinguishes disciplined hope from optimism?
+- How much uncertainty is required before action becomes worthwhile?
+- Can people coordinate around hope without claiming false confidence?
+- What responsibilities follow from believing that the trajectory is still changeable?
+            """,
+            side_trails="""
+- Active hope
+- Moral responsibility
+- Collective efficacy
+- Radical uncertainty
+- Agency
+            """,
+        )
+
+    st.markdown("---")
     st.subheader("What Would Change My Mind?")
 
     col1, col2 = st.columns(2)
@@ -868,21 +764,19 @@ def render_chapter14(you) -> None:
         st.markdown(
             """
             <div class="sage-box">
-                <h3>I would move closer to the authors’ conclusion if...</h3>
-
+                <h3>I would become more persuaded by the book if...</h3>
                 <p>
-                    Evidence showed that increasingly capable systems reliably
-                    developed persistent autonomous goals, concealed capabilities,
-                    improved their own research process, acquired resources, or
-                    resisted meaningful intervention across different architectures
-                    and training methods.
+                    Evidence increasingly showed that capability growth reliably
+                    produces autonomous long-horizon planning, strategic deception,
+                    independent replication, resource acquisition, and the ability
+                    to accelerate AI research without dense human scaffolding.
                 </p>
-
                 <p>
-                    I would also update if independent technical teams repeatedly
-                    concluded that proposed containment and alignment methods failed
-                    before systems reached the capabilities required for autonomous
-                    replication or strategic control.
+                    I would also update if technically independent researchers
+                    converged on the same causal pathways, if proposed control
+                    methods repeatedly failed under realistic evaluations, and if
+                    governance institutions demonstrated that less restrictive
+                    approaches could not preserve meaningful human control.
                 </p>
             </div>
             """,
@@ -893,97 +787,119 @@ def render_chapter14(you) -> None:
         st.markdown(
             """
             <div class="blue-box">
-                <h3>I would move farther from the authors’ conclusion if...</h3>
-
+                <h3>I would become less persuaded by the book if...</h3>
                 <p>
-                    Advanced capabilities continued to depend heavily on human
-                    scaffolding, fragmented tools, restricted access, and
-                    organization-specific deployment conditions rather than
-                    producing durable autonomous agency.
+                    Increasing model capability continued to depend on extensive
+                    human direction, fragile scaffolding, bounded infrastructure,
+                    and access that could be reliably monitored and revoked.
                 </p>
-
                 <p>
-                    I would also update if monitoring, interpretability, containment,
-                    secure deployment, and international coordination demonstrated
-                    that catastrophic pathways could be governed without the global
-                    prohibition and coercive enforcement proposed by the authors.
+                    I would also update if interpretability, control evaluations,
+                    containment, staged deployment, and international coordination
+                    consistently improved faster than dangerous capability—and if
+                    those systems worked outside carefully selected demonstrations.
                 </p>
             </div>
             """,
             unsafe_allow_html=True,
         )
 
-    # ------------------------------------------------------------------
-    # LOOKING BACK
-    # ------------------------------------------------------------------
-
     st.subheader("Looking Back")
 
     st.markdown(
-        """
+        f"""
         <div class="burgundy-box">
-            <h3>Where the book leaves me</h3>
-
+            <h3>Where the book left me</h3>
             <p>
-                I did not finish this book convinced that artificial
-                superintelligence necessarily kills everyone.
+                I did not finish this book agreeing with its full chain of
+                certainty.
             </p>
-
             <p>
-                I remain unconvinced that capability automatically becomes agency,
-                that agency inevitably becomes power-seeking, or that every
-                sufficiently advanced system converges on one catastrophic
-                trajectory.
+                I remain unconvinced that every sufficiently advanced AI system
+                necessarily becomes a coherent agent, acquires the relevant goals,
+                escapes human control, and eliminates humanity.
             </p>
-
             <p>
-                I also do not think uncertainty gives us permission to be careless.
+                Too many steps in that sequence still depend on assumptions that
+                deserve to be examined separately rather than compressed into one
+                inevitable outcome.
             </p>
-
             <p>
-                The book succeeds in making several weaker—but still extremely
-                important—claims difficult to dismiss:
+                But I also did not finish the book where I began.
             </p>
-
             <p>
-                We do not understand advanced model internals well enough.
-                Competitive incentives reward capability before understanding.
-                Voluntary corporate restraint is structurally fragile.
-                National rules cannot fully govern a transnational technology.
-                Some failures may be difficult or impossible to reverse.
-                And “we will stop when it becomes dangerous” is not a plan unless we
-                can define danger, detect it, and retain the ability to stop.
+                I am less willing to treat uncertainty as reassurance. Less willing
+                to assume that human oversight remains meaningful merely because a
+                person appears somewhere in the workflow. Less willing to believe
+                that competition will naturally reward caution. And much less
+                willing to accept “we can stop later” without asking who retains the
+                ability to stop what, under which conditions, and for how long.
             </p>
-
             <p>
-                I disagree most strongly when the authors turn uncertainty into
-                certainty and certainty into permission for extraordinary
-                centralized or military power.
+                The book is strongest when it exposes the structural problem:
+                increasingly capable systems are being developed inside institutions
+                rewarded for speed, secrecy, scale, and competitive advantage, while
+                the relevant harms may be cumulative, difficult to measure, and
+                potentially irreversible.
             </p>
-
             <p>
-                But I think they are right that surviving a dangerous trajectory is
-                not evidence the trajectory was safe. Sometimes disaster does not
-                occur because people noticed the path, took the warning seriously,
-                and changed direction.
+                It is weakest when uncertainty inside that structure becomes
+                certainty about one exact future.
             </p>
-
             <p>
-                So I leave the book neither reassured nor converted.
+                I do not think the right response is dismissal.
             </p>
-
             <p>
-                I leave it more interested in the space between dismissal and
-                certainty: the place where serious risk analysis, measurement,
-                institutional design, technical research, and democratic legitimacy
-                actually have to live.
+                I think it is decomposition.
             </p>
-
             <p>
-                And I leave it agreeing with the final sentence more than I expected.
+                Which capabilities create danger? Which forms of agency are real?
+                Which failures are reversible? Which controls remain external?
+                Which institutions can verify restraint? Which claims would weaken
+                if the evidence changed?
             </p>
+            <p>
+                Those are not ways of avoiding the argument.
+            </p>
+            <p>
+                They are how I know to take an argument seriously.
+            </p>
+            <p>
+                And the final question I would put in front of {you()} is not
+                whether this book successfully proved that everyone dies.
+            </p>
+            <p>
+                It is whether it showed us enough about the trajectory that
+                continuing without stronger evidence, stronger controls, and much
+                better institutions would itself be an extraordinary gamble.
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
-            <p><strong>Where there’s life, there’s hope.</strong></p>
+    st.markdown(
+        """
+        <div class="lavender-box">
+            <h3>My final margin note</h3>
+            <p>
+                I hope the authors are wrong.
+            </p>
+            <p>
+                Not because the argument was foolish, and not because the risks
+                were imaginary.
+            </p>
+            <p>
+                I hope they are wrong because humanity noticed enough, questioned
+                enough, built better institutions, and changed the trajectory before
+                the prediction had the chance to become history.
+            </p>
+            <p>
+                Where there’s life, there’s still agency.
+            </p>
+            <p>
+                And where there’s agency, there’s hope.
+            </p>
         </div>
         """,
         unsafe_allow_html=True,

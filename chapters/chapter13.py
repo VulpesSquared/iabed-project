@@ -1,798 +1,728 @@
 import streamlit as st
 
+from components.claim_card import render_claim_card
+
 
 def render_chapter13(you) -> None:
     st.header("Chapter 13 — Shut It Down")
 
     st.caption(
-        "On global prohibition, compute governance, coercive enforcement, "
-        "and what the authors believe survival would require."
-    )
-
-    # ------------------------------------------------------------------
-    # BEFORE YOU READ
-    # ------------------------------------------------------------------
-
-    st.subheader("Before You Read")
-
-    st.markdown(
-        """
-        Chapter 12 argued that people routinely minimize unfamiliar dangers,
-        especially when acknowledging them would require sacrifice.
-
-        Chapter 13 is where the authors stop describing that failure and tell us
-        what they believe should happen instead.
-
-        Their answer is not ordinary AI regulation.
-
-        It is not better evaluations, stricter licensing, more interpretability,
-        or one unusually responsible company winning the race.
-
-        Their answer is a worldwide prohibition on advancing toward
-        superintelligence, backed by compute monitoring, international
-        enforcement, and—if necessary—sabotage or military force.
-
-        This is the chapter where I most clearly separate two questions:
-
-        **Are the authors right that current governance proposals are too weak for
-        the risk they describe?**
-
-        and
-
-        **Have they justified the extraordinary political and coercive system
-        they propose in response?**
-
-        I think the first question deserves serious attention.
-
-        I am much less persuaded by their answer to the second.
-        """
-    )
-
-    # ------------------------------------------------------------------
-    # THE BIG IDEA
-    # ------------------------------------------------------------------
-
-    st.subheader("The Big Idea")
-
-    st.markdown(
-        """
-        <div class="blue-box">
-            <h3>What the authors are arguing</h3>
-            <p>
-                If the creation of artificial superintelligence would kill
-                everyone, then humanity cannot safely permit any company, country,
-                military, or independent actor to continue advancing toward it.
-            </p>
-            <p>
-                National regulation is insufficient because the consequences would
-                be global. A cautious country would remain vulnerable if another
-                country continued. A responsible company would not protect humanity
-                if a less responsible competitor built the dangerous system first.
-            </p>
-            <p>
-                The authors therefore propose restricting the computing power and
-                research needed to create increasingly capable AI systems. Advanced
-                chips would be registered, concentrated in monitored facilities,
-                and subject to international verification. Research that could make
-                powerful systems dramatically cheaper or more efficient would also
-                need to be prohibited.
-            </p>
-            <p>
-                If an actor refused to comply and attempted to construct a dangerous
-                datacenter, the authors argue that other states should be prepared
-                to stop it through cyberattacks, sabotage, or conventional military
-                action.
-            </p>
-            <p>
-                They present this not as an ideal political arrangement, but as the
-                minimum response appropriate to a technology they believe would
-                otherwise cause human extinction.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # ------------------------------------------------------------------
-    # PLACES I PAUSED
-    # ------------------------------------------------------------------
-
-    st.subheader("Places I Paused")
-
-    # CLAIM 1 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>1. The authors frame AI governance as a wartime mobilization problem</h3>
-
-            <p><strong>My initial reaction:</strong> I understand the logic, but I
-            do not think the analogy is neutral.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “Once the Axis powers become the comparison, almost any sacrifice
-                or expansion of authority can be made to sound proportionate.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The chapter begins with World War II because the authors want to
-                establish that humanity can coordinate, ration resources, suspend
-                ordinary expectations, and accept enormous costs when survival is
-                genuinely at stake.
-            </p>
-
-            <p>
-                That historical point is true. Governments and populations are
-                capable of extraordinary mobilization when they perceive a shared
-                existential threat.
-            </p>
-
-            <p>
-                But the analogy also performs substantial argumentative work. The
-                Axis threat was observable, embodied in identifiable states and
-                armies, and already producing mass violence. The danger described
-                here is a forecast about a class of systems that does not yet exist.
-            </p>
-
-            <p>
-                If those two situations are treated as morally equivalent before
-                the probability and mechanism of the AI threat have been
-                established, skepticism can begin to look like appeasement rather
-                than disagreement about evidence.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-            <p>
-                At what point does an emergency analogy clarify the scale of a risk,
-                and at what point does it pre-load the moral conclusion before the
-                evidence has done enough work?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
+        "On global prohibition, compute governance, international enforcement, "
+        "and what humanity would have to sacrifice to stop an AI race."
     )
 
     st.markdown(
         """
-        <span class="tag">wartime mobilization</span>
-        <span class="tag">historical analogy</span>
-        <span class="tag">emergency politics</span>
-        <span class="tag">securitization</span>
-        """,
-        unsafe_allow_html=True,
-    )
+### Before you read
 
-    # CLAIM 2 -----------------------------------------------------------
+This chapter stops diagnosing the problem and starts prescribing a
+solution.
 
-    st.markdown(
+The authors are no longer asking how alignment might work, whether
+companies should behave more responsibly, or which technical safeguards
+should accompany advanced AI development.
+
+Their answer is much more absolute:
+
+**Stop the development of increasingly powerful AI systems everywhere.**
+
+Not one company. Not one country. Not one voluntary agreement.
+
+Everywhere.
+
+The chapter compares the required response to the Allied mobilization
+during World War II. The point of the analogy is not that the situations
+are identical. It is that human societies have accepted enormous cost,
+centralized authority, rationing, surveillance, and military action when
+they believed the alternative was civilizational defeat.
+
+I understand the logic.
+
+I also think this chapter moves from a technical-risk argument into a
+political theory of emergency power—and that transition deserves at
+least as much scrutiny as the AI systems the authors want to prohibit.
         """
-        <div class="card">
-            <h3>2. A global risk cannot be solved by one virtuous company or country</h3>
-
-            <p><strong>My initial reaction:</strong> Strongly agree.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “If the externality is global, voluntary restraint by one actor
-                mostly changes who gets there first.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors are right that unilateral caution does not resolve a
-                competitive problem. A company can slow down while another company
-                accelerates. One country can regulate domestic labs while foreign
-                actors continue. A military can abstain while assuming that its
-                rivals will not.
-            </p>
-
-            <p>
-                This creates a familiar collective-action problem: nearly everyone
-                may prefer a safer equilibrium while still believing that continued
-                development is individually rational.
-            </p>
-
-            <p>
-                Even without accepting the authors’ extinction certainty, this
-                argument applies to many AI risks. Cyber capability, biological
-                design assistance, autonomous weapons, scalable persuasion, and
-                model proliferation all cross borders.
-            </p>
-
-            <p>
-                The chapter is strongest when it insists that “our company is
-                careful” and “our country has rules” are not complete answers to a
-                technology with transnational consequences.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-            <p>
-                What would make restraint stable when every actor believes that
-                restraint is only safe if everyone else adopts it too?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
     )
 
     st.markdown(
         """
-        <span class="tag">collective action</span>
-        <span class="tag">global externalities</span>
-        <span class="tag">race dynamics</span>
-        <span class="tag">international governance</span>
-        """,
-        unsafe_allow_html=True,
-    )
+### The big idea
 
-    # CLAIM 3 -----------------------------------------------------------
+The authors argue that preventing artificial superintelligence cannot
+be accomplished by shutting down one reckless company, passing ordinary
+safety regulations, or asking one country to behave responsibly.
 
-    st.markdown(
+If building superintelligence anywhere threatens everyone, then advanced
+AI development must become illegal everywhere.
+
+Their proposed first step is to monitor and control the computing
+infrastructure capable of training or running increasingly powerful
+systems. Large concentrations of advanced chips would be registered,
+observed, and subject to international inspection.
+
+But compute controls alone would not be enough. Algorithmic advances can
+make powerful systems cheaper to train, meaning that yesterday's enormous
+cluster may become tomorrow's modest laboratory.
+
+The authors therefore argue that research aimed at making AI substantially
+more capable or efficient must also be prohibited.
+
+A global prohibition would require credible enforcement. If a company or
+state attempted to build an unauthorized frontier datacenter, other
+powers would need to demand that it stop and, if necessary, disrupt or
+destroy the facility.
+
+The authors acknowledge that this would be expensive, dangerous, and open
+to abuse. Their position is that every available alternative is worse if
+continued AI escalation ends in human extinction.
         """
-        <div class="card">
-            <h3>3. Compute is the most governable chokepoint available</h3>
-
-            <p><strong>My initial reaction:</strong> Cautiously agree.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “Compute is attractive to govern because chips, datacenters, and
-                power draw are more legible than algorithms or intentions.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors propose concentrating advanced computing hardware in
-                monitored locations and using chip registration, electricity
-                monitoring, and international inspection to detect unauthorized
-                training runs.
-            </p>
-
-            <p>
-                This is more concrete than asking regulators to inspect whether an
-                AI system is “too intelligent” or whether a developer has “good
-                intentions.” Large training runs currently require physical
-                infrastructure, specialized chips, energy, cooling, networking, and
-                capital.
-            </p>
-
-            <p>
-                Those physical dependencies create possible points of observation
-                and control.
-            </p>
-
-            <p>
-                But governable does not mean simple. Hardware can be smuggled,
-                workloads can be distributed, monitoring can be evaded, governments
-                can conceal military programs, and verification systems can become
-                instruments of industrial surveillance.
-            </p>
-
-            <p>
-                Compute governance is therefore plausible as one layer of control.
-                I am not convinced it can carry the entire burden the authors place
-                on it.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
     )
 
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-            <p>
-                Is compute governance a durable safety mechanism, or merely the most
-                visible control point available during the current technological
-                phase?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    st.markdown("### How I was thinking through this")
 
-    st.markdown(
+    st.graphviz_chart(
         """
-        <span class="tag">compute governance</span>
-        <span class="tag">chip monitoring</span>
-        <span class="tag">verification</span>
-        <span class="tag">legibility</span>
+        digraph {
+            rankdir=LR
+            bgcolor="transparent"
+
+            node [
+                shape=box
+                style="rounded,filled"
+                fillcolor="#181B23"
+                color="#7C9A7A"
+                fontcolor="#F4F1EA"
+                fontname="Helvetica"
+                margin="0.18,0.12"
+            ]
+
+            edge [
+                color="#D8A54A"
+                penwidth=2
+                arrowsize=0.8
+            ]
+
+            premise [label="Superintelligence anywhere\\nthreatens everyone"]
+            prohibition [label="Advanced AI must be\\nprohibited everywhere"]
+            compute [label="Monitor chips, power,\\nand datacenters"]
+            research [label="Restrict capability and\\nefficiency research"]
+            enforcement [label="Inspect, disrupt, or\\ndestroy violations"]
+            survival [label="Preserve humanity's\\nability to choose later"]
+
+            premise -> prohibition
+            prohibition -> compute
+            compute -> research
+            research -> enforcement
+            enforcement -> survival
+        }
         """,
-        unsafe_allow_html=True,
+        use_container_width=True,
     )
 
-    # CLAIM 4 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>4. Because no safe compute threshold is known, the threshold should be set extremely low</h3>
-
-            <p><strong>My initial reaction:</strong> This is where precaution starts
-            to become prohibition by assumption.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “The uncertainty is real. But ‘we cannot identify a safe boundary’
-                does not automatically tell us that the only defensible boundary is
-                near zero.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors acknowledge that there is nothing scientifically magical
-                about a threshold such as 100,000 GPUs. They therefore recommend
-                setting the legal limit dramatically lower rather than risking that
-                an apparently moderate amount of compute is already enough.
-            </p>
-
-            <p>
-                This follows a strict precautionary logic: when the harm is
-                extinction and the threshold is unknown, err as far as possible on
-                the side of restraint.
-            </p>
-
-            <p>
-                The problem is that this reasoning can become difficult to falsify.
-                Any threshold can be described as potentially too high because the
-                dangerous system has not yet been built. The absence of a known safe
-                boundary becomes evidence for choosing the most restrictive one.
-            </p>
-
-            <p>
-                A defensible threshold would need to connect compute to measurable
-                capabilities, deployment conditions, autonomy, access, and evidence
-                of dangerous behavior. Compute alone is an imperfect proxy for all
-                of them.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
+    place = st.radio(
+        "📍 Places I paused",
+        [
+            "Humanity can mobilize at enormous cost when survival is at stake",
+            "No single company or country can solve a global AI race",
+            "Compute monitoring is more concrete than regulating model behavior",
+            "There is no obviously safe computing threshold",
+            "Algorithmic progress weakens compute-only governance",
+            "A global prohibition requires credible enforcement against defectors",
+            "The proposed enforcement regime creates enormous moral hazards",
+            "Waiting for a clearer warning may mean waiting too long",
+            "Incremental AI policy is not the same as addressing existential risk",
+            "A broad coalition should focus on the minimum shared goal",
+        ],
+        key="chapter13_place",
     )
 
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-            <p>
-                How should policymakers choose a safety threshold when the relevant
-                capability boundary is unknown and the proposed proxy is only
-                indirectly related to the feared harm?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">precautionary principle</span>
-        <span class="tag">threshold uncertainty</span>
-        <span class="tag">proxy measures</span>
-        <span class="tag">burden of proof</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # CLAIM 5 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>5. Algorithmic efficiency can undermine hardware-based limits</h3>
-
-            <p><strong>My initial reaction:</strong> Agree. This is one of the most
-            technically important points in the chapter.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “Controlling today’s quantity of compute does not control tomorrow’s
-                capability if algorithms keep making each unit of compute more
-                productive.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                A system with the capabilities of last year’s frontier model may be
-                trainable later using a fraction of the original hardware.
-                Improvements in architectures, data efficiency, optimization,
-                inference methods, distillation, and hardware utilization can move
-                capability beneath a fixed compute threshold.
-            </p>
-
-            <p>
-                This means that a static hardware rule decays over time.
-            </p>
-
-            <p>
-                The authors respond by arguing that some algorithmic research would
-                also have to become illegal. Their example is the transformer:
-                apparently abstract research can unexpectedly unlock broad new
-                capabilities.
-            </p>
-
-            <p>
-                I agree with the diagnosis more than the prescription. Algorithmic
-                progress complicates compute governance profoundly. But prohibiting
-                research because the next paper might be dangerous raises enormous
-                questions about scope, enforcement, scientific freedom, and how one
-                distinguishes safety-enhancing work from capability-enhancing work.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-            <p>
-                Can research governance meaningfully distinguish capability work
-                from safety work when the same technical discovery may contribute
-                to both?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">algorithmic efficiency</span>
-        <span class="tag">compute overhang</span>
-        <span class="tag">dual-use research</span>
-        <span class="tag">capability diffusion</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # CLAIM 6 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>6. The authors endorse sabotage or military force against noncompliant AI infrastructure</h3>
-
-            <p><strong>My initial reaction:</strong> Strongly disagree.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “This is not a minor implementation detail. It is a proposal to make
-                speculative AI risk a possible justification for interstate
-                violence.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors argue that if a country attempted to construct a
-                prohibited AI datacenter, other powers should communicate that the
-                project frightened them and demand that it stop. If diplomacy
-                failed, they propose cyberattacks, sabotage, or conventional
-                airstrikes.
-            </p>
-
-            <p>
-                They frame this as equivalent to stopping nuclear proliferation and
-                argue that datacenters may ultimately be more dangerous than nuclear
-                weapons.
-            </p>
-
-            <p>
-                I do not think the chapter has earned that conclusion.
-            </p>
-
-            <p>
-                Preventive violence requires extraordinarily reliable intelligence,
-                shared definitions, legitimate authority, evidence of imminent
-                danger, and confidence that intervention will reduce rather than
-                escalate the risk.
-            </p>
-
-            <p>
-                A mistaken attribution, ambiguous research program, intelligence
-                failure, or politically motivated accusation could create war
-                between nuclear powers. Cyberattacks could spread beyond their
-                intended target. Destruction of datacenters could harm civilians or
-                critical infrastructure.
-            </p>
-
-            <p>
-                The authors repeatedly emphasize the danger of handing control to a
-                powerful unaccountable optimizer. That concern should also apply to
-                states empowered to destroy infrastructure based on predictions
-                about what a future AI system might become.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-            <p>
-                What evidentiary standard could ever justify preventive military
-                action against a computing facility, especially when the feared
-                capability may not yet exist and cannot be directly observed?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">preventive force</span>
-        <span class="tag">state power</span>
-        <span class="tag">escalation risk</span>
-        <span class="tag">legitimacy</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # CLAIM 7 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>7. Small or incremental regulation may create the appearance of action without changing the trajectory</h3>
-
-            <p><strong>My initial reaction:</strong> Agree with the criticism, but
-            not with dismissing incremental policy altogether.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “A policy can be politically achievable and still be irrelevant to
-                the risk it claims to address.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors criticize proposals focused on reporting requirements,
-                deepfakes, annual safety plans, or regulation of obviously weaker
-                systems. Their concern is that these measures allow institutions to
-                say they acted while leaving frontier capability development
-                untouched.
-            </p>
-
-            <p>
-                That is a legitimate governance failure mode. Regulation can become
-                symbolic, fragmented, or aimed at harms that are easier to explain
-                rather than those that are hardest to control.
-            </p>
-
-            <p>
-                I am less convinced that incremental policy is inherently useless.
-                Reporting, incident disclosure, model evaluations, chip tracking,
-                liability, licensing, security requirements, and audit authority can
-                create institutional capacity that does not currently exist.
-            </p>
-
-            <p>
-                The relevant question is not whether a policy stops extinction by
-                itself. It is whether the policy measurably improves visibility,
-                accountability, coordination, or the ability to intervene later.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-            <p>
-                How can we tell the difference between incremental regulation that
-                builds real governing capacity and incremental regulation that
-                merely reassures the public?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">regulatory theater</span>
-        <span class="tag">incremental governance</span>
-        <span class="tag">institutional capacity</span>
-        <span class="tag">accountability</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # CLAIM 8 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>8. The anti-extinction coalition should remain broader than any single political package</h3>
-
-            <p><strong>My initial reaction:</strong> Agree.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “Coalitions collapse when survival becomes conditional on agreeing
-                about every other disputed consequence of technology.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors argue that people do not need to agree about employment,
-                productivity, autonomous weapons, digital minds, human enhancement,
-                or the long-term future in order to cooperate against extinction.
-            </p>
-
-            <p>
-                This is one of the more politically realistic arguments in the
-                chapter.
-            </p>
-
-            <p>
-                AI policy is often bundled with broader ideological programs. That
-                may create a coherent platform for one group while making
-                cooperation impossible with anyone who rejects one part of the
-                package.
-            </p>
-
-            <p>
-                A narrow agreement—humanity should retain the ability to continue
-                existing—does not resolve the technical or evidentiary dispute. But
-                it does provide a possible common value across otherwise incompatible
-                political positions.
-            </p>
-
-            <p>
-                I would still phrase the coalition around preventing catastrophic
-                loss of control rather than assuming extinction is the inevitable
-                result of any sufficiently advanced system.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-            <p>
-                What is the narrowest shared principle that could support meaningful
-                AI governance without requiring agreement about the entire future of
-                technology or society?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">coalition building</span>
-        <span class="tag">minimum consensus</span>
-        <span class="tag">political pluralism</span>
-        <span class="tag">catastrophic risk</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # CLAIM 9 -----------------------------------------------------------
-
-    st.markdown(
-        """
-        <div class="card">
-            <h3>9. Stopping AI development is presented as only the first step</h3>
-
-            <p><strong>My initial reaction:</strong> This exposes an unresolved
-            tension in the book.</p>
-
-            <p><strong>Here’s what I wrote in the margin:</strong></p>
-
-            <p>
-                “The authors want an indefinite global halt now, followed eventually
-                by a safe path to something like superintelligence. The bridge
-                between those two states is doing a lot of invisible work.”
-            </p>
-
-            <p><strong>Why I think this:</strong></p>
-
-            <p>
-                The authors do not claim that humanity should permanently abandon
-                intelligence enhancement or an abundant technological future. They
-                say the current path should stop until humanity becomes capable of
-                solving alignment correctly.
-            </p>
-
-            <p>
-                They briefly suggest improving humans themselves so that people are
-                smart enough to solve the problem without optimistically trusting a
-                plan that will fail.
-            </p>
-
-            <p>
-                That leaves several enormous questions unanswered.
-            </p>
-
-            <p>
-                Who determines when humanity is ready? What research remains legal
-                during the pause? How are safety theories tested without building
-                increasingly capable systems? How does a temporary emergency regime
-                avoid becoming permanent? And why should human enhancement be easier
-                to align, govern, or distribute fairly?
-            </p>
-
-            <p>
-                “Shut it down” is clearer than the authors’ theory of what happens
-                afterward.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        f"""
-        <div class="lavender-box">
-            <h3>Question I’d love to talk about with {you()}</h3>
-            <p>
-                What would a legitimate and testable exit condition from a global AI
-                moratorium actually look like?
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        """
-        <span class="tag">moratorium</span>
-        <span class="tag">exit conditions</span>
-        <span class="tag">human enhancement</span>
-        <span class="tag">institutional permanence</span>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # ------------------------------------------------------------------
-    # WHAT WOULD CHANGE MY MIND
-    # ------------------------------------------------------------------
-
+    if place == (
+        "Humanity can mobilize at enormous cost when survival is at stake"
+    ):
+        render_claim_card(
+            title=(
+                "Humanity can mobilize at enormous cost when survival "
+                "is at stake"
+            ),
+            reaction="🟢 Agree with the general point",
+            margin_note="""
+The World War II analogy is doing two things at once.
+
+First, it challenges the claim that international coordination on AI is
+simply too expensive, disruptive, or politically difficult to imagine.
+
+Human societies have imposed drafts, rationed essential goods, redirected
+industrial production, borrowed staggering sums of money, and accepted
+extraordinary state power when leaders and citizens believed the stakes
+were high enough.
+
+That part is true.
+
+Political feasibility is not fixed. What sounds impossible under normal
+conditions can become ordinary policy during a recognized emergency.
+
+But the analogy also risks smuggling in the very conclusion that needs to
+be established.
+
+The Allied powers were responding to visible states, armies, invasions,
+and atrocities. The threat was contested politically, but it was not a
+hypothetical capability threshold hidden inside an uncertain technological
+trajectory.
+
+The chapter is right that humanity can mobilize.
+
+It has not yet shown that people would interpret the AI evidence as
+clearly enough to mobilize in the same way.
+            """,
+            why="""
+- Political feasibility changes when a threat becomes socially legible.
+- States have previously accepted extraordinary costs for collective survival.
+- Emergency mobilization requires more than technical expert concern.
+- The comparison depends on whether the AI threat becomes broadly credible.
+            """,
+            questions="""
+- What would make advanced AI risk feel politically real rather than abstract?
+- Can democratic mobilization occur before visible catastrophe?
+- How much consensus existed before earlier large-scale mobilizations?
+- When does an emergency analogy clarify the stakes, and when does it manufacture urgency?
+            """,
+            side_trails="""
+- Wartime mobilization
+- Political feasibility
+- Risk communication
+- Emergency governance
+- Securitization
+            """,
+        )
+
+    elif place == "No single company or country can solve a global AI race":
+        render_claim_card(
+            title="No single company or country can solve a global AI race",
+            reaction="🟢 Strongly agree",
+            margin_note="""
+This is one of the chapter's strongest claims.
+
+If the danger comes from the existence of a sufficiently capable system,
+then it does not matter very much whether most companies behave
+responsibly.
+
+It also does not matter whether one country bans the work inside its own
+borders while another continues.
+
+A unilateral pause can reduce one actor's contribution to the risk. It
+cannot solve a race in which the first successful defector changes the
+outcome for everyone.
+
+That makes the problem structurally different from ordinary product
+regulation.
+
+A dangerous medical device can be removed from one market. A polluting
+factory primarily harms a region. A system capable of replication,
+cyber operations, strategic manipulation, or global loss of control
+would not respect jurisdictional boundaries.
+
+I agree that national virtue is not a complete strategy.
+
+The unresolved question is whether meaningful international coordination
+can exist without the universal and nearly perfect enforcement standard
+the authors appear to require.
+            """,
+            why="""
+- Advanced AI development produces cross-border externalities.
+- One actor may impose risk on people who never consented to it.
+- National regulation does not bind foreign companies or governments.
+- A single defector may undermine a broad voluntary agreement.
+            """,
+            questions="""
+- Does survival require universal compliance or merely control of the largest actors?
+- Which countries and companies actually possess decisive frontier capability?
+- Can partial coordination meaningfully slow the race?
+- What happens when a state considers AI development essential to its security?
+            """,
+            side_trails="""
+- Global catastrophic risk
+- Cross-border externalities
+- Collective action
+- Treaty design
+- Race dynamics
+            """,
+        )
+
+    elif place == (
+        "Compute monitoring is more concrete than regulating model behavior"
+    ):
+        render_claim_card(
+            title=(
+                "Compute monitoring is more concrete than regulating "
+                "model behavior"
+            ),
+            reaction="🟢 Agree, with substantial implementation concerns",
+            margin_note="""
+I understand why the authors begin with computing infrastructure.
+
+It is easier to count advanced chips, identify major datacenters, monitor
+large electrical loads, and audit supply chains than it is to inspect a
+model and prove that it will never become dangerous.
+
+Compute is a physical bottleneck.
+
+Models, prompts, intentions, and algorithms are difficult to observe.
+Large clusters of specialized hardware are comparatively tangible.
+
+That makes compute governance one of the more plausible components of a
+serious international regime.
+
+But physical observability is not the same as political simplicity.
+
+A monitoring system would need chip registries, import controls, power
+records, inspections, secure telemetry, supply-chain cooperation, and a
+trusted authority capable of distinguishing prohibited activity from
+ordinary scientific, commercial, or military computing.
+
+It would also create an extraordinary surveillance infrastructure.
+
+The same system that can identify unauthorized AI training could be used
+to monitor universities, companies, dissidents, or less powerful states.
+
+So I see the appeal of the bottleneck.
+
+I do not think the chapter spends enough time on who controls the
+monitoring layer—or how the monitored can challenge its decisions.
+            """,
+            why="""
+- Advanced compute is more physically observable than model intent.
+- Chip supply chains create potential regulatory choke points.
+- Large datacenters may be detectable through procurement and energy use.
+- Monitoring infrastructure can itself become a source of concentrated power.
+            """,
+            questions="""
+- Who would operate the international compute registry?
+- How would inspectors distinguish dangerous training from legitimate computing?
+- What appeal process would exist after a violation is alleged?
+- Can monitoring be technically effective without becoming politically abusive?
+            """,
+            side_trails="""
+- Compute governance
+- Chip supply chains
+- Datacenter monitoring
+- Verification technology
+- Surveillance infrastructure
+            """,
+        )
+
+    elif place == "There is no obviously safe computing threshold":
+        render_claim_card(
+            title="There is no obviously safe computing threshold",
+            reaction="🟢 Strongly agree",
+            margin_note="""
+The authors are unusually candid here.
+
+There is nothing magical about one hundred thousand GPUs.
+
+There is also nothing obviously safe about ninety-nine thousand, one
+thousand, or a cluster the size of several consumer machines.
+
+Any threshold would be a governance choice made under uncertainty.
+
+Set it too high and genuinely dangerous systems may remain legal.
+
+Set it too low and ordinary research, gaming hardware, scientific
+computing, medical modeling, and local experimentation could become
+subject to registration or prohibition.
+
+That is not a minor implementation detail.
+
+The threshold determines how much of society falls inside the emergency
+regime.
+
+I agree with the authors that the absence of a precise fatal number is
+not evidence that no danger exists.
+
+But the opposite is also true: uncertainty about the danger does not
+automatically justify setting the threshold at the lowest technically
+enforceable level.
+
+The burden is to explain why a particular threshold is proportionate to
+the evidence, revisable as technology changes, and narrow enough not to
+criminalize enormous amounts of harmless computation.
+            """,
+            why="""
+- Capability does not map cleanly onto a single hardware count.
+- Model architecture and training efficiency alter what a given cluster can do.
+- Conservative thresholds reduce false negatives but increase false positives.
+- Threshold choices distribute political and economic power.
+            """,
+            questions="""
+- What evidence should determine a regulated compute threshold?
+- Should thresholds depend on model type, training objective, or deployment access?
+- How often would the threshold need to change?
+- What protections should exist for research below the dangerous frontier?
+            """,
+            side_trails="""
+- Regulatory thresholds
+- Compute scaling
+- False positives
+- Proportionality
+- Technology-neutral regulation
+            """,
+        )
+
+    elif place == "Algorithmic progress weakens compute-only governance":
+        render_claim_card(
+            title="Algorithmic progress weakens compute-only governance",
+            reaction="🟢 Strongly agree",
+            margin_note="""
+This is the chapter's most important technical complication.
+
+A system as capable as last year's frontier model may eventually require
+a fraction of last year's computing power.
+
+The transformer itself illustrates the problem.
+
+A conceptual advance can unlock an enormous increase in capability
+without requiring a corresponding increase in raw hardware.
+
+That means a governance system built only around today's largest
+datacenters will decay over time.
+
+The regulated threshold moves downward as algorithms, data curation,
+training procedures, inference methods, and hardware utilization improve.
+
+I agree that compute governance cannot be the entire strategy.
+
+Where the authors lose me is the jump from that observation to making
+broad categories of research illegal.
+
+Research into efficiency is not a cleanly separable activity. Work on
+optimization, compression, mathematics, hardware, distributed systems,
+neuroscience, and energy efficiency can have both ordinary and
+capability-enhancing applications.
+
+The danger is real.
+
+The proposed boundary around forbidden knowledge remains extremely hard
+to define.
+            """,
+            why="""
+- Algorithmic efficiency can substitute for raw computing power.
+- Hardware thresholds become obsolete as methods improve.
+- General scientific work may produce unexpected capability gains.
+- Research restrictions are harder to define and verify than hardware controls.
+            """,
+            questions="""
+- What counts as capability research rather than ordinary computer science?
+- Can research restrictions target experiments rather than ideas?
+- How should dual-use work be evaluated?
+- Would secrecy make dangerous breakthroughs more difficult to monitor?
+            """,
+            side_trails="""
+- Algorithmic efficiency
+- Dual-use research
+- Transformer architecture
+- Research governance
+- Information hazards
+            """,
+        )
+
+    elif place == (
+        "A global prohibition requires credible enforcement against defectors"
+    ):
+        render_claim_card(
+            title=(
+                "A global prohibition requires credible enforcement "
+                "against defectors"
+            ),
+            reaction="🟡 Agree with the strategic logic",
+            margin_note="""
+A prohibition that everyone expects others to violate is not a stable
+prohibition.
+
+The authors are right about that.
+
+If one country believes another is secretly building a decisive system,
+restraint begins to look like unilateral disarmament.
+
+Verification therefore needs an enforcement mechanism strong enough to
+change the expected payoff of defection.
+
+That may include inspections, sanctions, equipment seizure, cyber
+disruption, sabotage, or—in the authors' most extreme scenario—
+conventional military strikes against unauthorized datacenters.
+
+Strategically, I understand the argument.
+
+A rule without consequences invites the actors most willing to ignore it
+to determine the future for everyone else.
+
+But credible enforcement has two sides.
+
+It may deter prohibited activity.
+
+It may also convince states that their datacenters, power systems,
+research institutions, and military infrastructure are potential targets,
+thereby increasing secrecy, hardening, preemption, and arms-race behavior.
+
+The chapter treats enforcement primarily as the solution to defection.
+
+It may also become one of the mechanisms that makes cooperation harder.
+            """,
+            why="""
+- Agreements fail when violations are profitable and weakly punished.
+- Verification is meaningful only when findings produce consequences.
+- Strong enforcement may deter hidden frontier development.
+- Threats against infrastructure can increase escalation and secrecy.
+            """,
+            questions="""
+- Which enforcement tools are strong enough without becoming acts of war?
+- Who determines that a prohibited datacenter actually exists?
+- What evidentiary standard should precede destructive action?
+- Can enforcement remain credible without creating incentives for preemption?
+            """,
+            side_trails="""
+- Deterrence
+- Verification
+- Counterproliferation
+- Escalation risk
+- Commitment problems
+            """,
+        )
+
+    elif place == (
+        "The proposed enforcement regime creates enormous moral hazards"
+    ):
+        render_claim_card(
+            title=(
+                "The proposed enforcement regime creates enormous "
+                "moral hazards"
+            ),
+            reaction="🔴 This is where I become deeply uneasy",
+            margin_note="""
+The authors acknowledge that emergency authority can be abused.
+
+I do not think acknowledgement is enough.
+
+A global institution capable of tracking advanced computation,
+investigating private facilities, seizing hardware, imposing sanctions,
+conducting cyberattacks, and authorizing physical destruction would be
+one of the most powerful governance structures ever created.
+
+That power would not be used by an abstract entity called humanity.
+
+It would be exercised by particular states, agencies, officials,
+contractors, intelligence services, and military organizations with
+their own interests and biases.
+
+False intelligence happens.
+
+Political opponents are mislabeled.
+
+Rules are enforced unequally.
+
+Temporary emergency powers persist.
+
+Infrastructure intended for one threat is repurposed for another.
+
+The authors' answer is that extinction is worse.
+
+That may be true and still be incomplete.
+
+Expected harm cannot be evaluated by comparing extinction with an ideal
+version of global enforcement. It must be compared with the actual
+institutions we are likely to build, including their error rates,
+incentives, capture risks, and capacity for violence.
+            """,
+            why="""
+- Emergency institutions rarely operate exactly as designed.
+- Surveillance and enforcement powers can be redirected toward other goals.
+- False positives could carry catastrophic consequences.
+- Powerful states may impose unequal rules on weaker states.
+            """,
+            questions="""
+- What constitutional limits could bind an international AI authority?
+- Who investigates abuse by the enforcement body itself?
+- How would less powerful countries receive equal standing?
+- What level of institutional harm becomes unacceptable even under existential risk?
+            """,
+            side_trails="""
+- Moral hazard
+- Emergency powers
+- Institutional capture
+- International law
+- Procedural legitimacy
+            """,
+        )
+
+    elif place == "Waiting for a clearer warning may mean waiting too long":
+        render_claim_card(
+            title="Waiting for a clearer warning may mean waiting too long",
+            reaction="🟢 Agree",
+            margin_note="""
+The chapter is right to challenge the comforting idea that a dramatic
+warning will arrive at exactly the useful moment.
+
+A near-catastrophe is only informative if it is visible, correctly
+interpreted, contained, and followed by action.
+
+Advanced systems may improve quietly inside private laboratories.
+
+A dangerous transition may not resemble a public disaster.
+
+Organizations may explain away strange behavior, classify the evidence,
+or continue because the anomaly is ambiguous.
+
+Even a highly visible incident may produce only temporary concern before
+normal incentives return.
+
+So “we will act when the danger becomes obvious” is not a strategy.
+
+It is a bet that the evidence will become persuasive before the system
+becomes difficult to control.
+
+I agree that there may be no universally recognized right time.
+
+The hard question is what evidence is sufficient to justify exceptional
+action before certainty is available.
+            """,
+            why="""
+- Dangerous capability growth may occur outside public observation.
+- Warning signs can be ambiguous or institutionally suppressed.
+- Near misses do not guarantee political action.
+- Waiting for certainty may eliminate the opportunity for prevention.
+            """,
+            questions="""
+- Which present-day signals should count as meaningful warning signs?
+- Who decides when uncertainty has become intolerable?
+- Can predetermined tripwires reduce politically convenient delay?
+- How should policy respond when experts disagree about whether a threshold was crossed?
+            """,
+            side_trails="""
+- Warning signals
+- Tripwires
+- Normalcy bias
+- Precautionary action
+- Policy windows
+            """,
+        )
+
+    elif place == (
+        "Incremental AI policy is not the same as addressing existential risk"
+    ):
+        render_claim_card(
+            title=(
+                "Incremental AI policy is not the same as addressing "
+                "existential risk"
+            ),
+            reaction="🟡 Agree with the distinction; disagree with the dismissal",
+            margin_note="""
+The authors are frustrated by policy proposals that discuss reporting,
+deepfakes, annual safety plans, bias, or limited model behavior while
+avoiding the claim that increasingly capable AI could end humanity.
+
+I understand that frustration.
+
+A policy can look serious while leaving the central risk mechanism
+untouched.
+
+If the concern is uncontrolled superintelligence, then paperwork,
+voluntary commitments, and narrow content rules are not sufficient.
+
+But insufficient is not the same as useless.
+
+Reporting requirements can create visibility.
+
+Incident-disclosure rules can reveal patterns.
+
+Model evaluations can build institutional capacity.
+
+Liability can change incentives.
+
+Compute reporting can become the foundation for stronger verification.
+
+Incremental policy may fail because it is timid.
+
+It may also be how legal systems acquire the authority, technical
+knowledge, and political legitimacy needed to do something stronger
+later.
+
+I would not confuse small steps with a complete solution.
+
+I also would not discard them merely because they do not begin with the
+authors' final conclusion.
+            """,
+            why="""
+- Narrow rules may fail to address frontier capability escalation.
+- Symbolic regulation can create the appearance of safety without changing risk.
+- Incremental policies can still build information and enforcement capacity.
+- Durable governance often develops through cumulative legal infrastructure.
+            """,
+            questions="""
+- Which incremental policies genuinely reduce frontier risk?
+- Which policies mainly create regulatory theater?
+- Can gradual institution-building move quickly enough?
+- How should policymakers communicate limited measures without overstating them?
+            """,
+            side_trails="""
+- Regulatory capacity
+- Policy layering
+- Safety theater
+- Mandatory reporting
+- Institutional learning
+            """,
+        )
+
+    elif place == (
+        "A broad coalition should focus on the minimum shared goal"
+    ):
+        render_claim_card(
+            title="A broad coalition should focus on the minimum shared goal",
+            reaction="🟢 Strongly agree",
+            margin_note="""
+This is the most politically useful part of the chapter.
+
+People do not need to agree about automation, employment, military AI,
+consciousness, capitalism, abundance, human enhancement, or the long-term
+future in order to agree that humanity should not be involuntarily
+eliminated.
+
+Bundling every AI dispute into one package makes coordination harder.
+
+Someone may favor automation and oppose extinction.
+
+Someone may oppose autonomous weapons but support medical AI.
+
+Someone may want radical technological progress but reject an
+uncontrolled race toward systems no one knows how to govern.
+
+A survival coalition should therefore be narrow enough to include people
+with fundamentally different visions of a good future.
+
+That does not resolve the difficult questions about what must be stopped.
+
+But it is a better political starting point than requiring agreement on
+every moral and economic consequence of AI before anyone can act.
+            """,
+            why="""
+- Broad package deals create unnecessary ideological barriers.
+- Extinction prevention can be separated from many other AI disputes.
+- Coalitions are stronger when they organize around a clear shared minimum.
+- Other disagreements can continue without blocking survival-oriented action.
+            """,
+            questions="""
+- What is the narrowest principle a broad AI-risk coalition could share?
+- Which policies follow directly from that principle?
+- Which issues should remain outside the survival coalition?
+- How do we prevent a narrow coalition from becoming a vehicle for unrelated goals?
+            """,
+            side_trails="""
+- Coalition building
+- Minimum viable consensus
+- Existential security
+- Political pluralism
+- Issue bundling
+            """,
+        )
+
+    st.markdown("---")
     st.subheader("What Would Change My Mind?")
 
     col1, col2 = st.columns(2)
@@ -801,20 +731,19 @@ def render_chapter13(you) -> None:
         st.markdown(
             """
             <div class="sage-box">
-                <h3>I would become more supportive of a broad shutdown if...</h3>
-
+                <h3>I would become more supportive of a global shutdown if...</h3>
                 <p>
-                    Multiple independently governed evaluations showed that frontier
-                    systems were approaching autonomous replication, persistent
-                    strategic deception, rapid AI research acceleration, or the
-                    ability to evade meaningful human control.
+                    There were reproducible evidence that continued scaling was
+                    producing autonomous replication, durable strategic deception,
+                    independent resource acquisition, or AI systems capable of
+                    accelerating frontier research without meaningful human
+                    supervision.
                 </p>
-
                 <p>
-                    I would also update if safety researchers demonstrated that
-                    narrower controls consistently failed because capabilities
-                    crossed technical, national, and organizational boundaries too
-                    quickly to contain.
+                    I would also update if multiple technically and politically
+                    independent groups converged on enforceable definitions,
+                    credible verification methods, and a governance structure with
+                    meaningful due-process protections.
                 </p>
             </div>
             """,
@@ -825,86 +754,76 @@ def render_chapter13(you) -> None:
         st.markdown(
             """
             <div class="blue-box">
-                <h3>I would become more opposed to a broad shutdown if...</h3>
-
+                <h3>I would become less supportive of a global shutdown if...</h3>
                 <p>
-                    The proposed enforcement regime required pervasive surveillance,
-                    indefinite emergency powers, preventive violence, or unreviewable
-                    authority without producing reliable evidence that it reduced
-                    catastrophic risk.
+                    Capability growth repeatedly remained dependent on dense human
+                    scaffolding, narrow deployment environments, and infrastructure
+                    that could be reliably monitored, isolated, and revoked.
                 </p>
-
                 <p>
-                    I would also update if capability-specific regulation,
-                    containment, interpretability, licensing, and international
-                    verification repeatedly controlled dangerous behavior without
-                    requiring a prohibition on the broader field.
+                    I would also update if staged deployment, interpretability,
+                    external control systems, and international compute governance
+                    demonstrated that dangerous capabilities could be bounded
+                    without prohibiting broad areas of research.
                 </p>
             </div>
             """,
             unsafe_allow_html=True,
         )
 
-    # ------------------------------------------------------------------
-    # LOOKING BACK
-    # ------------------------------------------------------------------
-
     st.subheader("Looking Back")
 
     st.markdown(
-        """
+        f"""
         <div class="burgundy-box">
             <h3>Where this chapter moved me</h3>
-
             <p>
-                This chapter makes the governance problem feel more concrete.
+                This chapter makes the book's position much easier to evaluate
+                because it finally states what “taking the risk seriously” would
+                require in practice.
             </p>
-
             <p>
-                If advanced AI creates genuinely global and irreversible risks, then
-                voluntary commitments, company-level safety promises, and purely
-                domestic regulation are not enough. Compute infrastructure,
-                algorithmic efficiency, international competition, and verification
-                all matter.
+                The authors are not proposing better model cards, voluntary safety
+                commitments, or a more cautious race.
             </p>
-
             <p>
-                I agree with the authors that a system cannot be called safe merely
-                because its creators are sincere, and that one responsible actor
-                cannot compensate for a race involving many others.
+                They are proposing a worldwide prohibition backed by surveillance,
+                inspection, economic coercion, cyber operations, and potentially
+                military force.
             </p>
-
             <p>
-                But the chapter asks the reader to move from that diagnosis to an
-                extraordinary political order: worldwide restrictions on computing
-                hardware, prohibition of broad categories of research, intrusive
-                monitoring, and possible military attacks on noncompliant
-                infrastructure.
+                I agree with several premises underneath that conclusion. One
+                responsible company cannot solve a global race. One national ban
+                cannot contain a cross-border threat. Compute is more observable
+                than intent. Algorithmic progress will weaken static hardware
+                thresholds. And waiting for an unmistakable warning may mean
+                waiting until prevention is no longer possible.
             </p>
-
             <p>
-                I do not think the book has established enough confidence in either
-                its forecast or its proposed institutions to justify that leap.
+                Where I remain unconvinced is the assumption that the enforcement
+                system can be treated as a neutral instrument.
             </p>
-
             <p>
-                There is also a tension I cannot ignore. The authors warn us that no
-                powerful system should be trusted merely because its objective sounds
-                benevolent. Yet their solution requires concentrating enormous power
-                in governments and international enforcement bodies whose objective
-                would also be described as benevolent: saving humanity.
+                A global authority powerful enough to stop every prohibited AI
+                project would itself become an unprecedented concentration of
+                technical, political, and military power.
             </p>
-
             <p>
-                Human institutions are not superintelligences, but they are still
-                optimizers. They pursue incentives, expand mandates, protect
-                authority, make classification errors, and impose costs unevenly.
+                That does not automatically make the proposal wrong.
             </p>
-
             <p>
-                So I leave this chapter more convinced that weak and fragmented AI
-                governance is inadequate—but not convinced that “shut it down,” as
-                described here, is either the only possible response or a safe one.
+                It means the governance system belongs inside the risk model.
+                We cannot compare dangerous AI with an idealized shutdown regime.
+                We have to compare it with the imperfect, strategic, error-prone,
+                and potentially abusive institutions humans would actually build.
+            </p>
+            <p>
+                The question I kept wanting to put in front of {you()} is not simply
+                whether humanity could shut the race down.
+            </p>
+            <p>
+                It is whether we could create enough power to enforce that shutdown
+                without creating another system that no one can safely control.
             </p>
         </div>
         """,
