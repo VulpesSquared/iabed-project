@@ -319,7 +319,7 @@ def show() -> None:
                     unsafe_allow_html=True,
                 )
                 st.button(
-                    "Choose this door",
+                    "Choose this door (and look down)",
                     key=f"rabbit_hole_{route_id}",
                     use_container_width=True,
                     on_click=choose_route,
