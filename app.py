@@ -8,6 +8,7 @@ from components.home import render_home
 from components.ontology import show as show_ontology
 from components.reading_journal import show as show_reading_journal
 from components.side_trails import show as show_side_trails
+from components.ask_me import show as show_ask_me
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -176,34 +177,7 @@ elif page == "Side Trails":
     show_side_trails()
 
 elif page == "Ask Me":
-    st.title("💭 Ask Me")
-
-    st.caption(
-        "A future way to explore my notes, sources, disagreements, "
-        "and evolving positions."
-    )
-
-    question = st.text_input(
-        "Ask a question about my notes",
-        placeholder="What changed your mind about agency?",
-    )
-
-    if question:
-        st.markdown(
-            """
-            <div class="lavender-box">
-                <h3>Still being built</h3>
-                <p>
-                    This feature will eventually answer from my notes,
-                    concept pages, chapter commentary, and research sources.
-                </p>
-                <p>
-                    For now, it is a placeholder.
-                </p>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
+    show_ask_me()
 
 elif page == "About":
     show_about()
