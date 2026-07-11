@@ -20,8 +20,6 @@
       "Benchmark",
       "Construct Validity"
     ],
-    "core_readings": [],
-    "further_reading": [],
     "seminar_questions": [
       "What is lost when intelligence is treated as a single dimension?",
       "Can a system be broadly capable without possessing anything like human general intelligence?",
@@ -49,6 +47,74 @@
       "Chapter 3",
       "Chapter 4",
       "Chapter 8"
+    ],
+    "core_readings": [
+      {
+        "title": "On the Measure of Intelligence",
+        "creator": "François Chollet",
+        "year": 2019,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/1911.01547",
+        "note": "Argues skill at specific tasks is a poor proxy for intelligence and proposes measuring generalization/sample-efficiency directly — a clean empirical anchor for the scalar-vs-profile question."
+      },
+      {
+        "title": "Universal Intelligence: A Definition of Machine Intelligence",
+        "creator": "Shane Legg & Marcus Hutter",
+        "year": 2007,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/0712.3329",
+        "note": "The most-cited attempt at a single formal, computable definition of intelligence — useful as the strongest 'scalar' position to argue against or refine."
+      },
+      {
+        "title": "Frames of Mind: The Theory of Multiple Intelligences",
+        "creator": "Howard Gardner",
+        "year": 1983,
+        "type": "book",
+        "url": "https://dspace.sxcjpr.edu.in/jspui/bitstream/123456789/720/1/Howard%20Gardner%20-%20Frames%20of%20Mind_%20The%20Theory%20of%20Multiple%20Intelligences-Basic%20Books%20%282011%29%20%281%29.pdf",
+        "note": "The classic critique of a single general-intelligence view. The theory itself is contested in psychometrics, which is useful to flag in the construct table."
+      },
+      {
+        "title": "Intelligence Without Representation",
+        "creator": "Rodney Brooks",
+        "year": 1991,
+        "type": "paper",
+        "url": "https://people.csail.mit.edu/brooks/papers/representation.pdf",
+        "note": "Foundational embodied/ecological account: intelligence as situated behavior rather than internal symbolic reasoning."
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Measure of All Minds: Evaluating Natural and Artificial Intelligence",
+        "creator": "José Hernández-Orallo",
+        "year": 2017,
+        "type": "book",
+        "url": "https://josephorallo.webs.upv.es/allminds/references.pdf",
+        "note": "Full psychometric-computational synthesis — the most systematic treatment of construct validity for intelligence measures."
+      },
+      {
+        "title": "Why AI Is Harder Than We Think",
+        "creator": "Melanie Mitchell",
+        "year": 2021,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/2104.12871",
+        "note": "Directly addresses how benchmark design creates illusions of generality — pairs well with the benchmark-artifact seminar question."
+      },
+      {
+        "title": "Beyond IQ: A Triarchic Theory of Human Intelligence",
+        "creator": "Robert Sternberg",
+        "year": 1985,
+        "type": "book",
+        "url": "https://assets.cambridge.org/97805212/78911/excerpt/9780521278911_excerpt.pdf",
+        "note": "EXCERPT ONLY - Analytic, creative, and practical intelligence as separable components — useful as a human-cognition profile model to compare against AI capability profiles."
+      },
+      {
+        "title": "A Collection of Definitions of Intelligence",
+        "creator": "Shane Legg & Marcus Hutter",
+        "year": 2007,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/0706.3639",
+        "note": "Survey of ~70 published definitions of intelligence from psychology, AI, and biology — raw material for the methods-lab construct table."
+      }
     ]
   },
   {
@@ -73,8 +139,6 @@
       "Scaffolded Agency",
       "Distributed Agency"
     ],
-    "core_readings": [],
-    "further_reading": [],
     "seminar_questions": [
       "Is agency a property of a model, a deployed system, or an observer's explanatory stance?",
       "Can a system pursue goals without representing them explicitly?",
@@ -102,6 +166,66 @@
       "Chapter 6",
       "Chapter 8",
       "Chapter 11"
+    ],
+    "core_readings": [
+      {
+        "title": "Discovering Agents",
+        "creator": "Zachary Kenton, Ramana Kumar, Sebastian Farquhar, Jonathan Richens, Matt MacDermott & Tom Everitt",
+        "year": 2022,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2208.08345",
+        "note": "The first formal causal definition of agency in ML systems — an agent is a system that would change its policy if its actions influenced the world differently. Directly usable in the construct table."
+      },
+      {
+        "title": "The Intentional Stance",
+        "creator": "Daniel Dennett",
+        "year": 1987,
+        "type": "book",
+        "url": "https://www.scribd.com/document/74996486/Dennett-The-Intentional-Stance",
+        "note": "Argues agency/intentionality can be an observer's explanatory stance rather than an intrinsic property — the philosophical anchor for the observer-relative seminar question."
+      },
+      {
+        "title": "Optimal Policies Tend to Seek Power",
+        "creator": "Alexander Matt Turner, Logan Smith, Rohin Shah, Andrew Critch & Prasad Tadepalli",
+        "year": 2021,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/1912.01683",
+        "note": "Formal result showing power-seeking emerges from broad reward-optimization under mild assumptions — the technical backbone for 'when does optimization become agency.'"
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
+        "creator": "Evan Hubinger, Chris van Merwijk, Vladimir Mikulik, Joar Skalse & Scott Garrabrant",
+        "year": 2019,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/1906.01820",
+        "note": "Introduces mesa-optimization: a learned model can become an optimizer with its own objective, distinct from the outer training objective."
+      },
+      {
+        "title": "The Basic AI Drives",
+        "creator": "Stephen Omohundro",
+        "year": 2008,
+        "type": "paper",
+        "url": "https://selfawaresystems.com/wp-content/uploads/2008/01/ai_drives_final.pdf",
+        "note": "Early argument for instrumental convergence — that almost any goal creates incentives toward self-preservation and resource acquisition, prefiguring the power-seeking literature."
+      },
+      {
+        "title": "Intention, Plans, and Practical Reason",
+        "creator": "Michael Bratman",
+        "year": 1987,
+        "type": "book",
+        "url": "https://archive.org/details/intentionplanspr0000brat",
+        "note": "Philosophy-of-action account of planning agency in humans — a useful ground truth for comparing against 'planning' in RL/LLM agent systems."
+      },
+      {
+        "title": "Power-Seeking Can Be Probable and Predictive for Trained Agents",
+        "creator": "Victoria Krakovna & Janos Kramar",
+        "year": 2023,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2304.06528",
+        "note": "Extends the Turner et al. results from optimal to trained (RL-learned) policies — closes the gap between theory and realistic agents."
+      }
     ]
   },
   {
@@ -126,8 +250,6 @@
       "Machine Consciousness",
       "Moral Patienthood"
     ],
-    "core_readings": [],
-    "further_reading": [],
     "seminar_questions": [
       "Is functional equivalence enough for consciousness?",
       "What evidence could distinguish genuine experience from convincing simulation?",
@@ -154,6 +276,66 @@
       "Chapter 3",
       "Chapter 4",
       "Chapter 8"
+    ],
+    "core_readings": [
+      {
+        "title": "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness",
+        "creator": "Patrick Butlin, Robert Long, et al.",
+        "year": 2023,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2308.08708",
+        "note": "The most systematic attempt to derive testable 'indicator properties' of consciousness from neuroscience theories and apply them to current AI. Concludes no current systems qualify, but no obvious technical barrier either."
+      },
+      {
+        "title": "What Is It Like to Be a Bat?",
+        "creator": "Thomas Nagel",
+        "year": 1974,
+        "type": "paper",
+        "url": "https://www.sas.upenn.edu/~cavitch/pdf-library/Nagel_Bat.pdf",
+        "note": "The foundational statement of the subjective-character-of-experience problem — why functional description may leave something out."
+      },
+      {
+        "title": "Facing Up to the Problem of Consciousness",
+        "creator": "David Chalmers",
+        "year": 1995,
+        "type": "paper",
+        "url": "https://consc.net/papers/facing.pdf",
+        "note": "Introduces the 'hard problem' distinction between explaining function/behavior and explaining experience — the conceptual spine of this whole trail."
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Could a Large Language Model Be Conscious?",
+        "creator": "David Chalmers",
+        "year": 2023,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2303.07103",
+        "note": "Chalmers applies his own hard-problem framework directly to LLMs, weighing candidate indicators for and against — a direct sequel to the 1995 paper."
+      },
+      {
+        "title": "Taking AI Welfare Seriously",
+        "creator": "Robert Long, Jeff Sebo, Patrick Butlin, et al.",
+        "year": 2024,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2411.00986",
+        "note": "Moves from 'is it conscious' to the practical question of what moral precaution should look like under uncertainty — connects this trail to Futures Worth Wanting."
+      },
+      {
+        "title": "On a Confusion About a Function of Consciousness",
+        "creator": "Ned Block",
+        "year": 1995,
+        "type": "paper",
+        "url": "https://philpapers.org/rec/BLOOAC",
+        "note": "Distinguishes 'access consciousness' (information available for reasoning/report) from 'phenomenal consciousness' (subjective experience) — useful for separating fluency from sentience."
+      },
+      {
+        "title": "Consciousness Explained",
+        "creator": "Daniel Dennett",
+        "year": 1991,
+        "type": "book",
+        "url": "https://andrewmbailey.com/papers/ConsciousnessExplained.pdf",
+        "note": "A fully functionalist account that denies any residual hard problem — the strongest opposing position to Chalmers/Nagel, good for stress-testing your own position."
+      }
     ]
   },
   {
@@ -179,8 +361,6 @@
       "Scaling Laws",
       "Emergent Capabilities"
     ],
-    "core_readings": [],
-    "further_reading": [],
     "seminar_questions": [
       "In what sense are learned systems designed, and in what sense are they discovered?",
       "Does opacity arise from scale, distributed representation, optimization, or all three?",
@@ -207,6 +387,66 @@
       "Chapter 2",
       "Chapter 3",
       "Chapter 4"
+    ],
+    "core_readings": [
+      {
+        "title": "Deep Learning",
+        "creator": "Ian Goodfellow, Yoshua Bengio & Aaron Courville",
+        "year": 2016,
+        "type": "book",
+        "url": "https://aikosh.indiaai.gov.in/static/Deep+Learning+Ian+Goodfellow.pdf",
+        "note": "Still the standard technical reference for gradient descent, representation learning, and embeddings — the shared vocabulary layer under this whole concentration."
+      },
+      {
+        "title": "Scaling Laws for Neural Language Models",
+        "creator": "Jared Kaplan et al.",
+        "year": 2020,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/2001.08361",
+        "note": "Established that loss scales as a smooth power law in model size, data, and compute — the empirical basis for treating training as predictable rather than mystical."
+      },
+      {
+        "title": "Are Emergent Abilities of Large Language Models a Mirage?",
+        "creator": "Rylan Schaeffer, Brando Miranda & Sanmi Koyejo",
+        "year": 2023,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2304.15004",
+        "note": "Directly targets the emergence seminar question — shows several claimed capability 'jumps' disappear under continuous metrics, i.e. may be measurement artifacts rather than phase changes."
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Emergent Abilities of Large Language Models",
+        "creator": "Jason Wei et al.",
+        "year": 2022,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/2206.07682",
+        "note": "The paper that popularized the emergence framing that Schaeffer et al. later contest — read the two together."
+      },
+      {
+        "title": "Training Compute-Optimal Large Language Models",
+        "creator": "Jordan Hoffmann et al. (Chinchilla)",
+        "year": 2022,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2203.15556",
+        "note": "Revises the Kaplan-era scaling laws, showing most large models of that period were undertrained relative to their size — a good example of empirical self-correction in the field."
+      },
+      {
+        "title": "Zoom In: An Introduction to Circuits",
+        "creator": "Chris Olah, Nick Cammarata, Ludwig Schubert, Gabriel Goh, Michael Petrov & Shan Carter",
+        "year": 2020,
+        "type": "article",
+        "url": "https://distill.pub/2020/circuits/zoom-in/",
+        "note": "Distill.pub essay arguing learned features and circuits can be identified and studied directly — bridges this trail into Looking Inside the Gray Box."
+      },
+      {
+        "title": "Representation Learning: A Review and New Perspectives",
+        "creator": "Yoshua Bengio, Aaron Courville & Pascal Vincent",
+        "year": 2013,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/1206.5538",
+        "note": "Pre-LLM but still the clearest conceptual treatment of what a learned representation is and why depth/abstraction matter."
+      }
     ]
   },
   {
@@ -232,8 +472,6 @@
       "Value Learning",
       "Corrigibility"
     ],
-    "core_readings": [],
-    "further_reading": [],
     "seminar_questions": [
       "Is alignment primarily an engineering problem, a political problem, or both?",
       "Can preference aggregation produce legitimate values for a broadly deployed system?",
@@ -261,6 +499,66 @@
       "Chapter 6",
       "Chapter 8",
       "Chapter 11"
+    ],
+    "core_readings": [
+      {
+        "title": "Concrete Problems in AI Safety",
+        "creator": "Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman & Dan Mané",
+        "year": 2016,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/1606.06565",
+        "note": "The field-defining taxonomy of specification and robustness failures (reward hacking, side effects, scalable oversight) — a clean entry point before the political dimension of alignment."
+      },
+      {
+        "title": "Deep Reinforcement Learning from Human Preferences",
+        "creator": "Paul Christiano et al.",
+        "year": 2017,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/1706.03741",
+        "note": "The technical origin of preference-based reward learning that RLHF later scaled up — read before InstructGPT / Constitutional AI."
+      },
+      {
+        "title": "Categorizing Variants of Goodhart's Law",
+        "creator": "David Manheim & Scott Garrabrant",
+        "year": 2018,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/1803.04585",
+        "note": "Breaks 'when a measure becomes a target it ceases to be a good measure' into four distinct failure mechanisms — directly usable for the proxy-objective seminar question."
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Training Language Models to Follow Instructions with Human Feedback",
+        "creator": "Long Ouyang et al. (OpenAI, InstructGPT)",
+        "year": 2022,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2203.02155",
+        "note": "The paper that made RLHF a standard production technique — a case study in partial alignment via feedback."
+      },
+      {
+        "title": "Constitutional AI: Harmlessness from AI Feedback",
+        "creator": "Yuntao Bai, Saurav Kadavath, Sandipan Kundu, et al. (Anthropic)",
+        "year": 2022,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2212.08073",
+        "note": "Replaces some human feedback with model self-critique against written principles — a concrete attempt to make the 'whose values' question more transparent and auditable."
+      },
+      {
+        "title": "Artificial Intelligence, Values, and Alignment",
+        "creator": "Iason Gabriel",
+        "year": 2020,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/2001.09768",
+        "note": "The clearest philosophical unpacking of what 'alignment' could mean: technical alignment, value alignment, and the political legitimacy question the position memo is really asking about."
+      },
+      {
+        "title": "The Alignment Problem: Machine Learning and Human Values",
+        "creator": "Brian Christian",
+        "year": 2020,
+        "type": "book",
+        "url": "https://cpb-us-e1.wpmucdn.com/sites.psu.edu/dist/0/110933/files/2022/08/Christian-Alignment-Problem-Intro-and-Ch1.pdf",
+        "note": "INTRO AND CHAPTER 1 ONLYA - Accessible narrative synthesis connecting reward hacking, RLHF, and the specification problem — good for cross-checking your technical framing against a popular treatment."
+      }
     ]
   },
   {
@@ -285,8 +583,6 @@
       "Sparse Features",
       "Representation"
     ],
-    "core_readings": [],
-    "further_reading": [],
     "seminar_questions": [
       "What would count as understanding a neural network well enough for safety?",
       "Can local circuit explanations support global claims about model behavior?",
@@ -313,6 +609,50 @@
       "Chapter 4",
       "Chapter 7",
       "Chapter 8"
+    ],
+    "core_readings": [
+      {
+        "title": "Toy Models of Superposition",
+        "creator": "Nelson Elhage et al. (Anthropic)",
+        "year": 2022,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/2209.10652",
+        "note": "Explains why individual neurons are often polysemantic — models pack more features than they have dimensions — foundational for why interpretability is hard."
+      },
+      {
+        "title": "Towards Monosemanticity: Decomposing Language Models with Dictionary Learning",
+        "creator": "Trenton Bricken et al. (Anthropic)",
+        "year": 2023,
+        "type": "paper",
+        "url": "https://transformer-circuits.pub/2023/monosemantic-features",
+        "note": "Uses sparse autoencoders to extract more interpretable, single-meaning features from superposed activations — the direct technical follow-up to Toy Models of Superposition."
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Scaling Monosemanticity",
+        "creator": "Adly Templeton et al. (Anthropic)",
+        "year": 2024,
+        "type": "paper",
+        "url": "https://transformer-circuits.pub/2024/scaling-monosemanticity",
+        "note": "Extends dictionary-learning interpretability to a production-scale model and finds interpretable, causally-verifiable features — evidence relevant to the 'does this scale to safety-critical claims' seminar question."
+      },
+      {
+        "title": "Towards a Rigorous Science of Interpretable Machine Learning",
+        "creator": "Finale Doshi-Velez & Been Kim",
+        "year": 2017,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/1702.08608",
+        "note": "Predates the circuits era but still the clearest framework for what would count as a validated interpretability claim — useful for the explanation-audit methods lab."
+      },
+      {
+        "title": "Toward Transparent AI: A Survey on Interpreting the Inner Structures of Deep Neural Networks",
+        "creator": "Tilman Räuker, Anson Ho, Stephen Casper & Dylan Hadfield-Menell",
+        "year": 2023,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/2207.13243",
+        "note": "A broad map of the interpretability landscape (probing, attribution, causal intervention) — connective tissue across the methods being compared."
+      }
     ]
   },
   {
@@ -337,8 +677,6 @@
       "Mental Models",
       "Explainability"
     ],
-    "core_readings": [],
-    "further_reading": [],
     "seminar_questions": [
       "Should trustworthy AI aim to increase trust or calibrate reliance?",
       "How does conversational fluency distort judgments of competence?",
@@ -365,6 +703,58 @@
       "Chapter 3",
       "Chapter 8",
       "Chapter 10"
+    ],
+    "core_readings": [
+      {
+        "title": "Trust in Automation: Designing for Appropriate Reliance",
+        "creator": "John D. Lee & Katrina A. See",
+        "year": 2004,
+        "type": "paper",
+        "url": "https://scispace.com/pdf/trust-in-automation-designing-for-appropriate-reliance-2uiy4o89ga.pdf",
+        "note": "The classic paper distinguishing trust from reliance and defining 'calibration' — very likely the direct source behind the 'calibrated reliance' framing in your current position."
+      },
+      {
+        "title": "On Seeing Human: A Three-Factor Theory of Anthropomorphism",
+        "creator": "Nicholas Epley, Adam Waytz & John Cacioppo",
+        "year": 2007,
+        "type": "paper",
+        "url": "https://www.researchgate.net/publication/5936908_On_Seeing_Human_A_Three-Factor_Theory_of_Anthropomorphism",
+        "note": "Explains anthropomorphism as driven by effectance motivation, sociality motivation, and elicited agent knowledge — a psychological model for when humanlike framing helps vs. misleads."
+      },
+      {
+        "title": "Complacency and Bias in Human Use of Automation: An Attentional Integration",
+        "creator": "Raja Parasuraman & Dietrich Manzey",
+        "year": 2010,
+        "type": "paper",
+        "url": "https://www.scribd.com/document/800797485/Parasuraman-Manzey-2010-Complacency-and-Bias-in-Human-Use-of-Automation-An-Attentional-Integration",
+        "note": "Synthesizes the automation-bias literature and the attentional mechanisms behind over-reliance — directly relevant to the calibrated-reliance position."
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Does the Whole Exceed Its Parts? The Effect of AI Explanations on Complementary Team Performance",
+        "creator": "Gagan Bansal et al.",
+        "year": 2021,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/2006.14779",
+        "note": "Empirically tests whether explanations actually improve human+AI joint decisions — a sobering result set for the 'explainability as safety feature' question."
+      },
+      {
+        "title": "To Trust or to Think: Cognitive Forcing Functions Can Reduce Overreliance on AI",
+        "creator": "Zana Buçinca, Maja Barbara Malaya & Krzysztof Z. Gajos",
+        "year": 2021,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/2102.09692",
+        "note": "Tests interface interventions designed to slow people down before accepting an AI recommendation — good raw material for the reliance-study methods lab."
+      },
+      {
+        "title": "Effect of Confidence and Explanation on Accuracy and Trust Calibration in AI-Assisted Decision Making",
+        "creator": "Yunfeng Zhang, Q. Vera Liao & Rachel K. E. Bellamy",
+        "year": 2020,
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/2001.02114",
+        "note": "Shows confidence scores and explanations don't straightforwardly improve calibration and can even backfire — pairs well with the Bansal et al. paper."
+      }
     ]
   },
   {
@@ -389,8 +779,6 @@
       "Normalization of Deviance",
       "Legibility"
     ],
-    "core_readings": [],
-    "further_reading": [],
     "seminar_questions": [
       "Where should the boundary of an AI system be drawn for accountability?",
       "How do organizations convert uncertain model outputs into real-world decisions?",
@@ -418,6 +806,58 @@
       "Chapter 10",
       "Chapter 12",
       "Chapter 13"
+    ],
+    "core_readings": [
+      {
+        "title": "Fairness and Abstraction in Sociotechnical Systems",
+        "creator": "Andrew D. Selbst, danah boyd, Sorelle A. Friedler, Suresh Venkatasubramanian & Janet Vertesi",
+        "year": 2019,
+        "type": "paper",
+        "url": "https://sorelle.friedler.net/papers/sts_fat2019.pdf",
+        "note": "Names the 'abstraction traps' that happen when a sociotechnical problem gets treated as a purely technical one — a strong scaffold for the sociotechnical-system-map methods lab."
+      },
+      {
+        "title": "The Challenger Launch Decision",
+        "creator": "Diane Vaughan",
+        "year": 1996,
+        "type": "book",
+        "url": "https://archive.org/details/challengerlaunch00dian",
+        "note": "The canonical case study in normalization of deviance — how an organization incrementally redefines acceptable risk until disaster looks routine."
+      },
+      {
+        "title": "Moral Crumple Zones: Cautionary Tales in Human-Robot Interaction",
+        "creator": "Madeleine Clare Elish",
+        "year": 2019,
+        "type": "paper",
+        "url": "https://www.researchgate.net/publication/351054898_Moral_Crumple_Zones_Cautionary_Tales_in_Human-Robot_Interaction",
+        "note": "Coins the term for how humans absorb blame for failures that are really systemic — directly answers the seminar question about where accountability actually lands."
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Datasheets for Datasets",
+        "creator": "Timnit Gebru et al.",
+        "year": 2018,
+        "type": "paper",
+        "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2019/01/1803.09010.pdf",
+        "note": "A concrete documentation-and-accountability intervention at the data layer — a good example of a workflow-level, not model-level, fix."
+      },
+      {
+        "title": "Seeing Without Knowing: Limitations of the Transparency Ideal and Its Application to Algorithmic Accountability",
+        "creator": "Mike Ananny & Kate Crawford",
+        "year": 2018,
+        "type": "paper",
+        "url": "https://www.scribd.com/document/635523933/8-Seeing-without-knowing-Limitations-of-the-transparency-ideal-and-its-application-to-algorithmic-accountability",
+        "note": "Argues transparency alone doesn't produce accountability in complex sociotechnical systems — a useful counterpoint if the intervention brief leans on disclosure."
+      },
+      {
+        "title": "Machine Behaviour",
+        "creator": "Iyad Rahwan et al.",
+        "year": 2019,
+        "type": "paper",
+        "url": "https://www.nature.com/articles/s41586-019-1138-y",
+        "note": "Nature paper proposing AI systems in the wild need to be studied empirically as a behavioral science, not just engineered as artifacts — widens the unit of analysis the way this trail's question asks."
+      }
     ]
   },
   {
@@ -443,8 +883,6 @@
       "Safety Case",
       "Distribution Shift"
     ],
-    "core_readings": [],
-    "further_reading": [],
     "seminar_questions": [
       "Can a finite evaluation support a claim about open-ended deployment?",
       "How should evaluation account for strategic adaptation or evaluator awareness?",
@@ -472,6 +910,58 @@
       "Chapter 8",
       "Chapter 10",
       "Chapter 12"
+    ],
+    "core_readings": [
+      {
+        "title": "Model Evaluation for Extreme Risks",
+        "creator": "Toby Shevlane, Sebastian Farquhar, Ben Garfinkel, et al.",
+        "year": 2023,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2305.15324",
+        "note": "The framework paper distinguishing dangerous-capability evaluations from alignment (propensity) evaluations — almost certainly the direct source of this trail's framing."
+      },
+      {
+        "title": "Safety Cases: How to Justify the Safety of Advanced AI Systems",
+        "creator": "Joshua Clymer, Nick Gabrieli, David Krueger & Thomas Larsen",
+        "year": 2024,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2403.10462",
+        "note": "Adapts the 'safety case' methodology from aviation/nuclear engineering to frontier AI — a structured argument-plus-evidence approach rather than a single benchmark score."
+      },
+      {
+        "title": "Red Teaming Language Models with Language Models",
+        "creator": "Ethan Perez et al.",
+        "year": 2022,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2202.03286",
+        "note": "Shows red-teaming itself can be partly automated and scaled — useful for weighing what red-teaming can and can't establish."
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Unsolved Problems in ML Safety",
+        "creator": "Dan Hendrycks, Nicholas Carlini, John Schulman & Jacob Steinhardt",
+        "year": 2021,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2109.13916",
+        "note": "A broad taxonomy (robustness, monitoring, alignment, systemic safety) that complements Shevlane et al.'s narrower extreme-risk focus."
+      },
+      {
+        "title": "Frontier Safety Framework and Responsible Scaling Policy (public policy documents)",
+        "creator": "Google DeepMind and Anthropic",
+        "year": "2023–2026, updated periodically",
+        "type": "report",
+        "url": "https://metr.org/fsp",
+        "note": "The actual industry implementations of staged-deployment evaluation gates — worth reading as primary sources rather than academic proposals, and useful for the safety-case methods lab."
+      },
+      {
+        "title": "International AI Safety Report",
+        "creator": "Yoshua Bengio et al. (chair), international expert panel",
+        "year": 2025,
+        "type": "report",
+        "url": "https://internationalaisafetyreport.org",
+        "note": "A government-commissioned synthesis of the evaluation and evidence landscape across many labs and countries — relevant to 'who should decide what counts as sufficient evidence.'"
+      }
     ]
   },
   {
@@ -497,8 +987,6 @@
       "Robust Decision-Making",
       "Pascal's Mugging"
     ],
-    "core_readings": [],
-    "further_reading": [],
     "seminar_questions": [
       "How should policy respond when catastrophic probabilities cannot be calibrated?",
       "When does the scale of harm justify action despite weak probability estimates?",
@@ -526,6 +1014,58 @@
       "Chapter 12",
       "Chapter 13",
       "Chapter 14"
+    ],
+    "core_readings": [
+      {
+        "title": "Existential Risk Prevention as Global Priority",
+        "creator": "Nick Bostrom",
+        "year": 2013,
+        "type": "paper",
+        "url": "https://existential-risk.com/concept.pdf",
+        "note": "Lays out the formal case for why even tiny probabilities of existential harm can dominate expected-value calculations — the paper most directly under scrutiny in this trail's seminar questions."
+      },
+      {
+        "title": "The Precipice: Existential Risk and the Future of Humanity",
+        "creator": "Toby Ord",
+        "year": 2020,
+        "type": "book",
+        "url": "https://storage.googleapis.com/jnl-lse-j-sppe-files/journals/1/articles/51/64e36300b6acb.pdf",
+        "note": "REVIEW ONLY - The most complete book-length treatment of existential risk reasoning, including explicit probability estimates and their epistemic limits."
+      },
+      {
+        "title": "On Modeling and Interpreting the Economics of Catastrophic Climate Change",
+        "creator": "Martin Weitzman",
+        "year": 2009,
+        "type": "paper",
+        "url": "https://dash.harvard.edu/server/api/core/bitstreams/7312037c-728a-6bd4-e053-0100007fdf3b/content",
+        "note": "Origin of the 'dismal theorem': under fat-tailed uncertainty about catastrophic outcomes, standard expected-value cost-benefit analysis can break down. Useful for comparing precautionary vs. expected-value framings."
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Vulnerable World Hypothesis",
+        "creator": "Nick Bostrom",
+        "year": 2019,
+        "type": "paper",
+        "url": "https://nickbostrom.com/papers/vulnerable-world.pdf",
+        "note": "Asks what governance would be needed if technological progress could, by default, produce a civilization-ending capability — a bridge into Governing Frontier AI."
+      },
+      {
+        "title": "Pascal's Mugging",
+        "creator": "Nick Bostrom",
+        "year": 2009,
+        "type": "paper",
+        "url": "https://nickbostrom.com/papers/pascal.pdf",
+        "note": "Short treatment of the failure mode where tiny probabilities of vast outcomes can be used to demand almost anything — useful for testing when precaution becomes unfalsifiable."
+      },
+      {
+        "title": "Radical Uncertainty: Decision-Making Beyond the Numbers",
+        "creator": "John Kay & Mervyn King",
+        "year": 2020,
+        "type": "book",
+        "url": "https://www.scribd.com/document/1012621946/Radical-Uncertainty-Decision-Making-Beyond-the-Numbers-John-Kay",
+        "note": "A sustained argument for treating deep (Knightian) uncertainty differently from calculable risk — ballast for the reversible-vs-irreversible seminar question."
+      }
     ]
   },
   {
@@ -551,8 +1091,6 @@
       "Verification",
       "Democratic Legitimacy"
     ],
-    "core_readings": [],
-    "further_reading": [],
     "seminar_questions": [
       "Which governance mechanisms remain effective as algorithms become more efficient?",
       "How can verification work when major actors have incentives to conceal capabilities?",
@@ -579,6 +1117,50 @@
       "Chapter 12",
       "Chapter 13",
       "Chapter 14"
+    ],
+    "core_readings": [
+      {
+        "title": "Frontier AI Regulation: Managing Emerging Risks to Public Safety",
+        "creator": "Markus Anderljung, Joslyn Barnhart, Anton Korinek, Jade Leung, et al.",
+        "year": 2023,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2307.03718",
+        "note": "The most widely cited proposal for licensing, registration, and reporting requirements specifically for frontier-scale models — a baseline governance architecture to stress-test."
+      },
+      {
+        "title": "International Institutions for Advanced AI",
+        "creator": "Lewis Ho, Joslyn Barnhart, Robert Trager, Yoshua Bengio, et al.",
+        "year": 2023,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2307.04699",
+        "note": "Surveys existing international-institution models (from IAEA to ICAO) as templates for AI-specific coordination — directly usable for the governance-architecture diagram."
+      },
+      {
+        "title": "Computing Power and the Governance of Artificial Intelligence",
+        "creator": "Girish Sastry et al.",
+        "year": 2024,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2402.08797",
+        "note": "Makes the case for compute as the most measurable and governable input to frontier AI development — the technical backbone for any compute-governance proposal."
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Towards Best Practices in AGI Safety and Governance",
+        "creator": "Jonas Schuett, Noemi Dreksler, Markus Anderljung, David McCaffary, Lennart Heim, Emma Bluemke & Ben Garfinkel",
+        "year": 2023,
+        "type": "report",
+        "url": "https://arxiv.org/pdf/2305.07153",
+        "note": "A GovAI survey of practitioner views on what 'best practice' governance currently looks like inside labs — grounding for firm-level controls in the layered-regime design."
+      },
+      {
+        "title": "Thinking About Risks From AI: Accidents, Misuse and Structure",
+        "creator": "Remco Zwetsloot & Allan Dafoe",
+        "year": 2019,
+        "type": "article",
+        "url": "https://www.lawfaremedia.org/article/thinking-about-risks-ai-accidents-misuse-and-structure",
+        "note": "Distinguishes accident, misuse, and structural risk as separate categories requiring different governance tools — a clean framework for sorting which mechanism addresses which failure mode."
+      }
     ]
   },
   {
@@ -604,8 +1186,6 @@
       "Machine Consciousness",
       "Democratic Legitimacy"
     ],
-    "core_readings": [],
-    "further_reading": [],
     "seminar_questions": [
       "Is survival enough, or does safety need a positive theory of flourishing?",
       "How should future artificial minds be represented in political decisions?",
@@ -632,6 +1212,58 @@
       "Chapter 8",
       "Chapter 13",
       "Chapter 14"
+    ],
+    "core_readings": [
+      {
+        "title": "What We Owe the Future",
+        "creator": "William MacAskill",
+        "year": 2022,
+        "type": "book",
+        "url": "https://cepcuyo.com/wp-content/uploads/2022/10/What-We-Owe-the-Future-William-MacAskill-1.pdf",
+        "note": "The most accessible full case for longtermism and intergenerational obligation — directly engages the seminar question about what present institutions owe future/possible minds."
+      },
+      {
+        "title": "Reasons and Persons",
+        "creator": "Derek Parfit",
+        "year": 1984,
+        "type": "book",
+        "url": "https://pdf.stafforini.com/parfit-1984-reasons-persons.pdf",
+        "note": "The philosophical bedrock for population ethics and obligations to future people — dense but foundational underneath MacAskill's popularization."
+      },
+      {
+        "title": "Deep Utopia: Life and Meaning in a Solved World",
+        "creator": "Nick Bostrom",
+        "year": 2024,
+        "type": "book",
+        "url": "https://nickbostrom.com/papers/deep-utopia.pdf",
+        "note": "Unlike Bostrom's earlier extinction-focused work, this asks what a successful outcome would actually look like and whether it's still meaningful — a direct answer to 'is survival enough.'"
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Case for Strong Longtermism",
+        "creator": "Hilary Greaves & William MacAskill",
+        "year": 2021,
+        "type": "paper",
+        "url": "https://www.globalprioritiesinstitute.org/wp-content/uploads/The-Case-for-Strong-Longtermism-GPI-Working-Paper-June-2021-2-2.pdf",
+        "note": "The more technical, philosophy-journal version of the longtermism argument — useful if the position memo should engage the strongest academic form rather than the popular one."
+      },
+      {
+        "title": "Reality+: Virtual Worlds and the Problems of Philosophy",
+        "creator": "David Chalmers",
+        "year": 2022,
+        "type": "book",
+        "url": "https://www.academia.edu/83726976/Reality_Virtual_Worlds_and_the_Problems_of_Philosophy_Chalmers_David_J_2022_",
+        "note": "Extends questions about moral status and meaning to simulated/digital minds — relevant if the futures matrix includes artificial persons as stakeholders."
+      },
+      {
+        "title": "Taking AI Welfare Seriously",
+        "creator": "Robert Long, Jeff Sebo, Patrick Butlin, et al.",
+        "year": 2024,
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2411.00986",
+        "note": "Cross-listed from Minds Made of Machines — the practical companion to the philosophical arguments here about what present institutions owe possible future moral patients."
+      }
     ]
   }
 ]
