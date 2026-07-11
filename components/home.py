@@ -96,10 +96,27 @@ def render_home(you) -> None:
         st.markdown(
             """
             <div class="card">
+                <h3>🐇 Choose a Rabbit Hole</h3>
+                <p>
+                    A less sensible entrance: choose a door and get one claim,
+                    one concept, one reading, and one question for you.
+                </p>
+                <span class="tag">surprise me</span>
+                <span class="tag">flight reading</span>
+                <span class="tag">argue with me</span>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    with col6:
+        st.markdown(
+            """
+            <div class="card">
                 <h3>💭 Ask Me</h3>
                 <p>
-                    A future way to explore my notes, sources, disagreements,
-                    and evolving positions without reducing them to generic answers.
+                    Ask across my notes, sources, disagreements, and evolving
+                    positions—with answers grounded in what I actually wrote.
                 </p>
                 <span class="tag">reasoning</span>
                 <span class="tag">uncertainty</span>
@@ -109,7 +126,9 @@ def render_home(you) -> None:
             unsafe_allow_html=True,
         )
 
-    with col6:
+    col7, col8 = st.columns(2)
+
+    with col7:
         st.markdown(
             """
             <div class="card">
@@ -121,6 +140,22 @@ def render_home(you) -> None:
                 <span class="tag">purpose</span>
                 <span class="tag">process</span>
                 <span class="tag">design</span>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    with col8:
+        st.markdown(
+            """
+            <div class="card">
+                <h3>🧃 Emergency Provisions</h3>
+                <p>
+                    Gummy bears, too many tabs, and the unreasonable belief
+                    that this was going to remain a small project.
+                </p>
+                <span class="tag">very normal</span>
+                <span class="tag">completely restrained</span>
             </div>
             """,
             unsafe_allow_html=True,

@@ -9,6 +9,7 @@ from components.ontology import show as show_ontology
 from components.reading_journal import show as show_reading_journal
 from components.side_trails import show as show_side_trails
 from components.ask_me import show as show_ask_me
+from components.rabbit_hole import show as show_rabbit_hole
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -148,6 +149,7 @@ page = st.sidebar.radio(
         "Concepts",
         "Knowledge Map",
         "Side Trails",
+        "Choose a Rabbit Hole",
         "Ask Me",
         "About",
     ],
@@ -175,6 +177,9 @@ elif page == "Knowledge Map":
 
 elif page == "Side Trails":
     show_side_trails()
+
+elif page == "Choose a Rabbit Hole":
+    show_rabbit_hole()
 
 elif page == "Ask Me":
     show_ask_me()
