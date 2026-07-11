@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-def show_chapter_14(you) -> None:
+def render_chapter14(you) -> None:
     st.header("Chapter 14 — Where There’s Life, There’s Hope")
 
     st.caption(
