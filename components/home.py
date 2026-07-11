@@ -145,6 +145,7 @@ def render_home(you) -> None:
                 <p>
                     Why I built the Atlas, how it is organized,
                     and what I hope it makes visible.
+                    14 chapters · 112 claims · 12 seminars · 229 searchable records
                 </p>
                 <span class="tag">purpose</span>
                 <span class="tag">process</span>
