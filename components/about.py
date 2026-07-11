@@ -8,9 +8,9 @@ def show() -> None:
         """
         This is my very normal, very nerdy, but maybe you kind of get it, notebook.
 
-        It started with one book and then immediately became a collection of
-        margin notes, research papers, concept maps, questions, disagreements,
-        and side trails I absolutely did not plan to follow.
+        It started with a book suggestio from you and then immediately 
+        became a collection of margin notes, research papers, concept maps, 
+        questions, disagreements, and side trails I absolutely did not plan to follow.
 
         The goal is simple:
 
@@ -27,7 +27,9 @@ def show() -> None:
                 or leave a question unresolved for a while.
             </p>
             <p>
-                That is not a bug. That is the entire project.
+                You might be thinking "OMG why did she do all this?!
+                But I thought this was way more fun to give to you than a PDF of my notes.
+                Is it probably too much? Yes. But that's just how I am
             </p>
         </div>
         """,
@@ -39,8 +41,8 @@ def show() -> None:
         <div class="sage-box">
             <h3>Also</h3>
             <p>
-                I like evidence, footnotes, careful definitions, and occasionally
-                disappearing down a research rabbit hole for no practical reason.
+                I really appreciate all your book suggestions, 
+                the way you engage with ideas and the way your mind works
             </p>
         </div>
         """,
@@ -48,5 +50,6 @@ def show() -> None:
     )
 
     st.caption(
-        "Built with curiosity, too many tabs, and a highly questionable sense of scope."
+        "Built with WAY too many tabs open, late nights over" \
+        "a July weekend and handfuls of gummie bears"
     )

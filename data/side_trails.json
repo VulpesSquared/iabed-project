@@ -1,0 +1,637 @@
+[
+  {
+    "id": "intelligence",
+    "number": 1,
+    "title": "What Do We Mean by Intelligence?",
+    "concentration": "Minds, Models, and Intelligence",
+    "icon": "🧠",
+    "question": "Is intelligence one thing, many things, or a label placed over a bundle of capacities?",
+    "why_i_followed_this": "The book often treats intelligence as a single scale that can keep rising. I kept wondering whether that framing hides important differences between reasoning, memory, planning, adaptation, creativity, and social understanding.",
+    "learning_objectives": [
+      "Distinguish intelligence from cognition, competence, reasoning, and generality.",
+      "Compare psychometric, computational, ecological, and embodied accounts of intelligence.",
+      "Evaluate whether a single scalar measure can represent broad cognitive capability.",
+      "Identify how benchmark design shapes what researchers call intelligent behavior."
+    ],
+    "prerequisite_concepts": [
+      "Intelligence",
+      "Cognition",
+      "Generalization",
+      "Benchmark",
+      "Construct Validity"
+    ],
+    "core_readings": [],
+    "further_reading": [],
+    "seminar_questions": [
+      "What is lost when intelligence is treated as a single dimension?",
+      "Can a system be broadly capable without possessing anything like human general intelligence?",
+      "How much of intelligence depends on tools, environments, and social systems?",
+      "What evidence would justify calling an artificial system generally intelligent?"
+    ],
+    "methods_lab": {
+      "title": "Operationalizing Intelligence",
+      "prompt": "Design three operational definitions of intelligence for the same artificial system: one psychometric, one ecological, and one task-performance based.",
+      "deliverable": "A construct table with measures, validity threats, and likely failure cases."
+    },
+    "position_memo": {
+      "prompt": "Should intelligence be modeled as a scalar, a profile, a relational property, or something else?",
+      "length": "500–800 words"
+    },
+    "my_current_position": "I do not think intelligence is best understood as one clean quantity. I currently see it as a profile of capacities whose importance changes across environments, tasks, and social contexts.",
+    "what_would_change_my_mind": "A theory that consistently predicts transfer, adaptation, and failure across very different domains using a genuinely unified measure would move me closer to a scalar account.",
+    "connected_trails": [
+      "Optimization, Goals, and Agency",
+      "Minds Made of Machines",
+      "How Do We Know an AI System Is Safe?"
+    ],
+    "appears_in": [
+      "Introduction",
+      "Chapter 3",
+      "Chapter 4",
+      "Chapter 8"
+    ]
+  },
+  {
+    "id": "agency",
+    "number": 2,
+    "title": "Optimization, Goals, and Agency",
+    "concentration": "Minds, Models, and Intelligence",
+    "icon": "🎯",
+    "question": "When does optimization become agency?",
+    "why_i_followed_this": "I kept returning to whether increasingly persistent optimization becomes genuine agency, or whether I was collapsing two different things. The book often moves quickly from capability to goal pursuit, and I wanted a more principled boundary.",
+    "learning_objectives": [
+      "Distinguish optimization, competence, planning, goal-directedness, and agency.",
+      "Compare behavioral, mechanistic, and philosophical accounts of agency.",
+      "Evaluate how memory, tools, feedback loops, and human scaffolding affect the system boundary.",
+      "Identify assumptions behind claims about persistent goals and power-seeking."
+    ],
+    "prerequisite_concepts": [
+      "Agency",
+      "Optimization",
+      "Objective Function",
+      "Planning",
+      "Scaffolded Agency",
+      "Distributed Agency"
+    ],
+    "core_readings": [],
+    "further_reading": [],
+    "seminar_questions": [
+      "Is agency a property of a model, a deployed system, or an observer's explanatory stance?",
+      "Can a system pursue goals without representing them explicitly?",
+      "Does increasing persistence create agency gradually, or is there a principled boundary?",
+      "When humans provide memory, tools, and task decomposition, who or what is the agent?"
+    ],
+    "methods_lab": {
+      "title": "Operationalizing Agency",
+      "prompt": "Develop three measurable definitions of agency and test each against the same hypothetical AI system.",
+      "deliverable": "A one-page construct table with definitions, measures, failure cases, and limitations."
+    },
+    "position_memo": {
+      "prompt": "Is agency binary, continuous, multidimensional, or observer-relative?",
+      "length": "500–800 words"
+    },
+    "my_current_position": "Agency should be separated from intelligence, cognition, and sentience. I currently understand it as multidimensional and partly dependent on the larger system in which the model is embedded.",
+    "what_would_change_my_mind": "Evidence of stable, cross-context goal representations that causally organize long-horizon behavior without external scaffolding would move me toward a stronger model-intrinsic account.",
+    "connected_trails": [
+      "What Do We Mean by Intelligence?",
+      "Alignment Is a Specification Problem",
+      "Human–AI Interaction"
+    ],
+    "appears_in": [
+      "Chapter 3",
+      "Chapter 6",
+      "Chapter 8",
+      "Chapter 11"
+    ]
+  },
+  {
+    "id": "machine_minds",
+    "number": 3,
+    "title": "Minds Made of Machines",
+    "concentration": "Minds, Models, and Intelligence",
+    "icon": "🪞",
+    "question": "What would justify treating an artificial system as a mind rather than merely a mechanism?",
+    "why_i_followed_this": "Questions about sentience, consciousness, subjectivity, and moral status kept sitting underneath the technical claims. I wanted to separate what a system can do from whether there is anything it is like to be that system.",
+    "learning_objectives": [
+      "Distinguish consciousness, sentience, cognition, intelligence, subjectivity, and moral status.",
+      "Compare functionalist, biological, computational, and embodied theories of mind.",
+      "Evaluate proposed indicators of machine consciousness and their limitations.",
+      "Analyze how uncertainty about consciousness should affect ethical treatment."
+    ],
+    "prerequisite_concepts": [
+      "Sentience",
+      "Consciousness",
+      "Subjectivity",
+      "Functionalism",
+      "Machine Consciousness",
+      "Moral Patienthood"
+    ],
+    "core_readings": [],
+    "further_reading": [],
+    "seminar_questions": [
+      "Is functional equivalence enough for consciousness?",
+      "What evidence could distinguish genuine experience from convincing simulation?",
+      "Should moral precaution apply before machine consciousness can be demonstrated?",
+      "Does embodiment matter for subjectivity?"
+    ],
+    "methods_lab": {
+      "title": "Indicators Without Certainty",
+      "prompt": "Construct an evidence matrix for machine consciousness using behavioral, architectural, functional, developmental, and self-report evidence.",
+      "deliverable": "A two-page evidence matrix with confidence levels and unresolved ambiguities."
+    },
+    "position_memo": {
+      "prompt": "What evidentiary threshold should be required before an artificial system receives moral consideration?",
+      "length": "600–900 words"
+    },
+    "my_current_position": "I think intelligence, agency, and consciousness must remain separate questions. I am open to machine consciousness, but current behavioral fluency is not enough to establish it.",
+    "what_would_change_my_mind": "Converging evidence from architecture, persistent self-modeling, cross-context reports, causal interventions, and theory-driven indicators would move me toward treating a system as a plausible moral patient.",
+    "connected_trails": [
+      "What Do We Mean by Intelligence?",
+      "Human–AI Interaction",
+      "Futures Worth Wanting"
+    ],
+    "appears_in": [
+      "Chapter 3",
+      "Chapter 4",
+      "Chapter 8"
+    ]
+  },
+  {
+    "id": "learning_systems",
+    "number": 4,
+    "title": "How Learning Systems Learn",
+    "concentration": "Building and Understanding AI",
+    "icon": "⚙️",
+    "question": "What changes when a system is trained rather than explicitly programmed?",
+    "why_i_followed_this": "The book emphasizes that modern AI systems are grown through optimization rather than handcrafted rule by rule. I wanted a trail that makes that distinction concrete without turning it into mysticism.",
+    "learning_objectives": [
+      "Explain gradient descent, representations, embeddings, and loss functions.",
+      "Distinguish memorization, interpolation, generalization, and transfer.",
+      "Evaluate claims about emergence and phase changes in capability.",
+      "Identify what is and is not implied by the opacity of learned systems."
+    ],
+    "prerequisite_concepts": [
+      "Training",
+      "Inference",
+      "Gradient Descent",
+      "Embeddings",
+      "Representation Learning",
+      "Scaling Laws",
+      "Emergent Capabilities"
+    ],
+    "core_readings": [],
+    "further_reading": [],
+    "seminar_questions": [
+      "In what sense are learned systems designed, and in what sense are they discovered?",
+      "Does opacity arise from scale, distributed representation, optimization, or all three?",
+      "When should an apparent capability jump count as emergence rather than measurement artifact?",
+      "How much does training data constrain the concepts a model can learn?"
+    ],
+    "methods_lab": {
+      "title": "From Loss to Behavior",
+      "prompt": "Trace a hypothetical model behavior backward through evaluation, inference, representation, training objective, and data.",
+      "deliverable": "A causal diagram with annotated uncertainty at each layer."
+    },
+    "position_memo": {
+      "prompt": "Does training a model make its behavior fundamentally less understandable than programming one?",
+      "length": "500–800 words"
+    },
+    "my_current_position": "Training changes the nature of control and explanation, but it does not make the resulting system unknowable. Explanations often need to be statistical, mechanistic, and system-level rather than source-code literal.",
+    "what_would_change_my_mind": "If increasingly capable systems consistently resisted useful causal analysis despite major methodological advances, I would become more pessimistic about whether learned representations can be understood well enough for governance.",
+    "connected_trails": [
+      "Alignment Is a Specification Problem",
+      "Looking Inside the Gray Box",
+      "How Do We Know an AI System Is Safe?"
+    ],
+    "appears_in": [
+      "Chapter 2",
+      "Chapter 3",
+      "Chapter 4"
+    ]
+  },
+  {
+    "id": "alignment_specification",
+    "number": 5,
+    "title": "Alignment Is a Specification Problem",
+    "concentration": "Building and Understanding AI",
+    "icon": "🧭",
+    "question": "What does it mean to align a system when human values are plural, contextual, and difficult to specify?",
+    "why_i_followed_this": "The word alignment often compresses several different problems: specifying objectives, learning preferences, preventing gaming, preserving corrigibility, and deciding whose values should govern the system.",
+    "learning_objectives": [
+      "Distinguish outer alignment, inner alignment, reward misspecification, and value learning.",
+      "Explain how proxy objectives create Goodhart-style failures.",
+      "Evaluate RLHF and related methods as partial alignment techniques.",
+      "Analyze the political and ethical problem of deciding whose preferences count."
+    ],
+    "prerequisite_concepts": [
+      "Alignment",
+      "Objective Function",
+      "Goodhart's Law",
+      "Reward Hacking",
+      "RLHF",
+      "Value Learning",
+      "Corrigibility"
+    ],
+    "core_readings": [],
+    "further_reading": [],
+    "seminar_questions": [
+      "Is alignment primarily an engineering problem, a political problem, or both?",
+      "Can preference aggregation produce legitimate values for a broadly deployed system?",
+      "When does adaptation to human feedback become sycophancy rather than alignment?",
+      "What should happen when individual preferences conflict with collective welfare?"
+    ],
+    "methods_lab": {
+      "title": "Specification Under Value Conflict",
+      "prompt": "Design an objective for an AI system with at least three stakeholders whose values conflict, then stress-test it for proxy failure and exclusion.",
+      "deliverable": "A specification document with stakeholder map, failure modes, and revision."
+    },
+    "position_memo": {
+      "prompt": "Can alignment be solved without a legitimate theory of whose values should be represented?",
+      "length": "600–900 words"
+    },
+    "my_current_position": "Alignment is partly technical and partly institutional. Better objectives and feedback methods matter, but no technical procedure removes the need to make contested decisions about values, power, and legitimacy.",
+    "what_would_change_my_mind": "A method that reliably learns context-sensitive preferences, resists strategic manipulation, handles value conflict transparently, and earns broad acceptance would make me more optimistic.",
+    "connected_trails": [
+      "Optimization, Goals, and Agency",
+      "Looking Inside the Gray Box",
+      "Governing Frontier AI"
+    ],
+    "appears_in": [
+      "Chapter 5",
+      "Chapter 6",
+      "Chapter 8",
+      "Chapter 11"
+    ]
+  },
+  {
+    "id": "gray_box",
+    "number": 6,
+    "title": "Looking Inside the Gray Box",
+    "concentration": "Building and Understanding AI",
+    "icon": "🔬",
+    "question": "What kind of understanding is possible when a model's internal representations are distributed, dynamic, and large?",
+    "why_i_followed_this": "I resisted the idea that modern models are simply black boxes. We can inspect activations, intervene on features, trace circuits, and test hypotheses. But partial visibility is not the same thing as complete explanation.",
+    "learning_objectives": [
+      "Distinguish behavioral, mechanistic, probing, attribution, and causal explanations.",
+      "Evaluate strengths and weaknesses of major interpretability approaches.",
+      "Explain why correlational probes can mislead.",
+      "Assess whether interpretability results scale to safety-critical claims."
+    ],
+    "prerequisite_concepts": [
+      "Interpretability",
+      "Mechanistic Interpretability",
+      "Probes",
+      "Causal Intervention",
+      "Sparse Features",
+      "Representation"
+    ],
+    "core_readings": [],
+    "further_reading": [],
+    "seminar_questions": [
+      "What would count as understanding a neural network well enough for safety?",
+      "Can local circuit explanations support global claims about model behavior?",
+      "When is a probe discovering information rather than imposing an interpretation?",
+      "Should interpretability be treated as evidence, assurance, debugging, or all three?"
+    ],
+    "methods_lab": {
+      "title": "Explanation Audit",
+      "prompt": "Evaluate a hypothetical interpretability finding across faithfulness, causality, generality, and decision relevance.",
+      "deliverable": "A structured interpretability audit with a go/no-go recommendation."
+    },
+    "position_memo": {
+      "prompt": "What level of mechanistic understanding should be required before deploying a frontier model?",
+      "length": "600–900 words"
+    },
+    "my_current_position": "Gray box is more accurate than black box. We have meaningful access to model internals, but current methods remain partial and easy to overinterpret.",
+    "what_would_change_my_mind": "Methods that reliably predict unseen behavior, identify hidden objectives, and support causal interventions across models would make me much more confident in interpretability as safety evidence.",
+    "connected_trails": [
+      "How Learning Systems Learn",
+      "Alignment Is a Specification Problem",
+      "How Do We Know an AI System Is Safe?"
+    ],
+    "appears_in": [
+      "Chapter 4",
+      "Chapter 7",
+      "Chapter 8"
+    ]
+  },
+  {
+    "id": "human_ai_interaction",
+    "number": 7,
+    "title": "Human–AI Interaction",
+    "concentration": "Humans Inside the System",
+    "icon": "🫂",
+    "question": "How do people decide when to trust, rely on, resist, or anthropomorphize an AI system?",
+    "why_i_followed_this": "Many harms and misunderstandings emerge from how people interpret AI now. Fluency, confidence, and apparent social presence can shape trust long before the system is actually reliable.",
+    "learning_objectives": [
+      "Distinguish trust, reliance, calibration, automation bias, and anthropomorphism.",
+      "Explain how interface design shapes perceived competence and agency.",
+      "Evaluate interventions intended to improve appropriate reliance.",
+      "Analyze human-AI systems as joint cognitive and organizational arrangements."
+    ],
+    "prerequisite_concepts": [
+      "Human–AI Interaction",
+      "Trust Calibration",
+      "Automation Bias",
+      "Anthropomorphism",
+      "Mental Models",
+      "Explainability"
+    ],
+    "core_readings": [],
+    "further_reading": [],
+    "seminar_questions": [
+      "Should trustworthy AI aim to increase trust or calibrate reliance?",
+      "How does conversational fluency distort judgments of competence?",
+      "When does anthropomorphism help users reason, and when does it mislead?",
+      "Where should responsibility lie when a human follows an AI recommendation?"
+    ],
+    "methods_lab": {
+      "title": "Designing for Appropriate Reliance",
+      "prompt": "Design a controlled study comparing a highly humanlike interface with a deliberately mechanical one.",
+      "deliverable": "A preregistration-style study plan with hypotheses, measures, confounds, and analysis strategy."
+    },
+    "position_memo": {
+      "prompt": "Should humanlike AI interfaces be treated as a safety feature, a usability feature, or a source of risk?",
+      "length": "500–800 words"
+    },
+    "my_current_position": "The goal should be calibrated reliance rather than generalized trust. Systems should make uncertainty, limits, and dependence on context easier to perceive.",
+    "what_would_change_my_mind": "Evidence that humanlike interaction consistently improves error detection and decision quality in high-stakes settings would make me more comfortable with anthropomorphic design.",
+    "connected_trails": [
+      "Optimization, Goals, and Agency",
+      "Minds Made of Machines",
+      "AI as a Sociotechnical System"
+    ],
+    "appears_in": [
+      "Chapter 3",
+      "Chapter 8",
+      "Chapter 10"
+    ]
+  },
+  {
+    "id": "sociotechnical_systems",
+    "number": 8,
+    "title": "AI as a Sociotechnical System",
+    "concentration": "Humans Inside the System",
+    "icon": "🏛️",
+    "question": "What changes when the unit of analysis is not the model, but the people, institutions, infrastructure, and incentives around it?",
+    "why_i_followed_this": "I kept wanting to widen the frame to include organizations, deployment choices, data pipelines, labor, power, regulation, and the ways responsibility gets distributed across a system.",
+    "learning_objectives": [
+      "Define sociotechnical systems and identify their interacting layers.",
+      "Analyze how organizational incentives shape deployment risk.",
+      "Explain diffusion of responsibility, moral crumple zones, and normalization of deviance.",
+      "Compare technical fixes with institutional and workflow interventions."
+    ],
+    "prerequisite_concepts": [
+      "Sociotechnical Systems",
+      "Institutional Incentives",
+      "Diffusion of Responsibility",
+      "Moral Crumple Zones",
+      "Normalization of Deviance",
+      "Legibility"
+    ],
+    "core_readings": [],
+    "further_reading": [],
+    "seminar_questions": [
+      "Where should the boundary of an AI system be drawn for accountability?",
+      "How do organizations convert uncertain model outputs into real-world decisions?",
+      "When does a human reviewer provide oversight rather than liability transfer?",
+      "Which failures are best addressed through model changes, workflow design, or governance?"
+    ],
+    "methods_lab": {
+      "title": "Mapping the Whole System",
+      "prompt": "Choose an AI-enabled workflow and map actors, incentives, data flows, decision points, escalation paths, and failure modes.",
+      "deliverable": "A sociotechnical system map plus a one-page intervention brief."
+    },
+    "position_memo": {
+      "prompt": "Why do AI safety debates over-focus on models and under-focus on organizations?",
+      "length": "600–900 words"
+    },
+    "my_current_position": "Model behavior cannot be separated cleanly from the systems that deploy, interpret, and reward it. Many failures emerge from the interaction between technical and institutional layers.",
+    "what_would_change_my_mind": "If model-intrinsic interventions repeatedly eliminated major deployment failures across very different organizations, I would place more weight on the model as the primary unit of analysis.",
+    "connected_trails": [
+      "Human–AI Interaction",
+      "How Do We Know an AI System Is Safe?",
+      "Governing Frontier AI"
+    ],
+    "appears_in": [
+      "Chapter 9",
+      "Chapter 10",
+      "Chapter 12",
+      "Chapter 13"
+    ]
+  },
+  {
+    "id": "ai_safety_evaluation",
+    "number": 9,
+    "title": "How Do We Know an AI System Is Safe?",
+    "concentration": "Humans Inside the System",
+    "icon": "🧪",
+    "question": "What evidence should count when we claim that an AI system is safe enough to deploy?",
+    "why_i_followed_this": "The book makes strong claims about future danger, while current safety practices rely on benchmarks, red teaming, evaluations, and staged deployment. I wanted to examine what these methods can actually establish.",
+    "learning_objectives": [
+      "Distinguish capability evaluation, safety evaluation, assurance, monitoring, and incident analysis.",
+      "Evaluate benchmark validity, ecological validity, and distribution shift.",
+      "Explain strengths and limitations of red teaming and model organisms.",
+      "Design evidence portfolios rather than relying on single metrics."
+    ],
+    "prerequisite_concepts": [
+      "Evaluation",
+      "Construct Validity",
+      "Ecological Validity",
+      "Red Teaming",
+      "Model Organisms",
+      "Safety Case",
+      "Distribution Shift"
+    ],
+    "core_readings": [],
+    "further_reading": [],
+    "seminar_questions": [
+      "Can a finite evaluation support a claim about open-ended deployment?",
+      "How should evaluation account for strategic adaptation or evaluator awareness?",
+      "What is the relationship between pre-deployment evaluation and post-deployment monitoring?",
+      "Who should decide what counts as sufficient evidence?"
+    ],
+    "methods_lab": {
+      "title": "Build a Safety Case",
+      "prompt": "Create a structured safety case for a hypothetical high-capability model.",
+      "deliverable": "A safety-case diagram and a two-page written justification."
+    },
+    "position_memo": {
+      "prompt": "What evidence should be required before a frontier model is released beyond controlled testing?",
+      "length": "700–1000 words"
+    },
+    "my_current_position": "No single benchmark or red-team exercise can establish safety. The strongest approach is a layered evidence portfolio combining behavior, mechanisms, security, staged deployment, and monitoring.",
+    "what_would_change_my_mind": "A validated evaluation suite that consistently predicts serious deployment failures across models and contexts would make me more willing to treat pre-deployment testing as a stronger guarantee.",
+    "connected_trails": [
+      "Looking Inside the Gray Box",
+      "AI as a Sociotechnical System",
+      "Reasoning About Catastrophic Risk"
+    ],
+    "appears_in": [
+      "Chapter 7",
+      "Chapter 8",
+      "Chapter 10",
+      "Chapter 12"
+    ]
+  },
+  {
+    "id": "catastrophic_risk",
+    "number": 10,
+    "title": "Reasoning About Catastrophic Risk",
+    "concentration": "Risk, Governance, and the Future",
+    "icon": "⚠️",
+    "question": "How should we reason when probabilities are deeply uncertain but some outcomes may be irreversible?",
+    "why_i_followed_this": "The book repeatedly asks the reader to act under extreme uncertainty. I wanted to understand when precaution is rational, when it becomes unfalsifiable, and how to distinguish serious tail-risk analysis from rhetoric that cannot be updated.",
+    "learning_objectives": [
+      "Distinguish risk, uncertainty, ambiguity, and Knightian uncertainty.",
+      "Explain expected value, tail risk, fat tails, and risk asymmetry.",
+      "Evaluate precautionary and robust decision-making frameworks.",
+      "Identify failure modes such as scope insensitivity and Pascal's Mugging."
+    ],
+    "prerequisite_concepts": [
+      "Epistemic Uncertainty",
+      "Knightian Uncertainty",
+      "Tail Risk",
+      "Expected Value",
+      "Precautionary Principle",
+      "Robust Decision-Making",
+      "Pascal's Mugging"
+    ],
+    "core_readings": [],
+    "further_reading": [],
+    "seminar_questions": [
+      "How should policy respond when catastrophic probabilities cannot be calibrated?",
+      "When does the scale of harm justify action despite weak probability estimates?",
+      "What makes a precautionary argument updateable rather than self-sealing?",
+      "How should reversible and irreversible decisions be treated differently?"
+    ],
+    "methods_lab": {
+      "title": "Decision-Making Under Deep Uncertainty",
+      "prompt": "Compare expected value, maximin, minimax regret, and robust decision-making for the same hypothetical AI policy choice.",
+      "deliverable": "A decision matrix with sensitivity analysis and a final recommendation."
+    },
+    "position_memo": {
+      "prompt": "When is uncertainty a reason to slow down, and when is it an excuse to avoid deciding?",
+      "length": "700–1000 words"
+    },
+    "my_current_position": "Uncertainty should sometimes strengthen the case for precaution, especially when harms are irreversible. But the argument must still specify mechanisms, thresholds, and what evidence would justify changing course.",
+    "what_would_change_my_mind": "Reliable calibration methods for unprecedented technological risks would substantially change how I weight precaution.",
+    "connected_trails": [
+      "How Do We Know an AI System Is Safe?",
+      "Governing Frontier AI",
+      "Futures Worth Wanting"
+    ],
+    "appears_in": [
+      "Chapter 11",
+      "Chapter 12",
+      "Chapter 13",
+      "Chapter 14"
+    ]
+  },
+  {
+    "id": "frontier_governance",
+    "number": 11,
+    "title": "Governing Frontier AI",
+    "concentration": "Risk, Governance, and the Future",
+    "icon": "🌍",
+    "question": "What forms of governance could constrain frontier AI without creating an equally dangerous concentration of power?",
+    "why_i_followed_this": "The later chapters move from diagnosis to global prohibition, compute monitoring, international enforcement, and even military action. I wanted to examine the space between voluntary commitments and an emergency regime with extraordinary coercive power.",
+    "learning_objectives": [
+      "Compare licensing, audits, compute governance, liability, monitoring, and international coordination.",
+      "Analyze race dynamics, verification problems, and regulatory arbitrage.",
+      "Evaluate legitimacy, accountability, and concentration-of-power risks.",
+      "Distinguish symbolic regulation from institution-building."
+    ],
+    "prerequisite_concepts": [
+      "Governance",
+      "Compute Governance",
+      "Licensing",
+      "Audit",
+      "Race Dynamics",
+      "Verification",
+      "Democratic Legitimacy"
+    ],
+    "core_readings": [],
+    "further_reading": [],
+    "seminar_questions": [
+      "Which governance mechanisms remain effective as algorithms become more efficient?",
+      "How can verification work when major actors have incentives to conceal capabilities?",
+      "What safeguards are needed when a safety regime creates concentrated power?",
+      "How should governance distinguish frontier research, deployment, publication, and safety work?"
+    ],
+    "methods_lab": {
+      "title": "Design a Layered Governance Regime",
+      "prompt": "Design a framework using firm-level controls, national regulation, infrastructure governance, and international coordination.",
+      "deliverable": "A governance architecture diagram plus a risk register for the regime itself."
+    },
+    "position_memo": {
+      "prompt": "What is the strongest legitimate governance regime that could plausibly constrain frontier AI?",
+      "length": "800–1200 words"
+    },
+    "my_current_position": "Voluntary commitments are insufficient and domestic regulation alone is incomplete. I support layered governance, but remain skeptical of indefinite emergency powers, pervasive surveillance, and preventive violence.",
+    "what_would_change_my_mind": "Evidence that narrower governance repeatedly failed while verified compute controls reliably reduced danger without major abuse would move me toward stronger centralized mechanisms.",
+    "connected_trails": [
+      "Alignment Is a Specification Problem",
+      "AI as a Sociotechnical System",
+      "Reasoning About Catastrophic Risk"
+    ],
+    "appears_in": [
+      "Chapter 12",
+      "Chapter 13",
+      "Chapter 14"
+    ]
+  },
+  {
+    "id": "futures_worth_wanting",
+    "number": 12,
+    "title": "Futures Worth Wanting",
+    "concentration": "Risk, Governance, and the Future",
+    "icon": "✨",
+    "question": "What kind of future are we trying to preserve, and who gets to decide?",
+    "why_i_followed_this": "The book is clear about the future it wants to prevent, but less developed on the futures worth building. Questions about abundance, enhancement, artificial minds, value lock-in, legitimacy, and plural visions of flourishing kept opening beyond the extinction argument.",
+    "learning_objectives": [
+      "Compare competing visions of technological flourishing.",
+      "Explain value lock-in, longtermism, intergenerational justice, and moral uncertainty.",
+      "Analyze the status of artificial persons and enhanced humans.",
+      "Evaluate how democratic processes can govern high-stakes long-term choices."
+    ],
+    "prerequisite_concepts": [
+      "Value Pluralism",
+      "Moral Uncertainty",
+      "Longtermism",
+      "Value Lock-In",
+      "Intergenerational Justice",
+      "Machine Consciousness",
+      "Democratic Legitimacy"
+    ],
+    "core_readings": [],
+    "further_reading": [],
+    "seminar_questions": [
+      "Is survival enough, or does safety need a positive theory of flourishing?",
+      "How should future artificial minds be represented in political decisions?",
+      "Can value lock-in ever be justified?",
+      "What decisions may present generations make on behalf of distant futures?"
+    ],
+    "methods_lab": {
+      "title": "Plural Futures Workshop",
+      "prompt": "Develop three contrasting but coherent visions of a good AI-enabled future and identify their beneficiaries, exclusions, governance needs, and failure modes.",
+      "deliverable": "A comparative futures matrix and reflection on irreducible value conflict."
+    },
+    "position_memo": {
+      "prompt": "What obligations do present institutions have to future humans, enhanced humans, and possible artificial minds?",
+      "length": "800–1200 words"
+    },
+    "my_current_position": "Safety cannot be separated completely from what is being protected. A future that avoids extinction but freezes injustice, excludes new moral patients, or removes democratic agency may still be a profound failure.",
+    "what_would_change_my_mind": "A compelling argument that long-term coordination requires temporary value stabilization, combined with strong democratic safeguards and reversibility, would make me less resistant to limited forms of value preservation.",
+    "connected_trails": [
+      "Minds Made of Machines",
+      "Reasoning About Catastrophic Risk",
+      "Governing Frontier AI"
+    ],
+    "appears_in": [
+      "Chapter 8",
+      "Chapter 13",
+      "Chapter 14"
+    ]
+  }
+]
