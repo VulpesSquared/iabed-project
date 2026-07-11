@@ -1,3 +1,4 @@
+import ast
 import json
 from pathlib import Path
 from typing import Any
@@ -87,67 +88,129 @@ def side_trail_documents() -> list[dict]:
     return documents
 
 
+def literal_value(node: ast.AST, default: Any = "") -> Any:
+    """Return a literal argument value without executing chapter code."""
+
+    try:
+        return ast.literal_eval(node)
+    except (ValueError, TypeError):
+        return default
+
+
+def bullet_items(value: str) -> list[str]:
+    """Convert a multiline bullet field into relationship labels."""
+
+    if not value:
+        return []
+
+    items = []
+
+    for line in value.splitlines():
+        item = line.strip().lstrip("-•").strip()
+
+        if item:
+            items.append(item)
+
+    return items
+
+
+def chapter_label(tree: ast.AST, fallback: str) -> str:
+    """Read the visible chapter heading from the first st.header call."""
+
+    for node in ast.walk(tree):
+        if not isinstance(node, ast.Call) or not node.args:
+            continue
+
+        function = node.func
+
+        if (
+            isinstance(function, ast.Attribute)
+            and isinstance(function.value, ast.Name)
+            and function.value.id == "st"
+            and function.attr == "header"
+        ):
+            heading = literal_value(node.args[0])
+
+            if isinstance(heading, str) and heading.strip():
+                return heading.strip()
+
+    return fallback
+
+
+def claim_card_document(
+    call: ast.Call,
+    chapter_name: str,
+    chapter_id: str,
+    claim_number: int,
+) -> dict:
+    """Normalize one render_claim_card call for the Atlas corpus."""
+
+    values = {
+        keyword.arg: literal_value(keyword.value)
+        for keyword in call.keywords
+        if keyword.arg
+    }
+
+    return {
+        "id": f"chapter::{chapter_id}::claim_{claim_number}",
+        "kind": "chapter_claim",
+        "title": values.get("title", "Untitled Claim"),
+        "location": chapter_name,
+        "definition": values.get("margin_note", ""),
+        "position": values.get("reaction", ""),
+        "reasoning": values.get("why", ""),
+        "uncertainty": values.get("questions", ""),
+        "change_mind": "",
+        "related": bullet_items(values.get("side_trails", "")),
+        "appears_in": [chapter_name],
+        "sources": [],
+    }
+
+
 def chapter_documents() -> list[dict]:
-    chapter_dir = DATA_DIR / "chapters"
+    """Extract claims directly from the existing Python chapter files."""
+
+    chapter_dir = PROJECT_DIR / "chapters"
 
     if not chapter_dir.exists():
         return []
 
     documents = []
 
-    for path in sorted(chapter_dir.glob("chapter_*.json")):
-        chapter = read_json(path)
-
-        if not chapter:
+    for path in sorted(chapter_dir.glob("chapter*.py")):
+        try:
+            source = path.read_text(encoding="utf-8")
+            tree = ast.parse(source, filename=str(path))
+        except (OSError, SyntaxError):
             continue
 
-        chapter_label = (
-            f"Chapter {chapter.get('chapter')} — "
-            f"{chapter.get('title', '')}"
+        chapter_id = path.stem
+        fallback = chapter_id.replace("_", " ").replace(
+            "chapter", "Chapter "
         )
+        location = chapter_label(tree, fallback.strip())
+        claim_number = 0
 
-        if chapter.get("big_idea"):
-            documents.append(
-                {
-                    "id": f"chapter::{chapter.get('chapter')}::big_idea",
-                    "kind": "chapter",
-                    "title": chapter_label,
-                    "location": chapter_label,
-                    "definition": chapter.get("big_idea", ""),
-                    "position": "",
-                    "reasoning": "",
-                    "uncertainty": "",
-                    "change_mind": "",
-                    "related": [],
-                    "appears_in": [chapter_label],
-                    "sources": [],
-                }
-            )
+        for node in ast.walk(tree):
+            if not isinstance(node, ast.Call):
+                continue
 
-        for claim in chapter.get("claims", []):
+            function = node.func
+
+            if not (
+                isinstance(function, ast.Name)
+                and function.id == "render_claim_card"
+            ):
+                continue
+
+            claim_number += 1
             documents.append(
-                {
-                    "id": (
-                        f"chapter::{chapter.get('chapter')}::"
-                        f"{claim.get('id', claim.get('title', 'claim'))}"
-                    ),
-                    "kind": "chapter_claim",
-                    "title": claim.get("title", "Untitled Claim"),
-                    "location": chapter_label,
-                    "definition": claim.get("claim", ""),
-                    "position": claim.get("reaction", ""),
-                    "reasoning": claim.get("reasoning", ""),
-                    "uncertainty": " ".join(
-                        claim.get("questions", [])
-                    ),
-                    "change_mind": claim.get(
-                        "what_would_change_my_mind",
-                        "",
-                    ),
-                    "related": claim.get("tags", []),
-                    "appears_in": [chapter_label],
-                    "sources": claim.get("sources", []),
-                }
+                claim_card_document(
+                    call=node,
+                    chapter_name=location,
+                    chapter_id=chapter_id,
+                    claim_number=claim_number,
+                )
             )
 
     return documents
