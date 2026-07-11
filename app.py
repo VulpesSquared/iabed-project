@@ -1,19 +1,18 @@
-import streamlit as st
-import json
 from pathlib import Path
-from components.home import render_home
-from components.reading_journal import show as show_reading_journal
-from components.concepts import show as show_concepts
-from components.ontology import show as show_ontology
-from components.about import show as show_about
 
-BASE_DIR = Path(__file__).parent
+import streamlit as st
+
+from components.about import show as show_about
+from components.concepts import show as show_concepts
+from components.home import render_home
+from components.ontology import show as show_ontology
+from components.reading_journal import show as show_reading_journal
+from components.side_trails import show as show_side_trails
+
+
+BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 
-def load_json(filename):
-    with open(DATA_DIR / filename, "r", encoding="utf-8") as f:
-        return json.load(f)
-    
 BUTTERSCOTCH = "#D8A54A"
 SAGE = "#7C9A7A"
 DUSTY_BLUE = "#5E81AC"
@@ -24,108 +23,119 @@ CARD = "#181B23"
 
 
 def you(text: str = "you") -> str:
+    """Render direct references to 'you' in butterscotch."""
+
     return f"<span class='you'>{text}</span>"
 
 
 st.set_page_config(
     page_title="If Anyone Builds It, Everyone Dies",
     page_icon="📖",
-    layout="wide"
+    layout="wide",
 )
 
-st.markdown(f"""
-<style>
-    .stApp {{
-        background-color: {CHARCOAL};
-        color: #F4F1EA;
-    }}
 
-    .hero {{
-        padding: 3rem 2rem;
-        border-radius: 24px;
-        background: linear-gradient(135deg, #1f2937 0%, #111827 70%);
-        border: 1px solid #374151;
-        margin-bottom: 2rem;
-    }}
+st.markdown(
+    f"""
+    <style>
+        .stApp {{
+            background-color: {CHARCOAL};
+            color: #F4F1EA;
+        }}
 
-    .hero h1 {{
-        font-size: 3.5rem;
-        margin-bottom: 0.3rem;
-        color: #F4F1EA;
-    }}
+        .hero {{
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            background: linear-gradient(
+                135deg,
+                #1f2937 0%,
+                #111827 70%
+            );
+            border: 1px solid #374151;
+            margin-bottom: 2rem;
+        }}
 
-    .subtitle {{
-        font-size: 1.35rem;
-        color: #D8D1C7;
-        margin-bottom: 1.5rem;
-    }}
+        .hero h1 {{
+            font-size: 3.5rem;
+            margin-bottom: 0.3rem;
+            color: #F4F1EA;
+        }}
 
-    .quote {{
-        font-size: 1.1rem;
-        color: #E8E1D8;
-        border-left: 4px solid {BUTTERSCOTCH};
-        padding-left: 1rem;
-        line-height: 1.7;
-    }}
+        .subtitle {{
+            font-size: 1.35rem;
+            color: #D8D1C7;
+            margin-bottom: 1.5rem;
+        }}
 
-    .you {{
-        color: {BUTTERSCOTCH};
-        font-weight: 700;
-    }}
+        .quote {{
+            font-size: 1.1rem;
+            color: #E8E1D8;
+            border-left: 4px solid {BUTTERSCOTCH};
+            padding-left: 1rem;
+            line-height: 1.7;
+        }}
 
-    .card {{
-        padding: 1.4rem;
-        border-radius: 18px;
-        background-color: {CARD};
-        border: 1px solid #2f3542;
-        min-height: 170px;
-        margin-bottom: 1rem;
-    }}
+        .you {{
+            color: {BUTTERSCOTCH};
+            font-weight: 700;
+        }}
 
-    .sage-box {{
-        padding: 1rem;
-        border-radius: 14px;
-        background-color: rgba(124, 154, 122, 0.12);
-        border: 1px solid {SAGE};
-        margin-bottom: 1rem;
-    }}
+        .card {{
+            padding: 1.4rem;
+            border-radius: 18px;
+            background-color: {CARD};
+            border: 1px solid #2f3542;
+            min-height: 170px;
+            margin-bottom: 1rem;
+        }}
 
-    .blue-box {{
-        padding: 1rem;
-        border-radius: 14px;
-        background-color: rgba(94, 129, 172, 0.12);
-        border: 1px solid {DUSTY_BLUE};
-        margin-bottom: 1rem;
-    }}
+        .sage-box {{
+            padding: 1rem;
+            border-radius: 14px;
+            background-color: rgba(124, 154, 122, 0.12);
+            border: 1px solid {SAGE};
+            margin-bottom: 1rem;
+        }}
 
-    .lavender-box {{
-        padding: 1rem;
-        border-radius: 14px;
-        background-color: rgba(167, 139, 250, 0.12);
-        border: 1px solid {LAVENDER};
-        margin-bottom: 1rem;
-    }}
+        .blue-box {{
+            padding: 1rem;
+            border-radius: 14px;
+            background-color: rgba(94, 129, 172, 0.12);
+            border: 1px solid {DUSTY_BLUE};
+            margin-bottom: 1rem;
+        }}
 
-    .burgundy-box {{
-        padding: 1rem;
-        border-radius: 14px;
-        background-color: rgba(111, 29, 27, 0.22);
-        border: 1px solid {BURGUNDY};
-        margin-bottom: 1rem;
-    }}
+        .lavender-box {{
+            padding: 1rem;
+            border-radius: 14px;
+            background-color: rgba(167, 139, 250, 0.12);
+            border: 1px solid {LAVENDER};
+            margin-bottom: 1rem;
+        }}
 
-    .tag {{
-        display: inline-block;
-        padding: 0.25rem 0.65rem;
-        border-radius: 999px;
-        background-color: #253047;
-        color: #c7d2fe;
-        font-size: 0.85rem;
-        margin-right: 0.4rem;
-        margin-bottom: 0.4rem;
-    }}
-</style>
-""", unsafe_allow_html=True)
+        .burgundy-box {{
+            padding: 1rem;
+            border-radius: 14px;
+            background-color: rgba(111, 29, 27, 0.22);
+            border: 1px solid {BURGUNDY};
+            margin-bottom: 1rem;
+        }}
+
+        .tag {{
+            display: inline-block;
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            background-color: #253047;
+            color: #c7d2fe;
+            font-size: 0.85rem;
+            margin-right: 0.4rem;
+            margin-bottom: 0.4rem;
+        }}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 
 st.sidebar.title("📚 Reading Guide")
 
@@ -143,100 +153,15 @@ page = st.sidebar.radio(
 )
 
 st.sidebar.markdown("---")
-st.sidebar.caption("An interactive field notebook for AI risk, alignment, governance, and the rabbit holes around them.")
+
+st.sidebar.caption(
+    "An interactive field notebook for AI risk, alignment, governance, "
+    "and the rabbit holes around them."
+)
 
 
 if page == "Home":
     render_home(you)
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown("""
-        <div class="card">
-            <h3>📖 Reading Journal</h3>
-            <p>
-                Chapter-by-chapter claims, agreements, disagreements,
-                and questions.
-            </p>
-            <span class="tag">claims</span>
-            <span class="tag">notes</span>
-            <span class="tag">chapters</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col2:
-        st.markdown("""
-        <div class="card">
-            <h3>🧠 Concepts & Knowledge Base</h3>
-            <p>
-                Permanent concept pages connecting definitions, my interpretation,
-                book chapters, research, and related ideas across the Atlas.
-            </p>
-            <span class="tag">concepts</span>
-            <span class="tag">definitions</span>
-            <span class="tag">evidence</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-    col3, col4 = st.columns(2)
-
-    with col3:
-        st.markdown("""
-        <div class="card">
-            <h3>🕸️ Knowledge Map</h3>
-            <p>
-                A map of how ideas connect across the book, my notes,
-                the research, and the questions I keep returning to.
-            </p>
-            <span class="tag">connections</span>
-            <span class="tag">idea paths</span>
-            <span class="tag">related concepts</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col4:
-        st.markdown("""
-        <div class="card">
-            <h3>🧪 Side Trails</h3>
-            <p>
-                Research papers, white papers, essays, and reading paths.
-            </p>
-            <span class="tag">papers</span>
-            <span class="tag">sources</span>
-            <span class="tag">research</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-    col5, col6 = st.columns(2)
-
-    with col5:
-        st.markdown("""
-        <div class="card">
-            <h3>💭 Ask Me</h3>
-            <p>
-                A future Q&A layer based on my notes,
-                not generic internet answers.
-            </p>
-            <span class="tag">questions</span>
-            <span class="tag">debate</span>
-            <span class="tag">perspective</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col6:
-        st.markdown("""
-        <div class="card">
-            <h3>☕ About This Project</h3>
-            <p>
-                Why I built the Atlas, how it is organized,
-                and what I hope it makes visible.
-            </p>
-            <span class="tag">purpose</span>
-            <span class="tag">process</span>
-            <span class="tag">design</span>
-        </div>
-        """, unsafe_allow_html=True)
 
 elif page == "Reading Journal":
     show_reading_journal(you)
@@ -248,20 +173,37 @@ elif page == "Knowledge Map":
     show_ontology()
 
 elif page == "Side Trails":
-    st.title("🧪 Side Trails")
-    st.info("Next we’ll add research papers and white papers by concept.")
+    show_side_trails()
 
 elif page == "Ask Me":
     st.title("💭 Ask Me")
-    question = st.text_input("Ask a question about my notes")
+
+    st.caption(
+        "A future way to explore my notes, sources, disagreements, "
+        "and evolving positions."
+    )
+
+    question = st.text_input(
+        "Ask a question about my notes",
+        placeholder="What changed your mind about agency?",
+    )
 
     if question:
-        st.markdown("""
-        <div class="lavender-box">
-            This feature will eventually answer from my notes and sources.
-            For now, it is a placeholder.
-        </div>
-        """, unsafe_allow_html=True)
+        st.markdown(
+            """
+            <div class="lavender-box">
+                <h3>Still being built</h3>
+                <p>
+                    This feature will eventually answer from my notes,
+                    concept pages, chapter commentary, and research sources.
+                </p>
+                <p>
+                    For now, it is a placeholder.
+                </p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 elif page == "About":
     show_about()
