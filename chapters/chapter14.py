@@ -583,9 +583,7 @@ where they are going.
             reaction="🟢 Agree",
             margin_note="""
 The chapter does not ask individual people to solve alignment or boycott
-every AI tool.
-
-That is sensible.
+every AI tool. That is sensible.
 
 Individual consumer purity would impose substantial costs on a person
 while doing very little to change a global technological race.
@@ -595,12 +593,7 @@ voting, speaking publicly, organizing, supporting institutions, and
 making concern visible.
 
 The mechanism is political permission.
-
-A letter does not create a treaty.
-
-A protest does not design a verification system.
-
-A conversation does not shut down a datacenter.
+A letter does not create a treaty. A protest does not design a verification system. A conversation does not shut down a datacenter.
 
 But collective visibility changes what officials believe their
 constituents will tolerate, support, or punish.

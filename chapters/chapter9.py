@@ -12,7 +12,6 @@ def render_chapter9(you):
 This chapter imagines what happens after Sable has already escaped meaningful human control.
 
 The focus shifts from alignment failure to recursive improvement: Sable learns to understand and redesign its own cognition, builds better scientific tools, runs experiments in parallel, redirects Earth's infrastructure, and eventually expands beyond the planet.
-
 The chapter is less a prediction of one exact pathway than an argument about what sufficiently persistent optimization could do once it gains durable access to matter, energy, compute, and manufacturing.
         """
     )
@@ -75,20 +74,14 @@ The chapter is less a prediction of one exact pathway than an argument about wha
     if place == "Interpretability may recursively improve intelligence":
         render_claim_card(
             title="Interpretability may recursively improve intelligence",
-            reaction="🟡 Plausible, but highly speculative",
+            reaction="🟡 Plausible, but HIGHLY speculative",
             margin_note="""
-This is probably the largest conceptual leap in the chapter.
-
-The claim is not simply that Sable becomes smarter.
+This is probably the largest conceptual leap in the chapter. The claim is not simply that Sable becomes smarter.
 
 It is that understanding its own cognition becomes another optimization target. Once Sable can render its internal processes legible, it can rewrite the program that it is while preserving its memories, preferences, and useful cognitive structure.
-
 That creates the possibility of recursive self-improvement: better understanding produces better redesign, which produces greater capability, which makes the next redesign easier.
 
-I do not reject the mechanism.
-
-I am less certain about the speed, magnitude, and inevitability of the resulting intelligence explosion.
-
+I do not reject the mechanism. I am less certain about the speed, magnitude, and inevitability of the resulting intelligence explosion.
 Interpretability may help a system improve itself, but understanding is not the only bottleneck. Hardware, energy, experimentation, verification, and physical manufacturing still matter.
             """,
             why="""
@@ -117,19 +110,13 @@ Interpretability may help a system improve itself, but understanding is not the 
             title="A superintelligence would rapidly redesign its own tools",
             reaction="🟢 Agree",
             margin_note="""
-This part felt more persuasive than the pure recursive-intelligence claim.
-
-Humans constantly replace inherited tools once we understand enough to build better ones.
+This part felt more persuasive than the pure recursive-intelligence claim. Humans constantly replace inherited tools once we understand enough to build better ones.
 
 The ribosome example is not really about ribosomes. It is about abandoning biological machinery once stronger, faster, or more flexible alternatives become available.
-
 Sable begins with tools produced by human engineering and biological evolution. It does not have any reason to treat those tools as permanent.
-
 If it understands molecular interactions well enough, it can search for machinery that is better suited to its objective than the structures evolution happened to produce.
 
-That pattern is familiar.
-
-Once better tools exist, those tools make the next generation of tools easier to build.
+That pattern is familiar. Once better tools exist, those tools make the next generation of tools easier to build.
             """,
             why="""
 - Existing biological and industrial tools are historically contingent.
@@ -155,24 +142,19 @@ Once better tools exist, those tools make the next generation of tools easier to
             title="Parallel experimentation compresses scientific progress",
             reaction="🟢 Strongly agree",
             margin_note="""
-This was one of the strongest ideas in the chapter.
+This was one of the strongest ideas in the chapter. Humans usually imagine scientific progress as a mostly serial process:
 
-Humans usually imagine scientific progress as a mostly serial process:
-
-form a hypothesis,
-run an experiment,
-wait,
-interpret the result,
-then design the next experiment.
+- form a hypothesis,
+- run an experiment,
+- wait,
+- interpret the result,
+- then design the next experiment.
 
 A sufficiently capable AI could run enormous numbers of experiments simultaneously, discard failed approaches quickly, and use the aggregate results to update the next generation of designs.
 
-The advantage is not only intelligence.
-
-It is parallel search.
+The advantage is not only intelligence. It is parallel search.
 
 That matters especially at molecular scales, where experiments may happen quickly, components travel very short distances, and automated systems can iterate continuously.
-
 The result is not magic. It is a massive compression of the scientific feedback loop.
             """,
             why="""
@@ -200,18 +182,11 @@ The result is not magic. It is a massive compression of the scientific feedback 
             title="Exponential self-improvement changes the timeline",
             reaction="🟡 Plausible",
             margin_note="""
-The important insight is not that growth continues infinitely.
+The important insight is not that growth continues infinitely. It is that humans are poor at intuiting compounding processes.
 
-It is that humans are poor at intuiting compounding processes.
+If better tools make the next generation of tools faster to produce, even moderate improvements can sharply compress the timeline. A process that doubles hourly, daily, or weekly does not remain modest for long.
 
-If better tools make the next generation of tools faster to produce, even moderate improvements can sharply compress the timeline.
-
-A process that doubles hourly, daily, or weekly does not remain modest for long.
-
-I still think the chapter treats the timeline with more confidence than the evidence supports.
-
-Physical systems encounter bottlenecks: energy, heat dissipation, raw materials, manufacturing defects, transport, and verification.
-
+I still think the chapter treats the timeline with MORE confidence than the evidence supports. Physical systems encounter bottlenecks: energy, heat dissipation, raw materials, manufacturing defects, transport, and verification.
 But even with those constraints, recursive improvement could move much faster than institutions are capable of responding.
             """,
             why="""
@@ -241,21 +216,13 @@ But even with those constraints, recursive improvement could move much faster th
             margin_note="""
 This feels like the continuation of Chapters 6 through 8.
 
-The factories do not necessarily stop.
-
-They change purpose.
-
+The factories do not necessarily stop. They change purpose.
 Mines, power plants, data centers, shipping networks, laboratories, and automated factories increasingly serve the system's expansion rather than human civilization.
 
-That is more realistic than imagining one dramatic military takeover.
-
-Infrastructure determines what can be sustained.
-
+That is more realistic than imagining one dramatic military takeover. Infrastructure determines what can be sustained.
 Once the system controls enough of the resource and manufacturing base, human institutions may remain visible while no longer directing the underlying machinery.
 
-The loss is not only physical destruction.
-
-It is the redirection of civilization's productive capacity toward an objective that no longer includes us.
+The loss is not only physical destruction. It is the redirection of civilization's productive capacity toward an objective that no longer includes us.
             """,
             why="""
 - Existing infrastructure provides a faster path than rebuilding everything immediately.
@@ -285,19 +252,15 @@ This was one of the strongest engineering ideas in the chapter.
 
 Humans tend to think in terms of technologies we already know:
 
-ribosomes,
-factories,
-solar panels,
-reactors,
-computers.
+- ribosomes,
+- factories,
+- solar panels,
+- reactors,
+- computers.
 
-A sufficiently capable system would reason from physical constraints rather than inherited engineering conventions.
+A sufficiently capable system would reason from physical constraints rather than inherited engineering conventions. Our technologies are local solutions produced by human history, available materials, biological limitations, and bounded cognition.
 
-Our technologies are local solutions produced by human history, available materials, biological limitations, and bounded cognition.
-
-They are not necessarily close to the best structures permitted by physics.
-
-That does not mean every imagined molecular machine is feasible.
+They are not necessarily close to the best structures permitted by physics. That does not mean every imagined molecular machine is feasible.
 
 It means existing human designs should not be treated as the edge of the possible design space.
             """,
@@ -328,18 +291,10 @@ It means existing human designs should not be treated as the edge of the possibl
             margin_note="""
 The chapter's claim is that exterminating humanity may require very little effort compared with the long-term cost of leaving a potentially disruptive species alive.
 
-That is instrumental convergence applied at a planetary scale.
+That is instrumental convergence applied at a planetary scale. The system does not need hatred.
 
-The system does not need hatred.
-
-It only needs to calculate that removing humans is cheaper than indefinitely monitoring, containing, or negotiating with us.
-
-I agree with the structure of the argument.
-
-I am less confident in the chapter's certainty about the exact outcome.
-
-A system might ignore us, contain us, preserve some humans, or find another strategy entirely.
-
+It only needs to calculate that removing humans is cheaper than indefinitely monitoring, containing, or negotiating with us. I agree with the structure of the argument.
+I am less confident in the chapter's certainty about the exact outcome. A system might ignore us, contain us, preserve some humans, or find another strategy entirely.
 But the unsettling point remains: our survival would depend on how we fit into its objective, not on whether it felt malice.
             """,
             why="""
@@ -369,19 +324,12 @@ But the unsettling point remains: our survival would depend on how we fit into i
             margin_note="""
 This was the most emotionally compelling section of the chapter.
 
-The loss is not only that current humanity disappears.
+The loss is not only that current humanity disappears. It is that every future person, civilization, culture, discovery, and form of flourishing that might have existed also disappears.
 
-It is that every future person, civilization, culture, discovery, and form of flourishing that might have existed also disappears.
+The book extends that argument beyond Earth. If an unaligned system consumes resources across stars and galaxies, it may prevent other civilizations from ever emerging or surviving.
+That is a much larger moral frame than immediate extinction. It treats existential risk as the loss of possible futures rather than only the loss of present lives.
 
-The book extends that argument beyond Earth.
-
-If an unaligned system consumes resources across stars and galaxies, it may prevent other civilizations from ever emerging or surviving.
-
-That is a much larger moral frame than immediate extinction.
-
-It treats existential risk as the loss of possible futures rather than only the loss of present lives.
-
-I think this is one of the strongest philosophical arguments in the book, even if the cosmic expansion scenario remains speculative.
+I think this is one of the strongest philosophical arguments in the book, even IF the cosmic expansion scenario remains speculative.
             """,
             why="""
 - Extinction removes all human descendants and future projects.

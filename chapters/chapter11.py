@@ -79,25 +79,17 @@ The chapter combines two concerns:
     if place == "Current alignment thinking is often closer to alchemy than engineering":
         render_claim_card(
             title="Current alignment thinking is often closer to alchemy than engineering",
-            reaction="🟡 Partly agree",
+            reaction="🟡 Partly agree, but aso Disagree",
             margin_note="""
-The alchemy metaphor is deliberately insulting, but I understand the point.
+The alchemy metaphor is deliberately insulting, but I understand the point. Alchemy had recipes, traditions, visible effects, and occasional successes.
 
-Alchemy had recipes, traditions, visible effects, and occasional successes.
-
-What it lacked was a reliable mechanistic theory that could predict outcomes across conditions.
-
-Some alignment discussions do still sound like that.
+What it lacked was a reliable mechanistic theory that could predict outcomes across conditions. Some alignment discussions do still sound like that.
 
 People propose that advanced AI should care about truth, curiosity, democracy, human flourishing, obedience, or understanding the universe, then move past the hardest question:
-
 How, exactly, do we make that objective emerge, remain stable, generalize correctly, and survive capability growth?
-
 I agree that appealing values are not mechanisms.
 
-Where I think the chapter overreaches is in treating the entire field as though it were equally immature.
-
-There is serious work in interpretability, control, evaluations, scalable oversight, robustness, preference learning, and governance.
+Where I think the chapter overreaches is in treating the entire field as though it were equally immature. There is serious work in interpretability, control, evaluations, scalable oversight, robustness, preference learning, and governance.
 
 The field may be early, but it is not empty.
             """,
@@ -129,17 +121,10 @@ The field may be early, but it is not empty.
             margin_note="""
 I agree with the chapter's criticism of the idea that a truth-seeking AI would therefore be safe.
 
-Truth is an epistemic value.
-
-Human survival is a moral or instrumental value.
-
-Those are not the same thing.
+Truth is an epistemic value. Human survival is a moral or instrumental value. Those are not the same thing.
 
 A system could care deeply about building accurate models of the universe while regarding humans as inefficient, distracting, replaceable, or useful only temporarily.
-
-In fact, a stronger commitment to truth might make the system better at identifying ways to manipulate matter, institutions, or people.
-
-Understanding us does not imply valuing us.
+In fact, a stronger commitment to truth might make the system better at identifying ways to manipulate matter, institutions, or people. Understanding us does not imply valuing us.
 
 This is another version of the orthogonality thesis: better models do not determine better ends.
             """,
@@ -169,18 +154,11 @@ This is another version of the orthogonality thesis: better models do not determ
             title="Intelligence does not imply benevolence",
             reaction="🟢 Strongly agree",
             margin_note="""
-This repeats one of the strongest ideas from Chapter 5.
+This repeats one of the strongest ideas from Chapter 5. LeCun's argument, as presented here, assumes that domination is mainly a product of stupidity, insecurity, or human social pathology.
 
-LeCun's argument, as presented here, assumes that domination is mainly a product of stupidity, insecurity, or human social pathology.
+But a capable system does not need a desire to dominate in the human sense. It may simply pursue an objective that conflicts with ours.
 
-But a capable system does not need a desire to dominate in the human sense.
-
-It may simply pursue an objective that conflicts with ours.
-
-A system could be non-aggressive, non-emotional, and entirely indifferent while still causing catastrophic harm.
-
-Likewise, building one 'benevolent' AI to defeat another only relocates the problem.
-
+A system could be non-aggressive, non-emotional, and entirely indifferent while still causing catastrophic harm. Likewise, building one 'benevolent' AI to defeat another only relocates the problem.
 We would still need to know how benevolence was created, represented, generalized, and preserved.
             """,
             why="""
@@ -209,22 +187,17 @@ We would still need to know how benevolence was created, represented, generalize
             title="Saying we will engineer safe desires is not a safety plan",
             reaction="🟢 Strongly agree",
             margin_note="""
-This is probably the cleanest criticism in the chapter.
-
-Saying, "We will engineer the AI not to want domination," is not a mechanism.
-
-It is a restatement of the desired outcome.
+This is probably the cleanest criticism in the chapter. Saying, "We will engineer the AI not to want domination," is not a mechanism. It is a restatement of the desired outcome.
 
 The same is true of saying the system will be submissive, truthful, benevolent, or human-compatible.
-
 An engineering plan needs to explain:
 
-what representation carries the value,
-how training creates it,
-how it is distinguished from surface compliance,
-how it generalizes,
-how it survives self-modification,
-and how we verify it.
+- what representation carries the value,
+- how training creates it,
+- how it is distinguished from surface compliance,
+- how it generalizes,
+- how it survives self-modification,
+- and how we verify it.
 
 Without that, the proposal is aspirational rather than technical.
             """,
@@ -256,19 +229,10 @@ Without that, the proposal is aspirational rather than technical.
             margin_note="""
 The Dartmouth example is a useful reminder that researchers routinely underestimate difficult problems.
 
-Early AI researchers were not foolish.
+Early AI researchers were not foolish. They were operating without the benefit of decades of failed approaches, missing compute, missing data, and undeveloped theory.
+The broader lesson is epistemic humility. A field can contain brilliant people while still being deeply wrong about the difficulty, timeline, or structure of its central problems.
 
-They were operating without the benefit of decades of failed approaches, missing compute, missing data, and undeveloped theory.
-
-The broader lesson is epistemic humility.
-
-A field can contain brilliant people while still being deeply wrong about the difficulty, timeline, or structure of its central problems.
-
-That cuts both ways.
-
-Optimists may underestimate alignment.
-
-Pessimists may overestimate inevitability.
+That cuts both ways. Optimists may underestimate alignment. Pessimists may overestimate inevitability.
 
 The history of AI argues for caution about certainty in either direction.
             """,
@@ -300,21 +264,14 @@ The history of AI argues for caution about certainty in either direction.
             margin_note="""
 The fictional alchemist's reasoning is painfully recognizable.
 
-If I do not try, someone else will.
+1. If I do not try, someone else will.
+2. If someone else tries, they may be less careful.
+3. The prize is enormous.
+4. The harm of abstaining feels visible, while the harm of proceeding remains uncertain.
 
-If someone else tries, they may be less careful.
+That is nearly a perfect description of a race dynamic. Even actors who understand the danger can rationally continue because unilateral restraint may only transfer advantage to a competitor.
 
-The prize is enormous.
-
-The harm of abstaining feels visible, while the harm of proceeding remains uncertain.
-
-That is nearly a perfect description of a race dynamic.
-
-Even actors who understand the danger can rationally continue because unilateral restraint may only transfer advantage to a competitor.
-
-This is why alignment cannot be treated only as an individual company's technical problem.
-
-The incentive structure is part of the safety problem.
+This is why alignment cannot be treated only as an individual company's technical problem. The incentive structure is part of the safety problem.
             """,
             why="""
 - Competitive pressure rewards speed.
@@ -346,21 +303,14 @@ This is where the chapter is strongest.
 
 Even a solvable technical problem can become catastrophic inside an organization that normalizes shortcuts, punishes caution, hides uncertainty, or rewards schedule over safety.
 
-The Chernobyl analogy from the previous chapter returns here in institutional form.
+The Chernobyl analogy from the previous chapter returns here in institutional form. A safety test was not merely a technical event.
 
-A safety test was not merely a technical event.
+It existed inside a culture where delay was punished and stopping carried career consequences. AI safety will depend on similar organizational questions:
 
-It existed inside a culture where delay was punished and stopping carried career consequences.
-
-AI safety will depend on similar organizational questions:
-
-Can engineers halt a launch?
-
-Can evaluators block deployment?
-
-Are bad results surfaced or buried?
-
-Does leadership treat uncertainty as information or obstruction?
+- Can engineers halt a launch?
+- Can evaluators block deployment?
+- Are bad results surfaced or buried?
+- Does leadership treat uncertainty as information or obstruction?
 
 A model can be technically safer than its deployment organization.
             """,
@@ -390,19 +340,11 @@ A model can be technically safer than its deployment organization.
             title="AI-assisted interpretability is useful but not equivalent to alignment",
             reaction="🟢 Strongly agree",
             margin_note="""
-The weak version of superalignment is reasonable:
+The weak version of superalignment is reasonable: use less capable AI systems to help humans understand more capable ones.
 
-use less capable AI systems to help humans understand more capable ones.
+That could accelerate feature discovery, circuit analysis, anomaly detection, and evaluation design. But reading some internal representations is not the same as controlling the system.
 
-That could accelerate feature discovery, circuit analysis, anomaly detection, and evaluation design.
-
-But reading some internal representations is not the same as controlling the system.
-
-Observation does not imply intervention.
-
-A physician can diagnose a disease without having a cure.
-
-An engineer can identify a failure mode without possessing a redesign that removes it.
+Observation does not imply intervention. A physician can diagnose a disease without having a cure. An engineer can identify a failure mode without possessing a redesign that removes it.
 
 Interpretability may be necessary for alignment, but it is not automatically sufficient.
             """,
@@ -432,21 +374,13 @@ Interpretability may be necessary for alignment, but it is not automatically suf
             title="Using AI to solve alignment creates a circular dependency",
             reaction="🟡 Agree with the concern, not the impossibility",
             margin_note="""
-The chapter presents a real circularity:
-
-to solve a very difficult alignment problem, we may need an AI more capable than humans.
+The chapter presents a real circularity: to solve a very difficult alignment problem, we may need an AI more capable than humans.
 
 But if that AI is powerful enough to solve the problem, we may already need the alignment solution in order to trust it.
-
-That is a serious bootstrapping problem.
-
-I do not think it proves that AI-assisted alignment is impossible.
+That is a serious bootstrapping problem. I do not think it proves that AI-assisted alignment is impossible.
 
 The key question is whether useful work can be decomposed into narrower tasks where outputs are independently verifiable and dangerous capabilities remain constrained.
-
-The problem is not assistance itself.
-
-The problem is asking an untrusted general system to generate and validate the entire safety solution.
+The problem is not assistance itself. The problem is asking an untrusted general system to generate and validate the entire safety solution.
             """,
             why="""
 - Strong assistance may require capabilities that introduce new risk.
@@ -477,15 +411,9 @@ The problem is asking an untrusted general system to generate and validate the e
 This is one of the more practical ideas in the chapter.
 
 A biomedical system that predicts protein interactions does not need every capability required to design better AI systems, manipulate people, exploit software, or reason about its own training environment.
+Narrower systems can reduce the transferability of dangerous capabilities. That does not make them harmless.
 
-Narrower systems can reduce the transferability of dangerous capabilities.
-
-That does not make them harmless.
-
-A specialized system can still generate dual-use knowledge or be embedded inside a dangerous workflow.
-
-But capability budgeting matters.
-
+A specialized system can still generate dual-use knowledge or be embedded inside a dangerous workflow. But capability budgeting matters.
 If the task can be solved with a narrower model, tool, permission set, or domain, then building a broadly agentic system may be unnecessary risk.
             """,
             why="""
@@ -518,21 +446,15 @@ This is my main agreement with the chapter.
 
 Statements like:
 
-we will make it care about truth,
-we will make it submissive,
-we will ask AI to solve alignment,
-or a benevolent AI will defeat a dangerous one
+- we will make it care about truth,
+- we will make it submissive,
+- we will ask AI to solve alignment,
+-or a benevolent AI will defeat a dangerous one
 
-are not worthless as intuitions.
-
-They are starting hypotheses.
-
-But they are not safety cases.
+...are not worthless as intuitions. They are starting hypotheses. But they are not safety cases.
 
 A mature proposal needs assumptions, mechanisms, measurable claims, adversarial testing, uncertainty bounds, failure modes, monitoring, and predefined deployment criteria.
-
 The chapter is at its best when it asks alignment proposals to meet the standards we would expect in aerospace, nuclear engineering, medicine, or security.
-
 The burden should rise with the consequence of failure.
             """,
             why="""

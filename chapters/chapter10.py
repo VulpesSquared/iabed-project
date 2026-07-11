@@ -12,9 +12,7 @@ def render_chapter10(you):
 This chapter argues that aligning artificial superintelligence is unusually difficult because humanity must solve the problem **before** the system becomes powerful enough to make failure irreversible.
 
 Most engineering disciplines improve through iteration: build something, observe how it fails, correct the design, and try again.
-
 The authors argue that advanced AI may not permit that learning cycle. Before the capability threshold, our tests may not expose the relevant failures. After the threshold, the system may be too capable to correct safely.
-
 The chapter compares this problem with space probes, nuclear reactors, and computer security to identify several recurring engineering “curses”:
 
 - speed,
@@ -88,15 +86,10 @@ The chapter compares this problem with space probes, nuclear reactors, and compu
 This is the chapter's central claim, and I think it is one of the strongest formulations of the alignment problem so far.
 
 Before a system becomes sufficiently capable, it may not possess the abilities, situational awareness, persistence, or access required to reveal the failure mode we are actually worried about.
-
 After it crosses that capability threshold, the same system may be able to resist correction, escape containment, manipulate operators, or act faster than humans can respond.
 
-That creates a brutal asymmetry.
-
-We need evidence that alignment will continue working under conditions we cannot safely reproduce in advance.
-
+That creates a brutal asymmetry. We need evidence that alignment will continue working under conditions we cannot safely reproduce in advance.
 In ordinary machine learning, we expect distribution shift and build monitoring, rollback, and retraining into deployment. But those tools assume the system remains within an environment humans still control.
-
 The chapter is asking what happens when the deployment itself changes who controls the environment.
             """,
             why="""
